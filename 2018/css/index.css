@@ -1,0 +1,17 @@
+#news {}
+
+#list {
+	width: 100%;
+	background: #eeeee9;
+}
+
+#list .box-title {
+	width: 100%;
+	height: 688px;
+	min-height: 435px;
+	color: #4b4b4b;
+	font-size: 18px;
+	font-weight: 600;
+	text-indent: 0;
+	line-height: 43px;
+}

@@ -1,6 +1,30 @@
 $font-stack:    Helvetica, sans-serif
 $primary-color: #333
 
+// keyframes mixin
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
++keyframes(bgcolor)
+  0%
+    background-color: #ffccf2
+  50%
+    background-color: #ccffcc
+  100%
+    background-color: #ccffff   
 body
   font: 100% $font-stack
   color: $primary-color
+
+#list
+ width: 100%
+ background: #eeeee9
+
+#list .box-title 
