@@ -62,8 +62,8 @@ function initList() {
 
 function startList() {
 
-	$('.bg1').addClass('animate');
-	listAnimateTimeout[0] = setTimeout(function() { $('.bg2').addClass('animate'); }, 800);
+	//$('.bg1').addClass('animate');
+	//listAnimateTimeout[0] = setTimeout(function() { $('.bg2').addClass('animate'); }, 800);
 	listAnimateTimeout[1] = setTimeout(function() {
 		$('.natural').css({'left': ($('.box-top-inner').width() - $('.natural').width()) / 2});
 		$('.natural').animate({'opacity': 1}, 450);
