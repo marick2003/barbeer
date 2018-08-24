@@ -1,9 +1,12 @@
 var listAnimateIsFin = false,
     listAnimateTimeout = [],
-    loadingInterval;
+    loadingInterval,
+    windowH,
+    windowW;
+    
 
 $(document).ready(function() {
-
+    
     if ($('#list').length == 1) {
 		loadingInterval = setInterval(function(){
 			if ( $('html.jf-active').length == 1 ) {
@@ -30,7 +33,7 @@ $(document).ready(function() {
     
     /* transition
     ----------------------------------------*/
-    
+        windowH=$(window).height();
         var transitionOpacityElements = [
             '#news .navigation li a',
             '#news .catalog li .pic img',
@@ -38,6 +41,9 @@ $(document).ready(function() {
             // '#products .navigation li a',
             // '#products .catalog li'
         ];
+        // windowH=$(window).height();
+        // var listh=windowH-138-90;
+        // $("#list").css({'height':listh});
     
         $.each(transitionOpacityElements, function(index, ele) {
             $(ele).addClass('tst-opacity');
@@ -94,14 +100,18 @@ $(document).ready(function() {
             $('.caption2').animate({'opacity': 1}, 450);
         }, 3200);
         listAnimateTimeout[6] = setTimeout(function() {
+<<<<<<< HEAD
             $('.box-top-inner:not(.shadow)').animate({'top': 10}, 1000);
+=======
+            $('.box-top-inner:not(.shadow)').animate({'top':10}, 1000);
+>>>>>>> 127e27d85a8d080f26a59417265a402d00be0466
             $('.box-top-inner.shadow').animate({'top': 20}, 1000);
         }, 3500);
         listAnimateTimeout[7] = setTimeout(function() {
             if ( $(window).height() <= 917 ) {
-                $('.desc').css({'top': $('.natural').position().top + $('.natural').height() + (40 * ($(window).height() / 917) * 0.25)});
+                $('.desc,.desc2').css({'top': $('.natural').position().top + $('.natural').height() + (40 * ($(window).height() / 917) * 0.25)});
             } else {
-                $('.desc').css({'top': $('.natural').position().top + $('.natural').height() + 40});
+                $('.desc,.desc2').css({'top': $('.natural').position().top + $('.natural').height() + 40});
             }
             $('.desc .line').eq(0).animate({'opacity': 1}, 450);
         }, 4000);
@@ -139,8 +149,15 @@ $(document).ready(function() {
         }, 1000);
     }
 
+<<<<<<< HEAD
 
     $(window).resize(function(){
+=======
+//138 + 90 
+    $(window).resize(function(){
+        
+
+>>>>>>> 127e27d85a8d080f26a59417265a402d00be0466
         if ($('#list').length == 1) {
             if ( !listAnimateIsFin ) {
                 $.each(listAnimateTimeout, function(index, ele) {
@@ -151,5 +168,9 @@ $(document).ready(function() {
                 endList();
             }
         }
+<<<<<<< HEAD
     });
     
+=======
+    });
+>>>>>>> 127e27d85a8d080f26a59417265a402d00be0466
