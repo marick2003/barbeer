@@ -1,10 +1,12 @@
 #news {}
 
 #list {
-	width: 100%;
+		width: 100%;
         background: #eeeee9;
-        height: -webkit-fill-available;
-        /* overflow: hidden; */
+		height: 688px;
+		position: relative;
+
+        overflow: hidden;
 }
 
 
@@ -385,11 +387,15 @@
 		top: 6.6%;
 	}
 }
-#list .box-top-inner .desc {
+#list .box-top-inner .desc,#list .box-top-inner .desc2 {
 	width: 100%;
 	top: 428px;
 	position: absolute;
 	z-index: 1;
+}
+#list .box-top-inner .desc2{
+
+	display: none;
 }
 #list .box-top-inner .desc .line {
 	width: 100%;

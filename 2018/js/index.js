@@ -94,8 +94,8 @@ $(document).ready(function() {
             $('.caption2').animate({'opacity': 1}, 450);
         }, 3200);
         listAnimateTimeout[6] = setTimeout(function() {
-            $('.box-top-inner:not(.shadow)').animate({'top': 110}, 1000);
-            $('.box-top-inner.shadow').animate({'top': 120}, 1000);
+            $('.box-top-inner:not(.shadow)').animate({'top': 10}, 1000);
+            $('.box-top-inner.shadow').animate({'top': 20}, 1000);
         }, 3500);
         listAnimateTimeout[7] = setTimeout(function() {
             if ( $(window).height() <= 917 ) {
@@ -138,3 +138,18 @@ $(document).ready(function() {
             $('.box-top-inner .beer.' + direction + ' .fly-bubble div[data-num=' + num +']').remove();
         }, 1000);
     }
+
+
+    $(window).resize(function(){
+        if ($('#list').length == 1) {
+            if ( !listAnimateIsFin ) {
+                $.each(listAnimateTimeout, function(index, ele) {
+                    clearTimeout(listAnimateTimeout[index]);
+                });
+                initList();
+            } else {
+                endList();
+            }
+        }
+    });
+    
