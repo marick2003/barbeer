@@ -100,11 +100,7 @@ $(document).ready(function() {
             $('.caption2').animate({'opacity': 1}, 450);
         }, 3200);
         listAnimateTimeout[6] = setTimeout(function() {
-<<<<<<< HEAD
-            $('.box-top-inner:not(.shadow)').animate({'top': 10}, 1000);
-=======
             $('.box-top-inner:not(.shadow)').animate({'top':10}, 1000);
->>>>>>> 127e27d85a8d080f26a59417265a402d00be0466
             $('.box-top-inner.shadow').animate({'top': 20}, 1000);
         }, 3500);
         listAnimateTimeout[7] = setTimeout(function() {
@@ -149,15 +145,10 @@ $(document).ready(function() {
         }, 1000);
     }
 
-<<<<<<< HEAD
-
-    $(window).resize(function(){
-=======
 //138 + 90 
     $(window).resize(function(){
         
 
->>>>>>> 127e27d85a8d080f26a59417265a402d00be0466
         if ($('#list').length == 1) {
             if ( !listAnimateIsFin ) {
                 $.each(listAnimateTimeout, function(index, ele) {
@@ -168,9 +159,4 @@ $(document).ready(function() {
                 endList();
             }
         }
-<<<<<<< HEAD
     });
-    
-=======
-    });
->>>>>>> 127e27d85a8d080f26a59417265a402d00be0466

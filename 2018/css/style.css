@@ -1,19 +1,19 @@
 #news {}
 
 #list {
-		width: 100%;
+	    width: 100%;
         background: #eeeee9;
-		height: 688px;
-		position: relative;
-
-        overflow: hidden;
+		/* height: 688px;
+		min-height: 650px;
+		position: relative; */
+        /* overflow: hidden; */
 }
 
 
 #list .box-title {
 	width: 100%;
 	height: 688px;
-	min-height: 435px;
+	min-height: 500px;
 	color: #4b4b4b;
 	font-size: 18px;
 	font-weight: 600;
@@ -394,7 +394,6 @@
 	z-index: 1;
 }
 #list .box-top-inner .desc2{
-
 	display: none;
 }
 #list .box-top-inner .desc .line {
@@ -628,3 +627,236 @@
 
 /* -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
 filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
+.catalog {
+	padding: 60px 0 217px 0;
+	position: relative;
+	z-index: 2;
+
+}
+
+.catalog .inner {width: 940px;}
+
+.catalog .inner_title{
+	margin: 0px 0px 40px 0px;
+	text-align: center;
+}
+.catalog .inner_desc{
+    font-size: 18px;
+    font-weight: 700;
+    color: #393939;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+
+.catalog .group {}
+.catalog .group-title {
+	height: 80px;
+	color: #252525;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 80px;
+}
+
+.catalog .group-content {font-size: 0;}
+.catalog .group-content ul {width: 952px;}
+.catalog .group-content li {display: inline-block; width: 296px; height: 358px; margin-right: 26px; margin-bottom: 26px; vertical-align: top;}
+.catalog .group-content li:nth-child(3n) {margin-right: 0px;}
+.catalog .group-content li .pop {
+	width: 307px;
+	height: 65px;
+	margin-left: -5px;
+	float: left;
+	background: url(../images/index/news-text-bg.png) no-repeat;
+}
+.catalog .group-content li .pop:before {
+	content: "";
+	width: 277px;
+	height: 16px;
+	margin: 17px 0 0 15px;
+	float: left;
+	background: url(../images/index/news-text2.png) no-repeat;
+}
+.catalog .group-content li .pop:before {
+	background-position: 5px 0;
+}
+.catalog .group-content li + li .pop:before {
+	background-position: 12px -16px;
+}
+.catalog .group-content li + li + li .pop:before {
+	background-position: 30px -32px;
+}
+.catalog .group-content li .inner { float: left; width: 296px; height: 288px; overflow: hidden;}
+.catalog .group-content li .inner a {
+	display: block;
+	width: 294px;
+	color: #393939;
+	font-size: 13px;
+	border: #dedede 1px solid;
+}
+.catalog .group-content .pic {width: 294px; height: 202px; background: #fff; overflow: hidden;}
+.catalog .group-content .pic:before {
+	content: "";
+	width: 71px;
+	height: 71px;
+	margin: 65px 0 0 111px;
+	position: absolute;
+	background: url(../images/index/btn-play.png) no-repeat;
+	z-index: 1;
+}
+.catalog .group-content .pic img {
+	display: block;
+/*	-webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	-moz-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	-ms-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	-o-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);*/
+}
+.catalog .group-content a:hover .pic img {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+.catalog .group-content .info {
+	height: auto;
+	line-height: 21px;
+	padding: 8px 15px 10px;
+	background: #ffffff;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.catalog .group-content .date {color: #000; font-weight: 600;}
+.catalog .group-content .text {}
+
+.catalog .pagination {text-align: center; margin: 42px 0 0;}
+
+.catalog .pagination a {}
+.catalog .pagination a:hover {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+.catalog .pagination .unable a,
+.catalog .pagination .unable a:hover {
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+	cursor: default;
+}
+
+.catalog .pagination .arrow {
+	display: inline-block;
+	width: 33px;
+	height: 33px;
+}
+.catalog .pagination .arrow a {
+	display: block;
+	width: 33px;
+	height: 33px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.catalog .pagination .arrow .prev {background-image: url(../images/index/arrow-prev.gif);}
+.catalog .pagination .arrow .next {background-image: url(../images/index/arrow-next.gif);}
+.catalog .pagination ul {display: inline-block; vertical-align: top; margin: 0 50px;}
+.catalog .pagination li {display: inline-block; vertical-align: top; margin: 0 4px;}
+.catalog .pagination li a {
+	display: block;
+	min-width: 33px;
+	height: 33px;
+	color: #505050;
+	font-size: 16px;
+/*	font-weight: bold;*/
+	text-align: center;
+	line-height: 33px;
+}
+.catalog .pagination li.current a {
+	color: #d7000f;
+	cursor: default;
+}
+.catalog .pagination li.current a:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+
+
+#event-desc .event-group .event-group-content{
+
+	position: relative;
+	width: 940px;
+	height: 280px;
+	background-image: url(../images/index/event-step.png);
+	background-repeat: no-repeat;
+
+}
+#event-desc .event-group,#gift-desc .event-group{
+	margin-bottom: 15px;
+}
+#event-desc .event-group .event-group-content .step-title, #gift-desc .event-group .event-group-content .gift-title{
+	position: relative;
+    top: 30px;
+	text-align: center;
+}
+#event-desc ul{
+
+	position: relative;
+	top: 70px;
+}
+#event-desc ul li {
+    float: left;
+    margin-left: 86px;
+    margin-right: 10px;
+}
+#event-desc ul li:last-child{
+	margin-left: 65px;
+}
+#gift-desc{
+	width: 100%;
+	height: 580px;
+}
+#gift-desc .gift-item{
+
+	text-align: center;
+}
+#gift-desc .gift-item img:first-child{
+    position: absolute;
+    margin-left: -170px;
+    margin-top: 40px;
+}
+#gift-desc .gift-item img:nth-child(2){
+    position: absolute;
+    margin-left: -400px;
+    margin-top: 195px;
+
+}
+#gift-desc .gift-item img:nth-child(3){
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 225px;
+	
+}
+
+.box-content .bg {
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	position: absolute;
+	background-image: url(../images/index/news-bg01.jpg);
+	background-repeat:  repeat-x;
+	background-size:  auto 100%;
+	background-position: 0, 0;
+	z-index: 1;
+	-webkit-animation: content-bg linear 3s infinite;
+	-moz-animation: content-bg linear 3s infinite;
+	-ms-animation: content-bg linear 3s infinite;
+	-o-animation: content-bg linear 3s infinite;
+	animation: content-bg linear 3s infinite;
+}
+.box-content .bg:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url(../images/index/news-bg04.png) center bottom no-repeat;
+
+	z-index: 3;
+}
