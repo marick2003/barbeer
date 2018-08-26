@@ -47,6 +47,7 @@
 								</div>
 								<div class="godown">
 									<img class="arrow" src="images/index/index-img10.png">
+									<img class="arrow step2" src="images/index/index-img10-1.png">
 								</div>
 							</div>
 							<div class="box-top-inner shadow">
