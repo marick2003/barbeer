@@ -34,12 +34,14 @@
 								<img class="title" src="images/index/index-img06.png">
 								<img class="caption2" src="images/index/index-img07-1.png">
 								<img class="natural" src="images/index/index-img08-1.png">
+								<img class="natural step2" src="images/index/index-img08-2.png">
+								
 								<div class="desc">
 									<div class="line"><span class="black">從賈伯斯到披頭四，「車庫」成為孕育世界各種偉大創意的起點。</span></div>
 									<div class="line">而台灣也有一群車庫青年，為熱愛燃燒、為守護文化及土地閃耀。</div>
 									<div class="line">跟 KIRIN Bar BEER 一起支持車庫青年化信念為行動！</div>
 								</div>
-								<div class="desc2">
+								<div class="desc2 step2">
 									<div class="line">面對現實難題，他們正面迎擊！用新思維解決問題，用創意與熱血翻轉困境。</span></div>
 									<div class="line">2018 邀請你一起直擊寶島翻轉行動！</div>
 								</div>
@@ -168,7 +170,24 @@
 								</div>
 							</div>
 						</div>
-						<div class="bg"></div>
+						
+						<div class="bg">
+							<div class="bg_item">
+								<img src="images/index/bg-item01.png" alt="">
+							</div>
+							<div class="bg_item flipy tobottom">
+								<img src="images/index/bg-item01.png" alt="">
+							</div>
+							
+							<div class="fixed_bg">
+								<div class="bg_beer toleft">
+									<img src="images/index/bg_beer.png" alt="">
+								</div>
+								<div class="bg_beer toright flipx">
+								    <img src="images/index/bg_beer.png" alt="">
+								</div>
+							</div>
+						</div>
 					</div>
     </div>
 </body>

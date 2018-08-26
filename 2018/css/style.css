@@ -394,7 +394,9 @@
 	z-index: 1;
 }
 #list .box-top-inner .desc2{
-	display: none;
+	
+	text-align: center;
+	color: #fff100;
 }
 #list .box-top-inner .desc .line {
 	width: 100%;
@@ -842,8 +844,8 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 	position: absolute;
 	background-image: url(../images/index/news-bg01.jpg);
 	background-repeat:  repeat-x;
-	background-size:  auto 100%;
-	background-position: 0, 0;
+	background-size: contain;
+    background-position: 0px 0px;
 	z-index: 1;
 	-webkit-animation: content-bg linear 3s infinite;
 	-moz-animation: content-bg linear 3s infinite;
@@ -857,6 +859,55 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 	height: 100%;
 	position: absolute;
 	background: url(../images/index/news-bg04.png) center bottom no-repeat;
-
 	z-index: 3;
+}
+.step2{
+ 
+	display: none;
+
+}
+.filter_y{
+	transition: all 0.5s ease;
+	-webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 0, 0.8));
+	filter: drop-shadow(0px 0px 5px rgba(255, 255, 0, 0.8));
+}
+/* -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
+
+.fixed_bg{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 300px;
+    left: -80px;
+
+}
+.bg_item{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+}
+/*水平翻转*/
+.flipx {
+    -moz-transform:scaleX(-1);
+    -webkit-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+    /*IE*/
+    filter:FlipH;
+}
+.tobottom{
+
+	bottom: 0px;
+}
+/*垂直翻转*/
+.flipy {
+    -moz-transform:scaleY(-1);
+    -webkit-transform:scaleY(-1);
+    -o-transform:scaleY(-1);
+    transform:scaleY(-1);
+    /*IE*/
+    filter:FlipV;
 }

@@ -120,8 +120,11 @@ $(document).ready(function() {
         listAnimateTimeout[12] = setTimeout(function() {
             $("#list .box-top-inner.shadow").fadeOut();
             $('#list .box-title .bg .bg3').css({'opacity': 1});  
+            $("#list .desc").fadeOut();
+            $("#list .beer img,.caption1,.caption2,.natural,#list .title").addClass("filter_y");
+            $("#list .step2").fadeIn();
             $('.bg2').addClass('animate2'); }, 7000);
-        
+            
         
 
 
