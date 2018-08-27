@@ -1,6 +1,7 @@
 var listAnimateIsFin = false,
     listAnimateTimeout = [],
     loadingInterval,
+    scrolltop,
     windowH,
     windowW;
     
@@ -22,7 +23,19 @@ $(document).ready(function() {
 		initDetail();
 		
 	}
+    $(window).scroll(function() {
+			
+        scrolltop=$(window).scrollTop();
+        if(scrolltop>=$(".box-content").offset().top && scrolltop<$(".box-content").height()){
 
+            $(".fixed_bg .bg_beer").css({"position":"fixed"})
+        }else if(scrolltop>$(".box-content").height()-50){
+            $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "0px","top":"auto"})
+        }else if(scrolltop<$(".box-content").offset().top+350){
+            $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "auto","top":"300px"})
+        }
+
+    });
 
 });    
 
@@ -158,15 +171,15 @@ $(document).ready(function() {
             var item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 1) +'" style="left: ' + Math.floor((Math.random() * 80) + 0) + '%;"></div>';
             $('.fixed_bg .' + direction + ' .fly-bubble').append(item);
             BGflyBubbleEnd(direction, num);
-        }, Math.floor((Math.random() * 500) + 500));
+        }, Math.floor((Math.random() * 1500) + 200));
         setTimeout(function(){
             BGflyBubble(direction, num+=1);
-        }, Math.floor((Math.random() * 500) + 500));
+        }, Math.floor((Math.random() *1500) + 200));
     }
     function BGflyBubbleEnd(direction, num) {
         setTimeout(function(){
             $('.fixed_bg .' + direction + ' .fly-bubble div[data-num=' + num +']').remove();
-        }, 1500);
+        }, 1700);
     }
     function initDetail() {
 
