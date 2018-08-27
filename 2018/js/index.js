@@ -26,12 +26,12 @@ $(document).ready(function() {
     $(window).scroll(function() {
 			
         scrolltop=$(window).scrollTop();
-        if(scrolltop>=$(".box-content").offset().top && scrolltop<$(".box-content").height()){
+        if(scrolltop>=$(".box-content,.detail .inner").offset().top && scrolltop<$(".box-content,.detail .inner").height()){
 
             $(".fixed_bg .bg_beer").css({"position":"fixed"})
-        }else if(scrolltop>$(".box-content").height()-50){
+        }else if(scrolltop>$(".box-content,.detail .inner").height()-50){
             $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "0px","top":"auto"})
-        }else if(scrolltop<$(".box-content").offset().top+350){
+        }else if(scrolltop<$(".box-content,.detail .inner").offset().top+350){
             $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "auto","top":"300px"})
         }
 
@@ -185,7 +185,8 @@ $(document).ready(function() {
 
         /* transition
         ----------------------------------------*/
-        
+        BGflyBubble('toleft', 1);
+        BGflyBubble('toright', 1);
             var transitionOpacityElements = [
                 '#news #detail .back',
                 '#news .slide-arrow li a',
