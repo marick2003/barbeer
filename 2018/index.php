@@ -10,7 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="js/jquery.youtubebackground.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
@@ -71,7 +72,7 @@
 							<div class="bg2"></div>
 							<div class="bg1"></div>
 							<!--  video-->
-							<div class="bg3"></div>
+							<div id="video" class="bg3"></div>
 						</div>
 					</div>
 			</div>
@@ -180,12 +181,16 @@
 								<img src="images/index/bg-item01.png" alt="">
 							</div>
 							
-							<div class="fixed_bg">
+							<div class="fixed_bg">	
 								<div class="bg_beer toleft">
+									<div class='fly-bubble'>
+										
+									</div>
 									<img src="images/index/bg_beer.png" alt="">
 								</div>
-								<div class="bg_beer toright flipx">
-								    <img src="images/index/bg_beer.png" alt="">
+								<div class="bg_beer toright">
+									<div class='fly-bubble'></div>
+								    <img src="images/index/bg_beer2.png" alt="">
 								</div>
 							</div>
 						</div>

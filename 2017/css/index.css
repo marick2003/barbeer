@@ -1,7 +1,23 @@
 /*****************************************
 *                  news                  *
 *****************************************/
-
+  #video{
+	position: absolute;
+	background: transparent;
+  }
+  
+  .ytplayer-container {
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	min-width: 100%;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 3;
+  }
+  
 #news {}
 
 #list {
@@ -1188,3 +1204,5 @@
 #main > .inner {
 	 z-index: 3;
 }
+
+

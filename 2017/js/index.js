@@ -20,7 +20,10 @@ var listAnimateIsFin = false,
     listAnimateTimeout = [],
     loadingInterval;
 function initList() {
-
+	$('#video').YTPlayer({
+		fitToBackground: true,
+		videoId: 'LSmgKRx5pBo'
+	});
 	// func.setCookie('productsHash', '', 1);
 
 /* transition

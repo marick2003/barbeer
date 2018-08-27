@@ -28,7 +28,10 @@ $(document).ready(function() {
 
 
     function initList() {
-        
+        $('#video').YTPlayer({
+            fitToBackground: true,
+            videoId: 'LSmgKRx5pBo'
+        });
     // func.setCookie('productsHash', '', 1);
     
     /* transition
@@ -71,7 +74,8 @@ $(document).ready(function() {
         startList();
     }
     function startList() {
-
+        BGflyBubble('toleft', 1);
+        BGflyBubble('toright', 1);
         //$('.bg1').addClass('animate');
         listAnimateTimeout[0] = setTimeout(function() { $('.bg2').addClass('animate'); }, 800);
         listAnimateTimeout[1] = setTimeout(function() {
@@ -149,7 +153,188 @@ $(document).ready(function() {
         }, 1000);
     }
 
-//138 + 90 
+    function BGflyBubble(direction, num) {
+        setTimeout(function(){
+            var item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 1) +'" style="left: ' + Math.floor((Math.random() * 80) + 0) + '%;"></div>';
+            $('.fixed_bg .' + direction + ' .fly-bubble').append(item);
+            BGflyBubbleEnd(direction, num);
+        }, Math.floor((Math.random() * 300) + 500));
+        setTimeout(function(){
+            BGflyBubble(direction, num+=1);
+        }, Math.floor((Math.random() * 300) + 500));
+    }
+    function BGflyBubbleEnd(direction, num) {
+        setTimeout(function(){
+            $('.fixed_bg .' + direction + ' .fly-bubble div[data-num=' + num +']').remove();
+        }, 1500);
+    }
+    function initDetail() {
+
+        /* transition
+        ----------------------------------------*/
+        
+            var transitionOpacityElements = [
+                '#news #detail .back',
+                '#news .slide-arrow li a',
+                '#news .links a',
+                '#news .btn-active',
+                '#news .btn-fb'
+                // '#products .back',
+                // '#products .zoom',
+                // '#products .info .more',
+                // '#products .related-content li a',
+                // '#products .related-arrow li a'
+            ];
+        
+            $.each(transitionOpacityElements, function(index, ele) {
+                $(ele).addClass('tst-opacity');
+            });
+        
+        /* 版面調整
+        ----------------------------------------*/
+        
+            if ($('#detail .slide').length == 0) {
+        
+                // $('#article, .links').css('width', 720);
+        
+            }
+        
+        /* banner
+        ----------------------------------------*/
+        
+            var slideCount = 0, slideMove, slideTimer = 5000, slideAction, slideLength = $('.slide .controller div').length;
+        
+            // for (i = 0; i < slideLength; i++) {
+        
+            // 	var template = $('<li><a></a></li>');
+            // 	if (i == 0) template.addClass('current');
+            // 	template.appendTo('.slide .slide-nav ul');
+        
+            // }
+        
+            slideMove = function(count) {
+                $('.slide .controller').animate({
+                    'left': count * $('.slide .slide-content').innerWidth() * -1
+                }, 250, 'easeOutCubic');
+                $('.slide .slide-nav li:eq(' + count + ')').addClass('current').siblings().removeClass('current');
+            }
+        
+            slideAction = function() {
+                var next = slideCount + 1;
+                if (next == slideLength) next = 0;
+                $('.slide .slide-nav li:eq(' + next + ')').trigger('click');
+            }
+        
+            $('.slide .slide-nav li').click(function() {
+                if ($('.slide .controller').is(':animated')) return false;
+                slideCount = $(this).index();
+                slideMove(slideCount);
+            });
+        
+            $('.slide .slide-arrow li').click(function() {
+                if ($('.slide .controller').is(':animated')) return false;
+                if ($(this).hasClass('next')) {
+                    slideCount = $('.slide .slide-nav li.current').index() + 1;
+                    if (slideCount >= $('.slide .controller div').length) slideCount = 0; 
+                } else {
+                    slideCount = $('.slide .slide-nav li.current').index() - 1;
+                    if (slideCount <= -1) slideCount = $('.slide .controller div').length - 1; 
+                }
+                slideMove(slideCount);
+            });
+        
+            var slideInterval = setInterval(function() {
+                slideAction();
+            }, slideTimer);
+        
+            $('.slide').hover(
+        
+                function() {
+                    clearInterval(slideInterval);
+                },
+        
+                function() {
+                    slideInterval = setInterval(function() {
+                        slideAction();
+                    }, slideTimer);
+                }
+        
+            );
+        
+            $('#detail .links a').click(function() {
+        
+                // sendEvent('訊息按鈕-' + func.getParameterByName('id'), '點選', '最新訊息-' + $('#detail .box-title .title').text());
+        
+            });
+        
+            $('#detail .btn-active').click(function() {
+        
+                $('html, body').animate({scrollTop: $('#detail .box-content .rule-info .rule-image').offset().top - 58 + 80}, 2000);
+                sendEvent('分頁_' + gaMark +'_立即抽獎', '點選分頁_' + gaMark +'_立即抽獎', 'CSV');
+        
+            });
+        
+            $('#detail .btn-fb').click(function() {
+        
+                sendEvent('分頁_' + gaMark +'_分享', '點選分頁_' + gaMark +'_分享', 'CSV');
+        
+                FB.ui({
+                    method: 'feed',
+                    link: 'https://' + proj.domain + 'barbeer/CSV/2017/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv17&v=20170712',
+                    picture: 'https://' + proj.domain + 'barbeer/CSV/2017/images/item/' + detailID + '/metaimg.jpg?v=20170712',
+                    name: shareTitle,
+                    description: shareDescription
+                }, function(response) {
+                    if (response && !response.error_message) {
+                        alert('分享成功，請進行Step3留言，就有機會中大獎！');
+                        sendEvent('分頁_' + gaMark +'_分享done', '點選分頁_' + gaMark +'_分享done', 'CSV');
+                    }
+                });
+        
+            });
+        
+            $('#detail .back').click(function(){
+        
+                sendEvent('分頁_' + gaMark +'_回首頁', '點選分頁_' + gaMark +'_回首頁', 'CSV');
+        
+            });
+        
+            $('#detail .box-content .links a').click(function(){
+        
+                if ( $(this).attr('class').match('prev') ) {
+                    sendEvent('分頁_' + gaMark +'_上一篇', '點選分頁_' + gaMark +'_上一篇', 'CSV');
+                } else {
+                    sendEvent('分頁_' + gaMark +'_下一篇', '點選分頁_' + gaMark +'_下一篇', 'CSV');
+                }		
+        
+            });
+        }
+
+    function openPopup(){
+
+
+
+
+    } 
+    function endList() {
+        $('.natural').css({'left': ($('.box-top-inner').width() - $('.natural').width()) / 2});
+        if ( $(window).height() <= 917 ) {
+            $('.title').css({'top': '25%'});
+        } else {
+            $('.title').css({'top': 200});
+        }
+        $('.title').css({'left': ($('.box-top-inner').width() - $('.title').width()) / 2});
+        $('.caption1').css({'width': $('.caption1').height() * 3.46, 'left': ($('.box-top-inner').width() - ($('.caption1').height() * 3.46)) / 2});
+        $('.caption2').css({'left': ($('.box-top-inner').width() - $('.caption2').width()) / 2});
+        if ( $(window).height() <= 917 ) {
+            $('.desc,.desc2').css({'top': $('.natural').position().top + $('.natural').height() + (40 * ($(window).height() / 917) * 0.25)});
+        } else {
+            $('.desc,.desc2').css({'top': $('.natural').position().top + $('.natural').height() + 40});
+        }
+    }
+
+
+
     $(window).resize(function(){
         
 
