@@ -158,10 +158,10 @@ $(document).ready(function() {
             var item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 1) +'" style="left: ' + Math.floor((Math.random() * 80) + 0) + '%;"></div>';
             $('.fixed_bg .' + direction + ' .fly-bubble').append(item);
             BGflyBubbleEnd(direction, num);
-        }, Math.floor((Math.random() * 300) + 500));
+        }, Math.floor((Math.random() * 500) + 500));
         setTimeout(function(){
             BGflyBubble(direction, num+=1);
-        }, Math.floor((Math.random() * 300) + 500));
+        }, Math.floor((Math.random() * 500) + 500));
     }
     function BGflyBubbleEnd(direction, num) {
         setTimeout(function(){
