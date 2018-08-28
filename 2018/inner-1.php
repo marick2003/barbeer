@@ -33,6 +33,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <!-- <script type="text/javascript" src="../../../js/libs/swipe.js"></script> -->
+<script src="js/tw-city-selector.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 
 
@@ -47,12 +48,44 @@
                         
             </div>
             <div class='container'>
-                
-            
+				
+				<div class="form">
+					<div class="startform">
+						<input class="name form_style" type="text" placeholder="">
+						<input class="tel form_style" type="tel" placeholder="" maxlength="10">
+						<input class="email form_style" type="email" placeholder="">
+						<div class="my-selector-c">
+							<div>
+								<select class="county form_style"></select>
+							</div>
+							<div>
+								<select class="district form_style"></select>
+							</div>						
+						</div>
+						<input class="address form_style" type="text" placeholder="">
 
-                <div class="close_btn change_btn">
-                    <img src="images/index/close_btn.png" alt="">
-                </div>
+						<div class="send_btn">
+							<img src="images/index/send_form.png" alt="">
+						</div>
+					
+
+					</div>
+					<div class="overform">
+						<div class="content">
+							<div class="title">資料已成功送出!</div>
+							<span>中獎名單將於2018/00/00於活動網站公布</span>
+						</div>
+						<div class="more_btn">
+							<img src="images/index/more_btn.png" alt="">
+						</div>
+					</div>
+					<div class="close_btn change_btn">
+							<img src="images/index/close_btn.png" alt="">
+					</div>
+				</div>
+
+				
+                
             </div>
                 
     </div>
@@ -73,16 +106,13 @@
 		'targetType':'usual'
 		});
     </script> -->
-    
-
-
-    
 	<div id="wrap">
 		<div id="wrap2">
 			<?php
 			//	include('../../../include/header.php');
 			?>
 			<div id="main" class='detail'>
+				
 				<div class="inner">
 					<div id="detail" class="box">
 						<div class="box-title">
@@ -156,6 +186,14 @@
 	}(document, 'script', 'facebook-jssdk'));</script> -->
 
 	<script>
+
+		new TwCitySelector({
+			el: ".my-selector-c",
+			elCounty: ".county", // 在 el 裡查找 dom
+			elDistrict: ".district" // 在 el 裡查找 dom
+		
+		});
+
 		var tag = document.createElement('script');
 
 		tag.src = "https://www.youtube.com/iframe_api";
