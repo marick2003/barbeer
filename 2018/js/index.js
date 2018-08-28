@@ -3,11 +3,12 @@ var listAnimateIsFin = false,
     loadingInterval,
     scrolltop,
     windowH,
+    first_srcoll,
     windowW;
     
 
 $(document).ready(function() {
-    
+    first_srcoll=false;
     if ($('#list').length == 1) {
 		loadingInterval = setInterval(function(){
 			if ( $('html.jf-active').length == 1 ) {
@@ -22,16 +23,19 @@ $(document).ready(function() {
 	} else if ($('#detail').length == 1) {
 		initDetail();
 		
-	}
+	}else{
+
+        initDetail();
+    }
     $(window).scroll(function() {
 			
         scrolltop=$(window).scrollTop();
-        if(scrolltop>$(".box-content,.detail .inner").offset().top-300 && scrolltop<$(".box-content,.detail .inner").height()){
+        if(scrolltop>$(".box-content").offset().top-300 && scrolltop<$(".box-content").height()){
 
             $(".fixed_bg .bg_beer").css({"position":"fixed"})
-        }else if(scrolltop>$(".box-content,.detail .inner").height()-70){
+        }else if(scrolltop>$(".box-content").height()-70){
             $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "20px","top":"auto"})
-        }else if(scrolltop<$(".box-content,.detail .inner").offset().top+350){
+        }else if(scrolltop<$(".box-content").offset().top+350){
             $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "auto","top":"300px"})
         }
 
