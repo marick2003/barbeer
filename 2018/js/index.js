@@ -14,7 +14,7 @@ $(document).ready(function() {
 			if ( $('html.jf-active').length == 1 ) {
 				clearInterval(loadingInterval);
 				initList();
-				//listActive(); 
+				listActive(); 
 				
             }
             clearInterval(loadingInterval);
@@ -364,6 +364,31 @@ $(document).ready(function() {
 
 
     } 
+
+    function listActive() {
+        $('.godown').click(function() {
+    
+            $('html, body').animate({scrollTop: $('.box-content').offset().top - 58}, 1000);
+    
+        });
+    
+        $('.group-content li').click(function(){
+    
+            switch ($(this).index()) {
+                case 0:
+                    var gaName = '甘樂';
+                    break;
+                case 1:
+                    var gaName = '苑里';
+                    break;
+                case 2:
+                    var gaName = '八穀';
+                    break;
+            }		
+            sendEvent('首頁_' + gaName, '點選首頁_' + gaName, 'CSV');
+    
+        });
+    }
     function endList() {
         $('.natural').css({'left': ($('.box-top-inner').width() - $('.natural').width()) / 2});
         if ( $(window).height() <= 917 ) {
