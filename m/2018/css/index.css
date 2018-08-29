@@ -940,7 +940,7 @@
 	position: absolute;
 	top: -71px;
 	left: -1px;
-	width: 166px;
+	width: 280px;
 	height: 48px;
 	color: #6b6b6b;
 	font-size: 13px;
@@ -1195,7 +1195,7 @@
 	padding-bottom: 20px;
 }
 #main.detail:before {
-	content: '';
+	/* content: '';
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -1208,7 +1208,7 @@
 	-ms-animation: detail-bg linear 3s infinite;
 	-o-animation: detail-bg linear 3s infinite;
 	animation: detail-bg linear 3s infinite;
-	overflow: hidden;
+	overflow: hidden; */
 }
 @-webkit-keyframes detail-bg {
 	0%   { background-position: 0 0; }
