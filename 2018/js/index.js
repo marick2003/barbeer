@@ -145,8 +145,10 @@ $(document).ready(function() {
             $("#list .box-top-inner.shadow").fadeOut();
             $('#list .box-title .bg .bg3').css({'opacity': 1});  
             $("#list .desc,#list .arrow").fadeOut();
-            $("#list .beer img,.caption1,.caption2,.natural,#list .title").addClass("filter_y");
-            $("#list .step2").fadeIn();
+            $("#list .beer img,.caption1,.caption2,.natural,#list .title").delay(500).addClass("filter_y");
+            $("#list .step2 ").fadeIn();
+            $('.desc2 .line').eq(0).delay(1500).animate({'opacity': 1}, 450);
+            $('.desc2 .line').eq(1).delay(1800).animate({'opacity': 1}, 450);
             $("#list .box-top-inner .godown").css({'background-position': '0px -35px'}); 
             $('.bg2').addClass('animate2'); }, 7000);
             
