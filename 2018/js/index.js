@@ -30,12 +30,13 @@ $(document).ready(function() {
     $(window).scroll(function() {
 			
         scrolltop=$(window).scrollTop();
-        if(scrolltop>$(".box-content").offset().top-300 && scrolltop<$(".box-content").height()){
+        console.log(scrolltop+"::::"+$(".box-content").offset().top);
+        if(scrolltop>=$(".box-content").offset().top-126 && scrolltop<$(".box-content").height()){
 
-            $(".fixed_bg .bg_beer").css({"position":"fixed"})
+            $(".fixed_bg .bg_beer").css({"position":"fixed","top":"300px"})
         }else if(scrolltop>$(".box-content").height()-70){
             $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "20px","top":"auto"})
-        }else if(scrolltop<$(".box-content").offset().top+350){
+        }else if(scrolltop<$(".box-content").offset().top+126){
             $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "auto","top":"300px"})
         }
 
@@ -47,7 +48,7 @@ $(document).ready(function() {
     function initList() {
         $('#video').YTPlayer({
             fitToBackground: true,
-            videoId: 'LSmgKRx5pBo'
+            videoId: 'cARq74PCUqY'
         });
     // func.setCookie('productsHash', '', 1);
     
@@ -136,7 +137,7 @@ $(document).ready(function() {
         listAnimateTimeout[9] = setTimeout(function() { $('.desc .line').eq(2).animate({'opacity': 1}, 450); }, 4600);
         listAnimateTimeout[10] = setTimeout(function() { $('.desc .line').eq(3).animate({'opacity': 1}, 450); }, 4900);
         listAnimateTimeout[11] = setTimeout(function() { $('.godown').animate({'opacity': 1}, 450);
-        
+          $(".ytplayer-container").css({"top": -$(".box-top-inner").height()/3});
          }, 5000);
         listAnimateTimeout[12] = setTimeout(function() {
             $("#list .box-top-inner.shadow").fadeOut();
@@ -186,7 +187,7 @@ $(document).ready(function() {
         }, 1700);
     }
     function initDetail() {
-
+      
         /* transition
         ----------------------------------------*/
         BGflyBubble('toleft', 1);
@@ -336,6 +337,13 @@ $(document).ready(function() {
                 closePopup();
             
             });
+           
+            $(".check_btn").click(function(){
+
+                $( this ).toggleClass( "check" );
+               
+            
+            });
             $(".send_btn").click(function(){
 
                 $(".startform").fadeOut();
@@ -348,10 +356,15 @@ $(document).ready(function() {
 
     function openPopup(){
 
-	    $("html,body").css({'overflow' : 'hidden'});
-				$("#overlay,#popup").fadeIn(function(){
-					  
-				});
+        $(".check_btn").removeClass("check");
+        $(".startform").css({'display' : 'block'});
+        $(".overform").css({'display' : 'none'});
+        $(".form").removeClass("over");
+        $("html,body").css({'overflow' : 'hidden'});
+            
+            $("#overlay,#popup").fadeIn(function(){
+                      
+        });
 
 
     } 
@@ -421,4 +434,9 @@ $(document).ready(function() {
                 endList();
             }
         }
+
+
+        $(".ytplayer-container").css({"top": -$(".box-top-inner").height()/3});
+
+
     });

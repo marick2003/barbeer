@@ -408,8 +408,44 @@ function initDetail() {
 
 	});
 
+	$(".fb_btn").click(function(){
+
+		openPopup();
+	
+	});
+	$(".close_btn").click(function(){
+
+		closePopup();
+	
+	});
+	$(".send_btn").click(function(){
+
+		$(".startform").fadeOut();
+		$(".form").delay( 500 ).addClass("over");
+		$(".overform").delay( 1000 ).fadeIn();
+		
+	
+	});
 }
 
+function openPopup(){
+
+$("html,body").css({'overflow' : 'hidden'});
+		$("#overlay,#popup").fadeIn(function(){
+			  
+		});
+
+
+} 
+function closePopup(){
+
+$("html,body").css({'overflow' : ''});
+$("#overlay,#popup").fadeOut(function(){
+
+});
+
+
+} 
 $(window).resize(function(){
 	// if ($('#list').length == 1) {
 	// 	if ( !listAnimateIsFin ) {

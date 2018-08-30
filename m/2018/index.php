@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=375, initial-scale=1.0">
+    <meta name="viewport" id="viewport-meta" content="width=375 ,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Barbeer</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -96,7 +96,35 @@
 								<div class="bg2"></div>
                                 <div class="bg1"></div>
                                 <div class="bg3">
-                                   
+									  <div class="bg3_item">
+										  <img src="images/index/mobile_750x1112_1.jpg" alt="">
+										
+									  </div>
+									  <div class="bg3_item">
+										 
+										  <img src="images/index/mobile_750x1112_2.jpg" alt="">
+										 
+									  </div>
+									  <div class="bg3_item">
+										
+										  <img src="images/index/mobile_750x1112_3.jpg" alt="">
+										 
+									  </div>
+									  <div class="bg3_item">
+										 
+										  <img src="images/index/mobile_750x1112_4.jpg" alt="">
+										  
+									  </div>
+									  <div class="bg3_item">
+										 
+										  <img src="images/index/mobile_750x1112_5.jpg" alt="">
+										
+									  </div>
+									  <div class="bg3_item">
+										 
+										  <img src="images/index/mobile_750x1112_6.jpg" alt="">
+									  </div>
+									  
                                 </div>
 							</div>
 						</div>

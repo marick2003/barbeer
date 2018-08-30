@@ -344,57 +344,57 @@ function initDetail() {
 /* banner 滑動
 ----------------------------------------*/
 
-	var swipeLength = $('.swipe-wrap > div').length;
+	// var swipeLength = $('.swipe-wrap > div').length;
 
-	var elem = document.getElementById('slide-swipe');
-	window.mySwipe = Swipe(elem, {
-		// startSlide: 0,
-		auto: 3000,
-		continuous: true,
-		// disableScroll: true,
-		// stopPropagation: true,
-		callback: function(index, element) {
-			if (swipeLength > 1) {
-				var i = swipeDots.length;
-				if (i == 2) {
-					$('#swipe-dots .current')
-						.removeClass('current')
-						.siblings()
-						.addClass('current');
-				} else {
-					while(i--) {
-						swipeDots[i].className = '';
-					}
-					swipeDots[index].className = 'current';
-				}
-			}
-		},
-		transitionEnd: function(index, element) {}
-	});
+	// var elem = document.getElementById('slide-swipe');
+	// window.mySwipe = Swipe(elem, {
+	// 	// startSlide: 0,
+	// 	auto: 3000,
+	// 	continuous: true,
+	// 	// disableScroll: true,
+	// 	// stopPropagation: true,
+	// 	callback: function(index, element) {
+	// 		if (swipeLength > 1) {
+	// 			var i = swipeDots.length;
+	// 			if (i == 2) {
+	// 				$('#swipe-dots .current')
+	// 					.removeClass('current')
+	// 					.siblings()
+	// 					.addClass('current');
+	// 			} else {
+	// 				while(i--) {
+	// 					swipeDots[i].className = '';
+	// 				}
+	// 				swipeDots[index].className = 'current';
+	// 			}
+	// 		}
+	// 	},
+	// 	transitionEnd: function(index, element) {}
+	// });
 
-	if (swipeLength > 1) {
+	// if (swipeLength > 1) {
 
-		for (i = 0; i < swipeLength; i++) {
-			var template = $('<li></li>');
-			if (i == 0) template.addClass('current');
-			template.appendTo('#swipe-dots');
-		}
+	// 	for (i = 0; i < swipeLength; i++) {
+	// 		var template = $('<li></li>');
+	// 		if (i == 0) template.addClass('current');
+	// 		template.appendTo('#swipe-dots');
+	// 	}
 
-		var swipeDots = document.getElementById('swipe-dots').getElementsByTagName('li');
+	// 	var swipeDots = document.getElementById('swipe-dots').getElementsByTagName('li');
 
-	} else {
+	// } else {
 
-		$('.slide').css('margin-bottom', 20);
+	// 	$('.slide').css('margin-bottom', 20);
 
-	}
+	// }
 
-	$('.slide-nav .prev').click(function() {
-		mySwipe.prev();
-	});
+	// $('.slide-nav .prev').click(function() {
+	// 	mySwipe.prev();
+	// });
 
-	$('.slide-nav .next').click(function() {
-		mySwipe.next();
-	});
+	// $('.slide-nav .next').click(function() {
+	// 	mySwipe.next();
+	// });
 
 	$('#detail .links a').click(function() {
 
@@ -417,8 +417,8 @@ function initDetail() {
 
 		FB.ui({
 			method: 'feed',
-			link: 'https://' + proj.domain + 'barbeer/CSV/2017/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv17',
-			picture: 'https://' + proj.domain + 'barbeer/CSV/2017/images/item/' + detailID + '/metaimg.jpg?v=20170712',
+			link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv17',
+			picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg?v=20170712',
 			name: shareTitle,
 			description: shareDescription
 		}, function(response) {
@@ -445,9 +445,53 @@ function initDetail() {
 		}		
 
 	});
+	$(".fb_btn").click(function(){
+
+		openPopup();
+	
+	});
+	$(".close_btn").click(function(){
+
+		closePopup();
+	
+	});
+	$(".check_btn").click(function(){
+
+		$( this ).toggleClass( "check" );
+	
+	});
+	$(".send_btn").click(function(){
+
+		$(".startform").fadeOut();
+		$(".form").delay( 500 ).addClass("over");
+		$(".overform").delay( 1000 ).fadeIn();
+		
+	
+	});
 
 }
+function openPopup(){
+	$(".check_btn").removeClass("check");
+	$(".startform").css({'display' : 'block'});
+	$(".overform").css({'display' : 'none'});
+	$(".form").removeClass("over");
+	$("html,body").css({'overflow' : 'hidden'});
+		
+		$("#overlay,#popup").fadeIn(function(){
+				  
+	});
 
+
+} 
+function closePopup(){
+
+	$("html,body").css({'overflow' : ''});
+	$("#overlay,#popup").fadeOut(function(){
+	
+	});
+
+
+} 
 $(window).resize(function(){
 	// if ($('#list').length == 1) {
 	// 	if ( !listAnimateIsFin ) {

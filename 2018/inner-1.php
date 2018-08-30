@@ -63,7 +63,7 @@
 							</div>						
 						</div>
 						<input class="address form_style" type="text" placeholder="">
-
+						<div class="check_btn"></div>
 						<div class="send_btn">
 							<img src="images/index/send_form.png" alt="">
 						</div>
