@@ -97,32 +97,34 @@
                                 <div class="bg1"></div>
                                 <div class="bg3">
 									  <div class="bg3_item">
-										  <img src="images/index/mobile_750x1112_1.jpg" alt="">
-										
+										  <div class="photo">
+										  	<img src="images/index/mobile_750x1112_1.jpg" alt="">
+										  </div>
 									  </div>
 									  <div class="bg3_item">
-										 
-										  <img src="images/index/mobile_750x1112_2.jpg" alt="">
-										 
+									  	  <div class="photo">
+										  		<img src="images/index/mobile_750x1112_2.jpg" alt="">
+										  </div>
 									  </div>
 									  <div class="bg3_item">
-										
-										  <img src="images/index/mobile_750x1112_3.jpg" alt="">
-										 
+									  		<div class="photo">
+										  		<img src="images/index/mobile_750x1112_3.jpg" alt="">
+										  </div>
 									  </div>
 									  <div class="bg3_item">
-										 
-										  <img src="images/index/mobile_750x1112_4.jpg" alt="">
-										  
+									  		<div class="photo">
+										  		<img src="images/index/mobile_750x1112_4.jpg" alt="">
+										  </div>
 									  </div>
 									  <div class="bg3_item">
-										 
-										  <img src="images/index/mobile_750x1112_5.jpg" alt="">
-										
+									  		<div class="photo">
+										  		<img src="images/index/mobile_750x1112_5.jpg" alt="">
+										  </div>
 									  </div>
 									  <div class="bg3_item">
-										 
-										  <img src="images/index/mobile_750x1112_6.jpg" alt="">
+									  		<div class="photo">
+										  		<img src="images/index/mobile_750x1112_6.jpg" alt="">
+										  </div>
 									  </div>
 									  
                                 </div>

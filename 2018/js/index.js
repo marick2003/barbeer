@@ -8,6 +8,7 @@ var listAnimateIsFin = false,
     
 
 $(document).ready(function() {
+
     first_srcoll=false;
     if ($('#list').length == 1) {
 		loadingInterval = setInterval(function(){
@@ -140,6 +141,7 @@ $(document).ready(function() {
           $(".ytplayer-container").css({"top": -$(".box-top-inner").height()/3});
          }, 5000);
         listAnimateTimeout[12] = setTimeout(function() {
+            
             $("#list .box-top-inner.shadow").fadeOut();
             $('#list .box-title .bg .bg3').css({'opacity': 1});  
             $("#list .desc,#list .arrow").fadeOut();

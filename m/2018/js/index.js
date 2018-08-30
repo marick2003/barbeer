@@ -3,8 +3,34 @@ var listAnimateIsFin = false,
     loadingInterval,
     gaFlag = [];
 	// windowDirection;
-	
+var fadeInOut;	
 $(document).ready(function() {
+	   fadeInOut = function ($element) {
+		   console.log("asas");
+		var $children = $element.children(),
+			current = 0,
+			time = 10000,
+			speed = 'opacity 3s';
+	
+		$children.css({ transition: speed }).eq(current).css({ opacity: '1' });
+		$children.eq(current).addClass("set");
+				  
+		setInterval(function () {
+
+			$children.eq(current).css({ opacity: '0' });
+			current = current === $children.length - 1 ? 0 : current += 1;
+			current2 = current + 1;
+			current2 = current2 === $children.length  ? 0 : current2;
+			$children.eq(current2).removeClass("set");
+			
+			current3 = current2 + 1;
+			current3 = current3 === $children.length  ? 0 : current3;
+			$children.eq(current3).removeClass("set");
+						
+			$children.eq(current).addClass("set");
+			$children.eq(current).css({ opacity: '1' });
+		}, time);
+	};
 	var mySwiper = new Swiper ('.swiper-container', {
 		direction: 'horizontal',
 		loop: true,
@@ -122,6 +148,7 @@ function startList() {
 	listAnimateTimeout[10] = setTimeout(function() { $('.desc .line').eq(4).animate({'opacity': 1}, 450); }, 5200);
 	listAnimateTimeout[11] = setTimeout(function() { $('.godown').animate({'opacity': 1}, 450); }, 5300);
 	listAnimateTimeout[12] = setTimeout(function() {
+		fadeInOut($('.bg3'));
 		$("#list .box-top-inner.shadow").fadeOut();
 		$('#list .box-title .bg .bg3').css({'opacity': 1});  
 		$("#list .desc,#list .arrow").fadeOut();
@@ -491,7 +518,11 @@ function closePopup(){
 	});
 
 
-} 
+}
+
+
+
+
 $(window).resize(function(){
 	// if ($('#list').length == 1) {
 	// 	if ( !listAnimateIsFin ) {
