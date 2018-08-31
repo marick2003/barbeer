@@ -161,6 +161,21 @@ fbq('track', 'PageView');
 						</div>
 					</div>
 				</div>
+				<div class="bg">	
+
+                                <div class="fixed_bg fix_bg">	
+                                    <div class="bg_beer toleft">
+                                        <div class='fly-bubble'>
+                                            
+                                        </div>
+                                       
+                                    </div>
+                                    <!-- <div class="bg_beer toright">
+                                        <div class='fly-bubble'></div>
+                                       
+                                    </div> -->
+								</div>
+                 </div>
 			</div>
 			<?php
 				//include('../../../include/footer.php');

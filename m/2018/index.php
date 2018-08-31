@@ -229,7 +229,7 @@
 							    </div>
 							</div>
 							<div class="bg">
-
+								<div>
                                 <div class="bg_item">
                                     <img src="images/index/bg-item01.png" alt="">
                                 </div>
@@ -242,13 +242,15 @@
                                         <div class='fly-bubble'>
                                             
                                         </div>
-                                        <img src="images/index/bg_beer.png" alt="">
+                                       
                                     </div>
-                                    <div class="bg_beer toright">
+                                    <!-- <div class="bg_beer toright">
                                         <div class='fly-bubble'></div>
-                                        <img src="images/index/bg_beer2.png" alt="">
-                                    </div>
-                                </div>
+                                       
+                                    </div> -->
+								</div>
+								
+								</div>
 
                             </div>
 						</div>
