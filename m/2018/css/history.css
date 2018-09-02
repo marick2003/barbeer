@@ -21,7 +21,8 @@
 
 #history-detail .content .subTitle{
 
-    font-size: 20px;
+    font-size: 18px;
+	font-weight: 600;
     
 }
 #history-detail .content .line{
@@ -33,15 +34,16 @@
 }
 #history-detail .content .text{
 
-    font-size: 16px;
-    line-height: 25px;
+    color: #000000;
+	font-size: 12px;
+    line-height: 20px;
 }
 .seemore{
     position: relative;
     width: 135px;
     height: 57px;
     color: #6b6b6b;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 57px;
     text-indent: 35px;

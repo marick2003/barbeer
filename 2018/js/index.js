@@ -34,11 +34,11 @@ $(document).ready(function() {
         console.log(scrolltop+"::::"+$(".box-content").offset().top);
         if(scrolltop>=$(".box-content").offset().top-126 && scrolltop<$(".box-content").height()){
 
-            $(".fixed_bg .bg_beer").css({"position":"fixed","top":"300px"})
+            $(".fixed_bg .bg_beer").css({"position":"fixed","top":"340px"})
         }else if(scrolltop>$(".box-content").height()-70){
             $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "20px","top":"auto"})
-        }else if(scrolltop<$(".box-content").offset().top+126){
-            $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "auto","top":"300px"})
+        }else if(scrolltop<=740){
+            $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "auto","top":"340px"})
         }
 
     });

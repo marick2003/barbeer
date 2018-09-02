@@ -115,11 +115,11 @@ function BGflyBubble(direction, num) {
 	setTimeout(function(){
 		var item ;
 		if( num%2==0){
-			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="right: ' + Math.floor((Math.random() * 100) + 0) + '%;"></div>';
+			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="right: ' + Math.floor((Math.random() * 50) + 0) + '%;"></div>';
 
 		}else{
 
-			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="left: ' + Math.floor((Math.random() * 100) + 0) + '%;"></div>';
+			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="left: ' + Math.floor((Math.random() * 50) + 0) + '%;"></div>';
 		}
 		$('.fixed_bg .' + direction + ' .fly-bubble').append(item);
 		BGflyBubbleEnd(direction, num);
