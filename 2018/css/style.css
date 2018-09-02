@@ -946,7 +946,19 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
     /*IE*/
     filter:FlipV;
 }
-
+#article a {
+    text-decoration: none;
+    position: relative;
+}
+#article a:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    border-width: 0px 0px 1px;
+    border-style: solid;
+}
 
 
 #detail {
@@ -1144,12 +1156,13 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 	}
 	#article .subTitle {
 		font-size: 18px;
+		font-weight: 700;
 		color: #000;
 	}
 	
 	#article a {
 		color: #262626;
-		text-decoration: underline;
+		/* text-decoration: underline; */
 	}
 	#article img {
 		margin: 20px 0 20px -40px;

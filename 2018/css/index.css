@@ -795,6 +795,19 @@
 
 	z-index: 3;
 }
+#article a {
+    text-decoration: none;
+    position: relative;
+}
+#article a:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    border-width: 0px 0px 1px;
+    border-style: solid;
+}
 
 #detail {
 /*	padding: 60px;*/

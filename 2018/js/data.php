@@ -32,15 +32,15 @@
 							<br>
 							<img src="images/item/1/img02.jpg"><br>
                             <br>
-                            <img src="images/item/1/img02.jpg"><br>
-                            <img src="images/item/1/img02.jpg"><br>
+                            <img src="images/item/1/img03.jpg"><br>
+                            <img src="images/item/1/img04.jpg"><br>
                             <br>
 							<span class="subTitle">讓部落被看見，一個人闖不如一群人做</span><br>
 							<br>
 							因為很早就開始跟著爸爸推廣部落生態，大學時一邊讀書、一邊回部落經營民宿做生態導覽，大頭哥不斷在思索部落的可能性，除了當地生態體驗，是否還有其他方式，可以讓更多來到茂林的遊客，把這份體驗帶走？ 2006 年創立芭特芙萊烘焙坊，在這之前他其實沒有相關的烘焙經驗，這份決定背後，是一股渴望連結部落的使命感，「因為麵包不會被設限，可以結合樹豆、紅藜、刺蔥等部落的產品，我希望可以用麵包結合部落的農產品，然後帶著年輕人一起做。」重零開始學習，也帶領部落裡的大夥兒一起前進。用麵包結合這塊土地的四季風味，來往遊客都能感受茂林魯凱這股熱騰騰的真誠。<br>
 							<br>
-                            <img src="images/item/1/img03.jpg"><br>
-                            <img src="images/item/1/img03.jpg"><br>
+                            <img src="images/item/1/img05.jpg"><br>
+                            <img src="images/item/1/img06.jpg"><br>
                             
 							<br>
 							<span class="subTitle">生活有各種樣貌，帶著使命去闖蕩</span><br>
@@ -49,7 +49,7 @@
 							<br>
 							提到烘焙坊未來的規劃，大頭哥自在灑脫。「如果有人要接手，那就 Take it！」芭特芙萊只是大頭哥和魯凱青年的一個起點，「我們做麵包或許贏不了吳寶春，但我們留在部落，部落的文化精神就能留下來。」今天是麵包，明天可能是料理，是什麼東西並不重要，只要能與部落共好，就是好東西。帶著對部落的使命，大頭哥步伐堅定眼神明亮，而在他身旁的年輕人，也將帶上這股能量，繼續迎風出發。<br>
 							<br>
-							<img src="images/item/1/img04.jpg">';
+							';
 	$data['1']['ruleUrl'] = 'https://goo.gl/4oJswk';
 	$data['1']['award'] = '‧藍染DIY體驗 (共40名)';
 	$data['1']['ruleImageNum'] = 2;

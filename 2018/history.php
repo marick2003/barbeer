@@ -31,7 +31,7 @@
                                 <br>
                             </div>
                             
-                            <div class="seemore">了解更多</div>
+                            <a href=""><div class="seemore">了解更多</div></a>
                             <div class="history_img history_img1">
                                 <img src="images/history/history_img1-1.png" alt="">
                                 <img src="images/history/history_img1-2.png" alt="">
@@ -51,7 +51,7 @@
                                 <br>
                             </div>
                             
-                            <div class="seemore">了解更多</div>
+                            <a href=""><div class="seemore">了解更多</div></a>
                             <div class="history_img history_img2">
                                 <img src="images/history/history_img2-1.png" alt="">
                                 <img src="images/history/history_img2-2.png" alt="">
@@ -71,7 +71,7 @@
                                 <br>
                             </div>
                             
-                            <div class="seemore">了解更多</div>
+                            <a href=""><div class="seemore">了解更多</div></a>
                             <div class="history_img history_img3">
                                 <img src="images/history/history_img3-1.png" alt="">
                                 <img src="images/history/history_img3-2.png" alt="">
