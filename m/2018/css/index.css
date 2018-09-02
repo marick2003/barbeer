@@ -1249,8 +1249,9 @@ a {
 
 #main.detail {
 	background-color: #fef787;
-	/*background-image: url(../images/index/detail-bg02.png);
-	background-size: 2px 2730px;*/
+	background-image: url(../images/index/detail-bg02.png);
+	/* background-size: 2px 2730px; */
+	background-repeat: repeat-x;
 	padding-bottom: 20px;
 }
 #main.detail:before {
