@@ -1,7 +1,7 @@
 <?
 	//include('../../../config.php');
 	include('js/data.php');
-	$id = 1;
+	$id = 2;
 
 	if (!$data[$id]['title']) {
 		header("Location:./");
@@ -64,9 +64,6 @@
 						</div>
 						<input class="address form_style" type="text" placeholder="">
 						<div class="check_btn"></div>
-						<div class="rule_btn">
-							<a href=""></a>
-						</div>
 						<div class="send_btn">
 							<img src="images/index/send_form.png" alt="">
 						</div>

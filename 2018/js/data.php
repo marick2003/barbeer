@@ -1,6 +1,6 @@
 <?php
 
-	$data['1']['title'] = 'Bar BEER 車庫精神 翻轉世代｜勇往直前的使命‧芭特芙萊';
+	$data['1']['title'] = 'Bar BEER 車庫精神 翻轉世代│ 勇往直前的使命‧芭特芙萊';
 	$data['1']['date'] = '2018/8/30';
 	$data['1']['video'] = 'Zc9EbikW0LU';
 	$data['1']['article'] = '<span class="subTitle">活動步驟說明：</span><br>
