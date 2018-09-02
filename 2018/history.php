@@ -32,8 +32,10 @@
                             </div>
                             
                             <div class="seemore">了解更多</div>
-                            <div>
-                                <img src="images/history/history_img1.png" alt="">
+                            <div class="history_img history_img1">
+                                <img src="images/history/history_img1-1.png" alt="">
+                                <img src="images/history/history_img1-2.png" alt="">
+                                <img src="images/history/history_img1-3.png" alt="">
                             </div>
                           
                         </div>
@@ -50,8 +52,10 @@
                             </div>
                             
                             <div class="seemore">了解更多</div>
-                            <div>
-                                <img src="images/history/history_img2.png" alt="">
+                            <div class="history_img history_img2">
+                                <img src="images/history/history_img2-1.png" alt="">
+                                <img src="images/history/history_img2-2.png" alt="">
+                                <img src="images/history/history_img2-3.png" alt="">
                             </div>
                             
                         </div>
@@ -68,8 +72,10 @@
                             </div>
                             
                             <div class="seemore">了解更多</div>
-                            <div>
-                                <img src="images/history/history_img3.png" alt="">
+                            <div class="history_img history_img3">
+                                <img src="images/history/history_img3-1.png" alt="">
+                                <img src="images/history/history_img3-2.png" alt="">
+                                
                             </div>
                             
                         </div>

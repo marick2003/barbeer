@@ -48,13 +48,7 @@ $(document).ready(function() {
 		// effect : 'coverflow',
 		slidesPerView: 1,
 		centeredSlides: true,
-		// coverflow: {
-		// rotate: 30,
-		// stretch: 10,
-		// depth: 60,
-		// modifier: 2,
-		// slideShadows : true
-		// }
+
 		})
 		var swindex=1;
 		mySwiper.on('slideChange', function () {
@@ -91,7 +85,7 @@ $(document).ready(function() {
 		// sendPage('/' + gaMark + '_CSV');
 	}else if($("#history-detail").length == 1){
 
-		initDetail();
+		history_initDetail();
 	}
 
 
@@ -115,11 +109,11 @@ function BGflyBubble(direction, num) {
 	setTimeout(function(){
 		var item ;
 		if( num%2==0){
-			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="right: ' + Math.floor((Math.random() * 50) + 0) + '%;"></div>';
+			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="right: ' + Math.floor((Math.random() * 100) + 0) + '%;"></div>';
 
 		}else{
 
-			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="left: ' + Math.floor((Math.random() * 50) + 0) + '%;"></div>';
+			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="left: ' + Math.floor((Math.random() * 100) + 0) + '%;"></div>';
 		}
 		$('.fixed_bg .' + direction + ' .fly-bubble').append(item);
 		BGflyBubbleEnd(direction, num);
@@ -259,6 +253,7 @@ function scroll() {
 			sendPage('/Index_CSV_' + gaName);
 		}
 	}	
+	
 }
 
 function endList() {
@@ -296,7 +291,54 @@ function flyBubbleEnd(direction, num) {
 		$('.box-top-inner .beer.' + direction + ' .fly-bubble div[data-num=' + num +']').remove();
 	}, 1000);
 }
+function history_initDetail(){
+	BGflyBubble('toleft', 1);
+		$(window).scroll(function() {
+			
+        console.log( $(window).scrollTop());
+        if( $(window).scrollTop() >=$("#history-detail .item").eq(0).offset().top){
+			$("#history-detail .item:eq(0) .history_img img").each(function(index) {  
+				
+				$(this).delay(500 * index).animate({
+					'opacity': '1',
+					'margin-top': '0px'
+				}, 500, function() {
+					
+				});
+				
+			   });  
+			
+		}
+		 if( $(window).scrollTop() >=$("#history-detail .item").eq(1).offset().top){
+			
+			$("#history-detail .item:eq(1) .history_img img").each(function(index) {  
+				
+				$(this).delay(500 * index).animate({
+					'opacity': '1',
+					'margin-top': '0px'
+				}, 500, function() {
+					
+				});
+				
+			   });  
+		}
+		 if( $(window).scrollTop() >=$("#history-detail .item").eq(2).offset().top){
 
+			$("#history-detail .item:eq(2) .history_img img").each(function(index) {  
+				
+				$(this).delay(500 * index).animate({
+					'opacity': '1',
+					'margin-top': '0px'
+				}, 500, function() {
+					
+				});
+				
+			   });  
+		}
+
+    });
+
+}
 function initDetail() {
 	BGflyBubble('toleft', 1);
 /* transition

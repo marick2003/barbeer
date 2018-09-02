@@ -26,7 +26,7 @@ $(document).ready(function() {
 		
 	}else{
 
-        initDetail();
+        history_initDetail();
     }
     $(window).scroll(function() {
 			
@@ -180,15 +180,68 @@ $(document).ready(function() {
             var item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 1) +'" style="left: ' + Math.floor((Math.random() * 80) + 0) + '%;"></div>';
             $('.fixed_bg .' + direction + ' .fly-bubble').append(item);
             BGflyBubbleEnd(direction, num);
-        }, Math.floor((Math.random() * 1500) + 200));
+        }, Math.floor((Math.random() * 1000) + 200));
         setTimeout(function(){
             BGflyBubble(direction, num+=1);
-        }, Math.floor((Math.random() *1500) + 200));
+        }, Math.floor((Math.random() *1000) + 200));
     }
     function BGflyBubbleEnd(direction, num) {
         setTimeout(function(){
             $('.fixed_bg .' + direction + ' .fly-bubble div[data-num=' + num +']').remove();
         }, 1700);
+    }
+    function history_initDetail(){
+
+        BGflyBubble('toleft', 1);
+        BGflyBubble('toright', 1);
+        $(window).scroll(function() {
+			
+            console.log( $(window).scrollTop());
+            if( $(window).scrollTop() >=$("#history-detail .item").eq(0).offset().top-200){
+                $("#history-detail .item:eq(0) .history_img img").each(function(index) {  
+                    
+                    $(this).delay(500 * index).animate({
+                        'opacity': '1',
+                        'margin-top': '0px'
+                    }, 500, function() {
+                        
+                    });
+                    
+                   });  
+                
+            }
+             if( $(window).scrollTop() >=$("#history-detail .item").eq(1).offset().top-200){
+                
+                $("#history-detail .item:eq(1) .history_img img").each(function(index) {  
+                    
+                    $(this).delay(500 * index).animate({
+                        'opacity': '1',
+                        'margin-top': '0px'
+                    }, 500, function() {
+                        
+                    });
+                    
+                   });  
+            }
+             if( $(window).scrollTop() >=$("#history-detail .item").eq(2).offset().top-200){
+    
+                $("#history-detail .item:eq(2) .history_img img").each(function(index) {  
+                    
+                    $(this).delay(500 * index).animate({
+                        'opacity': '1',
+                        'margin-top': '0px'
+                    }, 500, function() {
+                        
+                    });
+                    
+                   });  
+            }
+    
+        });
+
+
+
+
     }
     function initDetail() {
       
