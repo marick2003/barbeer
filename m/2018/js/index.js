@@ -89,7 +89,7 @@ $(document).ready(function() {
 	} else if ($('#detail').length == 1) {
 		initDetail();
 		// sendPage('/' + gaMark + '_CSV');
-	}else{
+	}else if($("#history-detail").length == 1){
 
 		initDetail();
 	}

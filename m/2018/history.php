@@ -32,7 +32,7 @@
                                 <br>
                             </div>
                             
-                            <div class="seemore">了解更多</div>
+                            <a href=""><div class="seemore">了解更多</div></a>
                             <div>
                                 <img src="images/history/history_img1.png" alt="">
                             </div>
@@ -95,5 +95,9 @@
             </div>
         </div>
     </div>
+    <?php
+		//include('../../../include/menu.php');
+		//include('../../../include/rotate.php');
+	?>  
 </body>
 </html>
