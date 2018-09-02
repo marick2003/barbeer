@@ -56,6 +56,16 @@ $(document).ready(function() {
 		// slideShadows : true
 		// }
 		})
+		var swindex=1;
+		mySwiper.on('slideChange', function () {
+			console.log(this.activeIndex);
+			$(".catalog .group-content .pop").removeClass("item"+swindex);
+			swindex=this.activeIndex;
+			$(".catalog .group-content .pop").addClass("item"+swindex);
+			//$(".catalog .group-content .pop").css({"pos"})
+		  });
+
+
 	if ($('#list').length == 1) {
 		// if ( $(window).height() > $(window).width() ) {
 		// 	windowDirection = 'vertical';
@@ -79,6 +89,9 @@ $(document).ready(function() {
 	} else if ($('#detail').length == 1) {
 		initDetail();
 		// sendPage('/' + gaMark + '_CSV');
+	}else{
+
+		initDetail();
 	}
 
 

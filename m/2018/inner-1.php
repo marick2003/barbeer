@@ -10,6 +10,9 @@
 	
 	// include('../../../include/head.php');
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" id="viewport-meta" content="width=375 ,user-scalable=no">
 <meta name="description" content="<?=$data[$id]['shareDescription']?>">
