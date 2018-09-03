@@ -159,7 +159,7 @@
                                                             <a href="inner-1.php">
                                                                 <div class="pic"><img src="images/item/1/cover.jpg"></div>
                                                                 <div class="info">
-                                                                    <p class="text">用創意重新詮釋在地傳統，讓文化永續這就是「甘」之如飴、「樂」在其中的社區再造之路</p>
+                                                                    <p class="text">缺乏機會的茂林山谷，魯凱青年大頭哥如何用麵包重新為部落注入生命力，讓青年看見回家的路？</p>
                                                                 </div>
                                                             </a>
                                                         </div>
@@ -169,9 +169,9 @@
                                                             
                                                             <div class="inner">
                                                                 <a href="inner-1.php">
-                                                                    <div class="pic"><img src="images/item/1/cover.jpg"></div>
+                                                                    <div class="pic"><img src="images/item/2/cover.jpg"></div>
                                                                     <div class="info">
-                                                                        <p class="text">用創意重新詮釋在地傳統，讓文化永續這就是「甘」之如飴、「樂」在其中的社區再造之路</p>
+                                                                        <p class="text">在這個求新求快的速食時代下，看兩位男孩如何喚 回眾人記憶，翻轉老舊窗花被忽略淘汰的命運？ </p>
                                                                     </div>
                                                                 </a>
                                                             </div>
@@ -180,9 +180,9 @@
                                                             
                                                             <div class="inner">
                                                                 <a href="inner-1.php">
-                                                                    <div class="pic"><img src="images/item/1/cover.jpg"></div>
+                                                                    <div class="pic"><img src="images/item/3/cover.jpg"></div>
                                                                     <div class="info">
-                                                                        <p class="text">用創意重新詮釋在地傳統，讓文化永續這就是「甘」之如飴、「樂」在其中的社區再造之路</p>
+                                                                        <p class="text">除了被捨棄，酸澀的寶島水果還有另一種可能！？ 看果醬男孩如何翻轉非主流水果成為一罐罐寶石？ </p>
                                                                     </div>
                                                                 </a>
                                                             </div>

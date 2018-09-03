@@ -31,17 +31,19 @@ $(document).ready(function() {
 			$children.eq(current).css({ opacity: '1' });
 		}, time);
 	};
+	var rd= Math.floor((Math.random() * 3) + 1)
 	var mySwiper = new Swiper ('.swiper-container', {
 		direction: 'horizontal',
 		loop: true,
+		initialSlide:  rd,
 		// 如果需要前進後退按鈕
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		  },
-		autoplay: {
-			delay: 5000,
-		  },
+		// autoplay: {
+		// 	delay: 5000,
+		//   },
 		speed:300,
 		// 如果需要滾動條
 		//   scrollbar: '.swiper-scrollbar',
@@ -50,7 +52,8 @@ $(document).ready(function() {
 		centeredSlides: true,
 
 		})
-		var swindex=1;
+		var swindex=rd;
+		$(".catalog .group-content .pop").addClass("item"+rd);
 		mySwiper.on('slideChange', function () {
 			console.log(this.activeIndex);
 			$(".catalog .group-content .pop").removeClass("item"+swindex);
@@ -58,8 +61,12 @@ $(document).ready(function() {
 			$(".catalog .group-content .pop").addClass("item"+swindex);
 			//$(".catalog .group-content .pop").css({"pos"})
 		  });
+		  $(".swiper-button-next,.swiper-button-prev").click(function(){
 
+			mySwiper.autoplay.start();
 
+		  });
+		  
 	if ($('#list').length == 1) {
 		// if ( $(window).height() > $(window).width() ) {
 		// 	windowDirection = 'vertical';
@@ -568,7 +575,21 @@ function initDetail() {
 
 	});
 	$(".fb_btn").click(function(){
+		sendEvent('分頁_' + gaMark +'_分享', '點選分頁_' + gaMark +'_分享', 'CSV');
 
+		// FB.ui({
+		// 	method: 'feed',
+		// 	link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv18',
+		// 	picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg?v=20180903',
+		// 	name: shareTitle,
+		// 	description: shareDescription
+		// }, function(response) {
+		// 	if (response && !response.error_message) {
+		// 		openPopup();
+		// 		//alert('分享成功，請進行Step3留言，就有機會中大獎！');
+		// 		sendEvent('分頁_' + gaMark +'_分享done', '點選分頁_' + gaMark +'_分享done', 'CSV');
+		// 	}
+		// });
 		openPopup();
 	
 	});
@@ -584,14 +605,92 @@ function initDetail() {
 	});
 	$(".send_btn").click(function(){
 
-		$(".startform").fadeOut();
-		$(".form").delay( 500 ).addClass("over");
-		$(".overform").delay( 1000 ).fadeIn();
+		if(check_form()){
+                     
+			var _str="name="+$(".form .name").val()+"&phone="+$(".form .tel").val()+"&email="+$('.form .email').val()+"&address="+$(".form .county").val()+$(".form .district").val()+$('.form .address').val()+"&type="+type;
+			$.ajax({
+						type: "POST",
+						url: "../api/sendForm.php",
+						data:_str,
+						dataType: "text",
+  
+						error: function(xhr) {
+  
+						  console.log(xhr);
+				   
+					  },
+						success: function(response) {
+						
+						 console.log(response);
+						 if(response.slice(4)=='ok'){
+							$(".startform").fadeOut();
+							$(".form").delay(1000 ).addClass("over");
+							$(".overform").delay( 1500 ).fadeIn();
+
+						 }  
+						 
+					}
+				   
+			  });
+
+
+				
+			}
 		
 	
 	});
 
 }
+function check_form(){
+
+	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	var reg2 =/[a-zA-Z0-9]/g;
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	var error=[];
+
+	if($(".form .name").val()=="")
+	{
+		alert('請填寫姓名');
+		return false;
+	}else if($(".form .tel").val().length!=10)
+	{
+		 alert('請填寫正確手機格式');
+		return false;
+	}else if(!/^\d+$/.test($('.form .tel').val()) ){
+
+		alert('請填寫正確手機格式');
+		return false;
+	  
+	}else if(!re.test($('.form .email').val())){
+
+		alert('請填寫正確Email');
+		return false;
+	  
+	}else if($(".form .county").prop('selectedIndex')<=0){
+
+		alert("請選擇城市");
+		return false;
+
+	}else if($(".form .district").prop('selectedIndex')<=0){
+
+		alert("請選擇區域");
+		
+		return false;
+	}else if($('.form .address').val()=="")
+	{
+
+		 alert("請填寫地址");
+		 return false;
+	}else if(!$(".form .check_btn").hasClass("check")){
+
+		alert("請勾選同意活動辦法");
+		return false;
+	}
+
+	return true;
+}
+
+
 function openPopup(){
 	$(".check_btn").removeClass("check");
 	$(".startform").css({'display' : 'block'});

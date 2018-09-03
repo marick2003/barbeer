@@ -1,6 +1,6 @@
 <?
 	// include('../../../../config.php');
-	 include('js/data.php');
+	 include('../js/data.php');
 	$id = 1;
 
 	if (!$data[$id]['title']) {
@@ -201,7 +201,7 @@ fbq('track', 'PageView');
 
 	<script>
 
-		
+		var type = "<?php echo $id; ?>";
 		new TwCitySelector({
 			el: ".my-selector-c",
 			elCounty: ".county", // 在 el 裡查找 dom

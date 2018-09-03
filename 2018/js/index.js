@@ -356,8 +356,8 @@ $(document).ready(function() {
         
                 FB.ui({
                     method: 'feed',
-                    link: 'https://' + proj.domain + 'barbeer/CSV/2017/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv17&v=20170712',
-                    picture: 'https://' + proj.domain + 'barbeer/CSV/2017/images/item/' + detailID + '/metaimg.jpg?v=20170712',
+                    link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv17&v=20170712',
+                    picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg?v=20170712',
                     name: shareTitle,
                     description: shareDescription
                 }, function(response) {
@@ -403,14 +403,90 @@ $(document).ready(function() {
             });
             $(".send_btn").click(function(){
 
-                $(".startform").fadeOut();
-                $(".form").delay( 500 ).addClass("over");
-                $(".overform").delay( 1000 ).fadeIn();
+                if(check_form()){
+                     
+                var _str="name="+$(".form .name").val()+"&phone="+$(".form .tel").val()+"&email="+$('.form .email').val()+"&address="+$(".form .county").val()+$(".form .district").val()+$('.form .address').val()+"&type="+type;
+                $.ajax({
+                            type: "POST",
+                            url: "../api/sendForm.php",
+                            data:_str,
+                            dataType: "text",
+      
+                            error: function(xhr) {
+      
+                              console.log(xhr);
+                       
+                          },
+                            success: function(response) {
+                            
+                             console.log(response);
+                             if(response.slice(4)=='ok'){
+                                $(".startform").fadeOut();
+                                $(".form").delay(1000 ).addClass("over");
+                                $(".overform").delay( 1500 ).fadeIn();
+
+                             }  
+                             
+                        }
+                       
+                  });
+
+
+                    
+                }
                 
             
             });
         }
+        function check_form(){
 
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            var reg2 =/[a-zA-Z0-9]/g;
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            var error=[];
+    
+            if($(".form .name").val()=="")
+            {
+                alert('請填寫姓名');
+                return false;
+            }else if($(".form .tel").val().length!=10)
+            {
+                 alert('請填寫正確手機格式');
+                return false;
+            }else if(!/^\d+$/.test($('.form .tel').val()) ){
+    
+                alert('請填寫正確手機格式');
+                return false;
+              
+            }else if(!re.test($('.form .email').val())){
+    
+                alert('請填寫正確Email');
+                return false;
+              
+            }else if($(".form .county").prop('selectedIndex')<=0){
+    
+                alert("請選擇城市");
+                return false;
+    
+            }else if($(".form .district").prop('selectedIndex')<=0){
+    
+                alert("請選擇區域");
+                
+                return false;
+            }else if($('.form .address').val()=="")
+            {
+    
+                 alert("請填寫地址");
+                 return false;
+            }else if(!$(".form .check_btn").hasClass("check")){
+
+                alert("請勾選同意活動辦法");
+                return false;
+            }
+    
+            return true;
+        }
+    
     function openPopup(){
 
         $(".check_btn").removeClass("check");

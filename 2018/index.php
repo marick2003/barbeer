@@ -86,8 +86,8 @@
 									</div>
 									<div class="inner_desc">
 										<p>如果你也曾勇於翻轉現況，如果你也是不安於室的翻轉世代</p>
-										<p>如果你也認同，請用力分享以下任一支影片，不僅是你力挺這群台灣青年的熱血行動力</p>
-										<p>還有機會獲得今年 Bar BEER X 翻轉世代的限量好禮！詳情請見<span><a>活動辦法</a></span></p>
+										<p>如果你也認同，請用力<span class="red">分享以下任一支影片</span>，不僅是你<span class="red">力挺這群台灣青年的熱血行動力</span></p>
+										<p>還有機會獲得<span class="red">今年 Bar BEER X 翻轉世代的限量好禮</span>！詳情請見<span><a>活動辦法</a></span></p>
 									</div>
 
 								</div>

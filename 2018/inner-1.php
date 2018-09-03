@@ -189,7 +189,8 @@
 	}(document, 'script', 'facebook-jssdk'));</script> -->
 
 	<script>
-
+		var type = "<?php echo $id; ?>";
+		//console.log(type);
 		new TwCitySelector({
 			el: ".my-selector-c",
 			elCounty: ".county", // 在 el 裡查找 dom
