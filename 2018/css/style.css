@@ -924,14 +924,17 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 .fixed_bg .bg_beer{
 	position: absolute;
 	top: 300px;
+	
 }
 .toleft{
 
 	left: 0%;
+	transform-origin:top left;
 }
 .toright{
 
 	right: 0%;
+	transform-origin:top right;
 }
 .bg_item{
 	position: absolute;
