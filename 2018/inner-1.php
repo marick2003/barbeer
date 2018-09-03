@@ -145,8 +145,8 @@
 									} else {
 										$nextId = 1;
 									}
-									$data[$prevId]['title'] = substr($data[$prevId]['title'], 0, strpos($data[$prevId]['title'], '│ '));
-									$data[$nextId]['title'] = substr($data[$nextId]['title'], 0, strpos($data[$nextId]['title'], '│ '));
+									$data[$prevId]['title'] = substr($data[$prevId]['title'],  strpos($data[$prevId]['title'], '│ ')+3);
+									$data[$nextId]['title'] = substr($data[$nextId]['title'],  strpos($data[$nextId]['title'], '│ ')+3);
 								?>
 								<a class="prev" href="https://www.kirin.com.tw/barbeer/CSV/2018/inner-<?=$prevId?>.php">上一篇：<?=$data[$prevId]['title']?></a>
 								<a class="next" href="https://www.kirin.com.tw/barbeer/CSV/2018/inner-<?=$nextId?>.php">下一篇：<?=$data[$nextId]['title']?></a>

@@ -1,6 +1,6 @@
 <?
 	// include('../../../../config.php');
-	 include('../js/data.php');
+	 include('js/data.php');
 	$id = 1;
 
 	if (!$data[$id]['title']) {
