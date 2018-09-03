@@ -81,6 +81,9 @@ fbq('track', 'PageView');
 						</div>
 						<input class="address form_style" type="text" placeholder="">
 						<div class="check_btn"></div>
+						<div class="rule_btn">
+							<a href="https://www.kirin.com.tw/privacy.php" target="_blank"></a>
+						</div>
 						<div class="send_btn">
 							<img src="images/index/send_form.jpg" alt="">
 						</div>

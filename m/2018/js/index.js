@@ -114,20 +114,28 @@ $(document).ready(function() {
 
 function BGflyBubble(direction, num) {
 	setTimeout(function(){
+		var nums;
+		if ($('#list').length == 1) {
+			nums=100;
+		}else if($("#history-detail").length == 1){
+			nums=100;
+		}else{
+			nums=8;
+		}
 		var item ;
 		if( num%2==0){
-			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="right: ' + Math.floor((Math.random() * 100) + 0) + '%;"></div>';
+			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="right: ' + Math.floor((Math.random() * nums) + 0) + '%;"></div>';
 
 		}else{
 
-			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="left: ' + Math.floor((Math.random() * 100) + 0) + '%;"></div>';
+			item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 2) +'" style="left: ' + Math.floor((Math.random() * nums) + 0) + '%;"></div>';
 		}
 		$('.fixed_bg .' + direction + ' .fly-bubble').append(item);
 		BGflyBubbleEnd(direction, num);
-	}, Math.floor((Math.random() * 600) + 200));
+	}, Math.floor((Math.random() * 500) + 200));
 	setTimeout(function(){
 		BGflyBubble(direction, num+=1);
-	}, Math.floor((Math.random() *600) + 200));
+	}, Math.floor((Math.random() *500) + 200));
 }
 function BGflyBubbleEnd(direction, num) {
 	setTimeout(function(){
@@ -575,7 +583,7 @@ function initDetail() {
 
 	});
 	$(".fb_btn").click(function(){
-		sendEvent('分頁_' + gaMark +'_分享', '點選分頁_' + gaMark +'_分享', 'CSV');
+		//sendEvent('分頁_' + gaMark +'_分享', '點選分頁_' + gaMark +'_分享', 'CSV');
 
 		// FB.ui({
 		// 	method: 'feed',

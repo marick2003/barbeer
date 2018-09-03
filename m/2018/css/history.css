@@ -42,8 +42,8 @@
 .seemore{
     position: relative;
     margin-bottom: 20px;
-    width: 135px;
-    height: 57px;
+    width: 115px;
+    height: 55px;
     color: #6b6b6b;
     font-size: 12px;
     font-weight: 600;
@@ -51,6 +51,8 @@
     text-indent: 35px;
     border: #dedede 1px solid;
     background: url(../images/index/links-arrow.png) 16px center #ffffff no-repeat;
+    background-size: 5%;
+    background-position: 20px;
 }
 .history_img img{
     position: relative;
