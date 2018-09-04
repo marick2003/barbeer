@@ -578,10 +578,9 @@ $(document).ready(function() {
 
     });
  function change_beer(){
-
-    if($(window).width()>=1620){
-        $(".fixed_bg .bg_beer").css({"transform":"scale("+$(window).width()/1920+")"});
+   if($(window).width()>=1620){
+        $(".fixed_bg .bg_beer").css({"transform":"scale("+$(window).width()/2000+")"});
     }else{
-        $(".fixed_bg .bg_beer").css({"transform":"scale("+$(window).width()/2200+")"});
+        $(".fixed_bg .bg_beer").css({"transform":"scale("+$(window).width()/2600+")"});
     }
  }
