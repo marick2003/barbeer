@@ -68,11 +68,12 @@ $(document).ready(function() {
 		  });
 		  
 	if ($('#list').length == 1) {
-		// if ( $(window).height() > $(window).width() ) {
-		// 	windowDirection = 'vertical';
-		// } else {
-		// 	windowDirection = 'horizontal';
-		// }
+		sendPage('/index'); 
+		if ( $(window).height() > $(window).width() ) {
+			windowDirection = 'vertical';
+		} else {
+			windowDirection = 'horizontal';
+		}
 		loadingInterval = setInterval(function(){
 			//console.log($('html.jf-active').length)
 			//if ( $('html.jf-active').length == 1 ) {
@@ -88,6 +89,23 @@ $(document).ready(function() {
 			//}
 		}, 300);
 	} else if ($('#detail').length == 1) {
+		if(func.getParameterByName("utm_source")=="facebook"){
+            
+            sendEvent( gaMark +'_FB_回訪', '點選_' + gaMark +'_FB_回訪', 'KOL');
+
+        }
+        switch(type){
+
+            case "1":
+                sendPage('/B_story'); 
+            break;
+            case "2":
+                sendPage('/L_story'); 
+            break;
+            case "3":
+                sendPage('/T_story'); 
+            break;
+        }
 		initDetail();
 		// sendPage('/' + gaMark + '_CSV');
 	}else if($("#history-detail").length == 1){
@@ -217,14 +235,14 @@ function listActive() {
 	$('.group-content li .inner a').click(function(){
 		switch ($(this).parent().parent().index()) {
 			case 0:
-				var gaName = '甘樂';
-				break;
-			case 1:
-				var gaName = '苑里';
-				break;
-			case 2:
-				var gaName = '八穀';
-				break;
+			var gaName = '芭特芙萊';
+			break;
+		case 1:
+			var gaName = '老屋顏';
+			break;
+		case 2:
+			var gaName = '甜玉軒';
+			break;
 		}	
 		sendEvent('首頁_' + gaName, '點選首頁_' + gaName, 'CSV');	
 	});
