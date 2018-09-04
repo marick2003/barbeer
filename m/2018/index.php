@@ -1,19 +1,26 @@
 <?
-	// include('../../../../config.php');
-	// include('../../../include/head.php');
+	include('../../../../config.php');
+	include('../../../include/head.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" id="viewport-meta" content="width=375 ,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Barbeer</title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="從賈伯斯到披頭四，「車庫」成為孕育世界偉大創意的起點。台灣也有一群用新思維闖出新局的「返巢世代」。KIRIN Bar BEER 將以「創造共享價值」，全心投入支持行動，為擁有車庫精神的大家加油！">
+	<meta name="keywords" content="KIRIN,台灣麒麟,歡笑,Bar,bar,beer,公益,甘樂文創,苑裡掀海風,八穀農糧手工作坊,甘樂,苑里,八穀,耀就來Bar,車庫精神,閃耀啟程,返巢世代,三峽,藍染,無毒,饅頭,孝念米,免費,抽獎,林峻丞,熱血,返鄉,返鄉青年">
+
+	<meta property="og:site_name" content="台灣麒麟 KIRIN | Bar Beer 車庫精神‧翻轉世代" /> 
+	<meta property="og:title" content="台灣麒麟 KIRIN | Bar Beer 車庫精神‧翻轉世代" /> 
+	<meta property="og:description" content="從賈伯斯到披頭四，「車庫」成為孕育世界偉大創意的起點。台灣也有一群用新思維闖出新局的「返巢世代」。KIRIN Bar BEER 將以「創造共享價值」，全心投入支持行動，為擁有車庫精神的大家加油！" />
+	<meta property="og:image" content="http://www.kirin.com.tw/barbeer/CSV/2017/images/common/meta.jpg" />
+	<meta property="og:url" content="https://www.kirin.com.tw/barbeer/CSV/2017/" />
+	<meta property="fb:app_id" content="1830556680498946">
+	<title>台灣麒麟 KIRIN | Bar Beer 車庫精神‧翻轉世代</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.css">
-	<link rel="stylesheet" type="text/css" href="css/common.css">
-	
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
@@ -23,7 +30,7 @@
 
 <body id="news">
 	<?php
-		// include('../../../include/track.php');
+		include('../../../include/track.php');
 	?>
 	<!-- <script src="//cdn.doublemax.net/js/rtid.js"></script>
 	<script src="//dmp.eland-tech.com/dmpreceiver/eland_tracker.js"></script> -->
@@ -37,7 +44,7 @@
 	</script>
 	<div id="wrap">
 		<?php
-			// include('../../../include/header.php');
+			include('../../../include/header.php');
 		?>
 		<div id="wrap2">
 			<div id="main">
@@ -259,13 +266,13 @@
 				</div>
 			</div>
 			<?php
-				// include('../../../include/footer.php');
+				include('../../../include/footer.php');
 			?>
 		</div>
 	</div>
 	<?php
-		// include('../../../include/menu.php');
-		// include('../../../include/rotate.php');
+		include('../../../include/menu.php');
+		include('../../../include/rotate.php');
 	?>
 </body>
 </html>

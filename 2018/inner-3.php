@@ -1,7 +1,7 @@
 <?
 	include('../../../config.php');
 	include('js/data.php');
-	$id = 2;
+	$id = 3;
 
 	if (!$data[$id]['title']) {
 		header("Location:./");

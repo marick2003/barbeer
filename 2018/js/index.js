@@ -8,13 +8,13 @@ var listAnimateIsFin = false,
     
 
 $(document).ready(function() {
+    
     BGflyBubble('toleft', 1);
     BGflyBubble('toright', 1);
-
     change_beer();
-   
     first_srcoll=false;
     if ($('#list').length == 1) {
+        sendPage('/index'); 
 		loadingInterval = setInterval(function(){
 			if ( $('html.jf-active').length == 1 ) {
 				clearInterval(loadingInterval);
@@ -26,6 +26,25 @@ $(document).ready(function() {
 				initList();
 		}, 300);
 	} else if ($('#detail').length == 1) {
+
+        if(func.getParameterByName("utm_source")=="facebook"){
+            
+            sendEvent( gaMark +'_FB_回訪', '點選_' + gaMark +'_FB_回訪', 'KOL');
+
+        }
+        switch(type){
+
+            case "1":
+                sendPage('/B_story'); 
+            break;
+            case "2":
+                sendPage('/L_story'); 
+            break;
+            case "3":
+                sendPage('/T_story'); 
+            break;
+        }
+        
 		initDetail();
 		
 	}else{
@@ -194,30 +213,25 @@ $(document).ready(function() {
         }, 1700);
     }
     function history_initDetail(){
-
-        // BGflyBubble('toleft', 1);
-        // BGflyBubble('toright', 1);
+        $("#history-detail .item:eq(0) .history_img img").each(function(index) {  
+                    
+            $(this).delay(200 * index).animate({
+                'opacity': '1',
+                'margin-top': '0px'
+            }, 500, function() {
+                
+            });
+            
+           }); 
         $(window).scroll(function() {
 			
-            console.log( $(window).scrollTop());
-            if( $(window).scrollTop() >=$("#history-detail .item").eq(0).offset().top-200){
-                $("#history-detail .item:eq(0) .history_img img").each(function(index) {  
-                    
-                    $(this).delay(500 * index).animate({
-                        'opacity': '1',
-                        'margin-top': '0px'
-                    }, 500, function() {
-                        
-                    });
-                    
-                   });  
                 
-            }
+         
              if( $(window).scrollTop() >=$("#history-detail .item").eq(1).offset().top-200){
                 
                 $("#history-detail .item:eq(1) .history_img img").each(function(index) {  
                     
-                    $(this).delay(500 * index).animate({
+                    $(this).delay(200 * index).animate({
                         'opacity': '1',
                         'margin-top': '0px'
                     }, 500, function() {
@@ -230,7 +244,7 @@ $(document).ready(function() {
     
                 $("#history-detail .item:eq(2) .history_img img").each(function(index) {  
                     
-                    $(this).delay(500 * index).animate({
+                    $(this).delay(200 * index).animate({
                         'opacity': '1',
                         'margin-top': '0px'
                     }, 500, function() {
@@ -355,20 +369,20 @@ $(document).ready(function() {
         
             $('#detail .btn-fb').click(function() {
         
-                sendEvent('分頁_' + gaMark +'_分享', '點選分頁_' + gaMark +'_分享', 'CSV');
+                // sendEvent('分頁_' + gaMark +'_分享', '點選分頁_' + gaMark +'_分享', 'CSV');
         
-                FB.ui({
-                    method: 'feed',
-                    link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv17&v=20170712',
-                    picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg?v=20170712',
-                    name: shareTitle,
-                    description: shareDescription
-                }, function(response) {
-                    if (response && !response.error_message) {
-                        alert('分享成功，請進行Step3留言，就有機會中大獎！');
-                        sendEvent('分頁_' + gaMark +'_分享done', '點選分頁_' + gaMark +'_分享done', 'CSV');
-                    }
-                });
+                // FB.ui({
+                //     method: 'feed',
+                //     link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv17&v=20170712',
+                //     picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
+                //     name: shareTitle,
+                //     description: shareDescription
+                // }, function(response) {
+                //     if (response && !response.error_message) {
+                //         alert('分享成功，請進行Step3留言，就有機會中大獎！');
+                //         sendEvent('分頁_' + gaMark +'_分享done', '點選分頁_' + gaMark +'_分享done', 'CSV');
+                //     }
+                // });
         
             });
         
@@ -389,7 +403,20 @@ $(document).ready(function() {
             });
             $(".fb_btn").click(function(){
 
-                openPopup();
+               
+                FB.ui({
+                    method: 'feed',
+                    link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv17&v=20170712',
+                    picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
+                    name: shareTitle,
+                    description: shareDescription
+                }, function(response) {
+                    if (response && !response.error_message) {
+                      
+                        openPopup();
+                        sendEvent('KOL_' + gaMark +'_分享done', '點選KOL_' + gaMark +'_分享', 'KOL');
+                    }
+                });
             
             });
             $(".close_btn").click(function(){
@@ -401,17 +428,21 @@ $(document).ready(function() {
             $(".check_btn").click(function(){
 
                 $( this ).toggleClass( "check" );
-               
-            
+                         
+            });
+            $(".more_btn").click(function(){
+
+                sendEvent('填寫資料', '點選_填寫資料＿看其他', 'KOL');
             });
             $(".send_btn").click(function(){
 
                 if(check_form()){
-                     
+
+                sendEvent('填寫資料＿完成', '點選＿填寫資料_完成', 'KOL');
                 var _str="name="+$(".form .name").val()+"&phone="+$(".form .tel").val()+"&email="+$('.form .email').val()+"&address="+$(".form .county").val()+$(".form .district").val()+$('.form .address').val()+"&type="+type;
                 $.ajax({
                             type: "POST",
-                            url: "../api/sendForm.php",
+                            url: "./api/sendForm.php",
                             data:_str,
                             dataType: "text",
       
@@ -423,10 +454,12 @@ $(document).ready(function() {
                             success: function(response) {
                             
                              console.log(response);
-                             if(response.slice(4)=='ok'){
+                             if(response.slice(4)=='yes'){
                                 $(".startform").fadeOut();
                                 $(".form").delay(1000 ).addClass("over");
                                 $(".overform").delay( 1500 ).fadeIn();
+                                
+                                sendPage("/finish");
 
                              }  
                              
@@ -502,6 +535,8 @@ $(document).ready(function() {
                       
         });
 
+        sendPage("/personal");
+
 
     } 
     function closePopup(){
@@ -525,13 +560,13 @@ $(document).ready(function() {
     
             switch ($(this).index()) {
                 case 0:
-                    var gaName = '甘樂';
+                    var gaName = '芭特芙萊';
                     break;
                 case 1:
-                    var gaName = '苑里';
+                    var gaName = '老屋顏';
                     break;
                 case 2:
-                    var gaName = '八穀';
+                    var gaName = '甜玉軒';
                     break;
             }		
             sendEvent('首頁_' + gaName, '點選首頁_' + gaName, 'CSV');

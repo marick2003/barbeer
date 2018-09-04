@@ -1,5 +1,5 @@
 <?
-	//include('../../../config.php');
+	include('../../../config.php');
 	include('js/data.php');
 	$id = 1;
 
@@ -8,21 +8,21 @@
 		exit;
 	}
 
-	// include('../../../include/head.php');
+	include('../../../include/head.php');
 ?>
 <meta name="description" content="<?=$data[$id]['shareDescription']?>">
-<meta name="keywords" content="KIRIN,台灣麒麟,歡笑,Bar,bar,beer,公益,甘樂文創,苑裡掀海風,八穀農糧手工作坊,甘樂,苑里,八穀,耀就來Bar,車庫精神,閃耀啟程,返巢世代,三峽,藍染,無毒,饅頭,孝念米,免費,抽獎,林峻丞,熱血,返鄉,返鄉青年">
+<meta name="keywords" content="KIRIN Bar BEER,Bar, 車庫精神, 翻轉世代, 青年">
 
-<meta property="og:site_name" content="<?=$data[$id]['shareTitle']?>" /> 
-<meta property="og:title" content="<?=$data[$id]['shareTitle']?>" /> 
+<meta property="og:site_name" content="<?=$data[$id]['innerTitle']?>" /> 
+<meta property="og:title" content="<?=$data[$id]['innerTitle']?>" /> 
 <meta property="og:description" content="<?=$data[$id]['shareDescription']?>" />
-<meta property="og:image" content="https://www.kirin.com.tw/barbeer/CSV/2018/images/item/<?=$id?>/metaimg.jpg?v=20170712" />
+<meta property="og:image" content="https://www.kirin.com.tw/barbeer/CSV/2018/images/item/<?=$id?>/metaimg.jpg" />
 <meta property="og:url" content="https://www.kirin.com.tw/barbeer/CSV/2018/inner-<?=$id?>.php" />
 <meta property="fb:app_id" content="1830556680498946">
 
 <title><?=$data[$id]['title']?></title>
 <link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/common.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script>
 	var detailID = <?=$id?>,
@@ -41,7 +41,19 @@
 </head>
 
 <body id="news">
-
+	<?php
+		include('../../../include/track.php');
+	?>
+	<script src="//cdn.doublemax.net/js/rtid.js"></script>
+	<script src="//dmp.eland-tech.com/dmpreceiver/eland_tracker.js"></script>
+	<script>
+		clickforce_rtid("8269001");
+		ElandTracker.Track({'source':'CAP8269',
+		'trackType':'view',
+		'trackSubfolderDepth':3,
+		'targetType':'usual'
+		});
+	</script>
 <div id="overlay">
     <div id="popup">
             <div class="cover">
@@ -79,7 +91,10 @@
 							<span>中獎名單將於2018/00/00於活動網站公布</span>
 						</div>
 						<div class="more_btn">
-							<img src="images/index/more_btn.png" alt="">
+							<a href="">
+								<img src="images/index/more_btn.png" alt="">	
+							</a>
+							
 						</div>
 					</div>
 					<div class="close_btn change_btn">
@@ -97,7 +112,7 @@
 
 
 	<?php
-		// include('../../../include/track.php');
+		include('../../../include/track.php');
 	?>
 	<!-- <script src="//cdn.doublemax.net/js/rtid.js"></script>
 	<script src="//dmp.eland-tech.com/dmpreceiver/eland_tracker.js"></script>
@@ -112,7 +127,7 @@
 	<div id="wrap">
 		<div id="wrap2">
 			<?php
-			//	include('../../../include/header.php');
+				include('../../../include/header.php');
 			?>
 			<div id="main" class='detail'>
 				
@@ -175,7 +190,7 @@
 			
 		</div>
 		<?php
-			//include('../../../include/footer.php');
+			include('../../../include/footer.php');
 		?>
 	</div>
 
@@ -231,7 +246,7 @@
 					break;
 				case 1:
 					if ( ( prevYoutubeData[0] == -1 && prevYoutubeData[1] == 3 ) || ( prevYoutubeData[1] == 0 ) || ( player.getCurrentTime() >= 0 && player.getCurrentTime() <= 0.5 ) ) {
-						sendEvent('分頁_' + gaMark +'_影片', '點選分頁_' + gaMark +'_影片', 'CSV');
+						sendEvent('KOL_' + gaMark +'_影片', '點選KOL_' + gaMark +'_影片', 'KOL');
 					}
 					break;
 			}

@@ -1,6 +1,6 @@
 <?
-	// include('../../../../config.php');
-	 include('js/data.php');
+	 include('../../../../config.php');
+	 include('../../../../barbeer/CSV/2018/js/data.php');
 	$id = 1;
 
 	if (!$data[$id]['title']) {
@@ -8,7 +8,7 @@
 		exit;
 	}
 	
-	// include('../../../include/head.php');
+	include('../../../include/head.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,7 @@
 <title><?=$data[$id]['title']?></title>
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.css">
-<link rel="stylesheet" type="text/css" href="css/common.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <script>
 	var detailID = <?=$id?>,
@@ -111,11 +111,11 @@ fbq('track', 'PageView');
     </div>
 </div>
 	<?php
-		//include('../../../include/track.php');
+		include('../../../include/track.php');
 	?>
 	<div id="wrap">
 		<?php
-			//include('../../../include/header.php');
+			include('../../../include/header.php');
 		?>
 		<!-- <script src="//cdn.doublemax.net/js/rtid.js"></script>
 		<script src="//dmp.eland-tech.com/dmpreceiver/eland_tracker.js"></script> -->
@@ -184,13 +184,13 @@ fbq('track', 'PageView');
                  </div>
 			</div>
 			<?php
-				//include('../../../include/footer.php');
+				include('../../../include/footer.php');
 			?>
 		</div>
 	</div>
 	<?php
-		//include('../../../include/menu.php');
-		//include('../../../include/rotate.php');
+		include('../../../include/menu.php');
+		include('../../../include/rotate.php');
 	?>
 
 	<div id="fb-root"></div>

@@ -9,18 +9,18 @@ include('../../../include/head.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="description" content="2018 Bar BEER邀請你一起直擊寶島翻轉行動，為台灣車庫青年加油打氣!">
-	<meta name="keywords" content="KIRIN Bar BEER,Bar, 車庫精神, 翻轉世代, 青年">
-	<meta property="og:site_name" content="台灣麒麟 KIRIN | Bar Beer 車庫精神‧翻轉世代" /> 
-	<meta property="og:title" content="台灣麒麟 KIRIN | Bar Beer 車庫精神‧翻轉世代" /> 
-	<meta property="og:description" content="2018 Bar BEER邀請你一起直擊寶島翻轉行動，為台灣車庫青年加油打氣!" />
+	<meta name="description" content="從賈伯斯到披頭四，「車庫」成為孕育世界偉大創意的起點。台灣也有一群用新思維闖出新局的「返巢世代」。KIRIN Bar BEER 將以「創造共享價值」，全心投入支持行動，為擁有車庫精神的大家加油！">
+	<meta name="keywords" content="KIRIN,台灣麒麟,歡笑,Bar,bar,beer,公益,甘樂文創,苑裡掀海風,八穀農糧手工作坊,甘樂,苑里,八穀,耀就來Bar,車庫精神,閃耀啟程,返巢世代,三峽,藍染,無毒,饅頭,孝念米,免費,抽獎,林峻丞,熱血,返鄉,返鄉青年">
+	<meta property="og:site_name" content="台灣麒麟 KIRIN | Bar Beer 車庫精神‧返巢世代" /> 
+	<meta property="og:title" content="台灣麒麟 KIRIN | Bar Beer 車庫精神‧返巢世代" /> 
+	<meta property="og:description" content="從賈伯斯到披頭四，「車庫」成為孕育世界偉大創意的起點。台灣也有一群用新思維闖出新局的「返巢世代」。KIRIN Bar BEER 將以「創造共享價值」，全心投入支持行動，為擁有車庫精神的大家加油！" />
 	<meta property="og:image" content="http://www.kirin.com.tw/barbeer/CSV/2018/images/common/meta.jpg" />
 	<meta property="og:url" content="https://www.kirin.com.tw/barbeer/CSV/2018/" />
 	<meta property="fb:app_id" content="1830556680498946">
-	<title>首頁｜KIRIN Bar BEER 車庫精神翻轉世代</title>
+	<title>台灣麒麟 KIRIN | Bar Beer 車庫精神‧翻轉世代</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	
-	<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="js/jquery.youtubebackground.js"></script>

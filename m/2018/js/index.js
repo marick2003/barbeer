@@ -96,20 +96,6 @@ $(document).ready(function() {
 	}
 
 
-
-	// $(window).scroll(function() {
-			
-    //     scrolltop=$(window).scrollTop();
-    //     console.log(scrolltop+"::::"+$(".box-content").offset().top);
-    //     if(scrolltop>=$(".box-content").offset().top){
-	// 		$(".fixed_bg .bg_beer").css({"display":"block"})
-    //         $(".fixed_bg .bg_beer").css({"position":"fixed"})
-    //     }else{
-    //         $(".fixed_bg .bg_beer").css({"display":"none"})
-    //     }
-
-    // });
-
 });
 
 function BGflyBubble(direction, num) {
@@ -550,20 +536,20 @@ function initDetail() {
 
 	$('#detail .btn-fb').click(function() {
 
-		sendEvent('分頁_' + gaMark +'_分享', '點選分頁_' + gaMark +'_分享', 'CSV');
+		// sendEvent('分頁_' + gaMark +'_分享', '點選分頁_' + gaMark +'_分享', 'CSV');
 
-		FB.ui({
-			method: 'feed',
-			link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv17',
-			picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg?v=20170712',
-			name: shareTitle,
-			description: shareDescription
-		}, function(response) {
-			if (response && !response.error_message) {
-				alert('分享成功，請進行Step3留言，就有機會中大獎！');
-				sendEvent('分頁_' + gaMark +'_分享done', '點選分頁_' + gaMark +'_分享done', 'CSV');
-			}
-		});
+		// FB.ui({
+		// 	method: 'feed',
+		// 	link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv17',
+		// 	picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg?v=20170712',
+		// 	name: shareTitle,
+		// 	description: shareDescription
+		// }, function(response) {
+		// 	if (response && !response.error_message) {
+		// 		alert('分享成功，請進行Step3留言，就有機會中大獎！');
+		// 		sendEvent('分頁_' + gaMark +'_分享done', '點選分頁_' + gaMark +'_分享done', 'CSV');
+		// 	}
+		// });
 
 	});
 
@@ -583,22 +569,20 @@ function initDetail() {
 
 	});
 	$(".fb_btn").click(function(){
-		//sendEvent('分頁_' + gaMark +'_分享', '點選分頁_' + gaMark +'_分享', 'CSV');
-
-		// FB.ui({
-		// 	method: 'feed',
-		// 	link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv18',
-		// 	picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg?v=20180903',
-		// 	name: shareTitle,
-		// 	description: shareDescription
-		// }, function(response) {
-		// 	if (response && !response.error_message) {
-		// 		openPopup();
-		// 		//alert('分享成功，請進行Step3留言，就有機會中大獎！');
-		// 		sendEvent('分頁_' + gaMark +'_分享done', '點選分頁_' + gaMark +'_分享done', 'CSV');
-		// 	}
-		// });
-		openPopup();
+		sendEvent('分頁_' + gaMark +'_分享', '點選分頁_' + gaMark +'_分享', 'CSV');
+		FB.ui({
+			method: 'feed',
+			link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0830_csv&utm_campaign=csv18&v=20180830',
+			picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
+			name: shareTitle,
+			description: shareDescription
+		}, function(response) {
+			if (response && !response.error_message) {
+			   // alert('分享成功，請進行Step3留言，就有機會中大獎！');
+				openPopup();
+				sendEvent('分頁_' + gaMark +'_分享done', '點選分頁_' + gaMark +'_分享done', 'CSV');
+			}
+		});
 	
 	});
 	$(".close_btn").click(function(){
@@ -618,7 +602,7 @@ function initDetail() {
 			var _str="name="+$(".form .name").val()+"&phone="+$(".form .tel").val()+"&email="+$('.form .email').val()+"&address="+$(".form .county").val()+$(".form .district").val()+$('.form .address').val()+"&type="+type;
 			$.ajax({
 						type: "POST",
-						url: "../api/sendForm.php",
+						url: "../../../../barbeer/CSV/2018/api/sendForm.php",
 						data:_str,
 						dataType: "text",
   
@@ -630,7 +614,7 @@ function initDetail() {
 						success: function(response) {
 						
 						 console.log(response);
-						 if(response.slice(4)=='ok'){
+						 if(response.slice(4)=='yes'){
 							$(".startform").fadeOut();
 							$(".form").delay(1000 ).addClass("over");
 							$(".overform").delay( 1500 ).fadeIn();

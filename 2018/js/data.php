@@ -50,14 +50,16 @@
 							提到烘焙坊未來的規劃，大頭哥自在灑脫。「如果有人要接手，那就 Take it！」芭特芙萊只是大頭哥和魯凱青年的一個起點，「我們做麵包或許贏不了吳寶春，但我們留在部落，部落的文化精神就能留下來。」今天是麵包，明天可能是料理，是什麼東西並不重要，只要能與部落共好，就是好東西。帶著對部落的使命，大頭哥步伐堅定眼神明亮，而在他身旁的年輕人，也將帶上這股能量，繼續迎風出發。<br>
 							<br>
 							';
-	$data['1']['ruleUrl'] = 'https://goo.gl/4oJswk';
-	$data['1']['award'] = '‧藍染DIY體驗 (共40名)';
-	$data['1']['ruleImageNum'] = 2;
-	$data['1']['ruleStep2'] = '公開分享此篇文章至個人Facebook ，並寫下指定內容「三峽藍染DIY體驗~誰要+1 」。';
-	$data['1']['ruleStep3'] = '寫下最有甘樂精神的一句話。(小提示：片尾有8個字)<br>';
-	$data['1']['shareTitle'] = '送你去三峽，做專屬藍染配件！';
-	$data['1']['shareDescription'] = '【車庫精神‧返巢世代】三部曲！只要簡單3步驟，就有機會前進三角湧，體驗三峽藍染文化之旅！';
-	$data['1']['gaMark'] = '甘樂';
+	// $data['1']['ruleUrl'] = 'https://goo.gl/4oJswk';
+	// $data['1']['award'] = '‧藍染DIY體驗 (共40名)';
+	// $data['1']['ruleImageNum'] = 2;
+	// $data['1']['ruleStep2'] = '公開分享此篇文章至個人Facebook ，並寫下指定內容「三峽藍染DIY體驗~誰要+1 」。';
+	// $data['1']['ruleStep3'] = '寫下最有甘樂精神的一句話。(小提示：片尾有8個字)<br>';
+	$data['1']['innerTitle'] = '芭特芙萊烘焙坊｜KIRIN Bar BEER 車庫精神翻轉世代';
+	$data['1']['shareTitle'] = '【分享影片即有機會得到Bar BEER獨家限量好禮】';
+	$data['1']['description'] = '2018 Bar BEER邀請你一起直擊寶島翻轉行動，為台灣車庫青年加油打氣!';
+	$data['1']['shareDescription'] = '芭特芙萊烘焙坊∣看魯凱族青年大頭哥如何用麵包重新為部落注入生命力?';
+	$data['1']['gaMark'] = '芭特芙萊';
 
 	$data['2']['title'] = 'Bar BEER 車庫精神 翻轉世代│ 閃耀不滅的信念‧老屋顏 ';
 	$data['2']['date'] = '2018/8/30';
@@ -109,14 +111,16 @@
 							<br>
 							<img src="images/item/2/img05.jpg"><br>
 							';
-	$data['2']['ruleUrl'] = 'https://goo.gl/qKbfXm';
-	$data['2']['award'] = '‧孝念米一組(白米&糙米/組，共80份)';
-	$data['2']['ruleImageNum'] = 2;
-	$data['2']['ruleStep2'] = '公開分享此篇文章至個人Facebook ，並寫下指定內容「 我要扛米回去孝順家人啦~~~ 」。';
-	$data['2']['ruleStep3'] = '留言寫下你對家鄉的記憶是什麼? (小提示：我對苑裡的記憶是藺草)<br>';
-	$data['2']['shareTitle'] = '【鄉民表示：吃貨必吃！單吃就有幸福的感覺？！】';
-	$data['2']['shareDescription'] = '【車庫精神‧返巢世代】三部曲！只要簡單3步驟，就有機會抽中被評選為驚為天人好吃的孝念米啊！';
-	$data['2']['gaMark'] = '苑里';
+	// $data['2']['ruleUrl'] = 'https://goo.gl/qKbfXm';
+	// $data['2']['award'] = '‧孝念米一組(白米&糙米/組，共80份)';
+	// $data['2']['ruleImageNum'] = 2;
+	// $data['2']['ruleStep2'] = '公開分享此篇文章至個人Facebook ，並寫下指定內容「 我要扛米回去孝順家人啦~~~ 」。';
+	// $data['2']['ruleStep3'] = '留言寫下你對家鄉的記憶是什麼? (小提示：我對苑裡的記憶是藺草)<br>';
+	$data['2']['innerTitle'] = '老屋顏工作室｜KIRIN Bar BEER 車庫精神翻轉世代';
+	$data['2']['shareTitle'] = '【分享影片即有機會得到Bar BEER獨家限量好禮】';
+	$data['2']['description'] = '2018 Bar BEER邀請你一起直擊寶島翻轉行動，為台灣車庫青年加油打氣!';
+	$data['2']['shareDescription'] = '老屋顏工作室∣看兩位男孩如何喚回眾人記憶，翻轉老舊窗花被忽略淘汰的命運？';
+	$data['2']['gaMark'] = '老屋顏';
 
 	$data['3']['title'] = 'Bar BEER 車庫精神 翻轉世代│ 一路堅持的熱血‧甜玉軒';
 	$data['3']['date'] = '2018/8/30';
@@ -168,13 +172,15 @@
 							<img src="images/item/3/img06.jpg">
 							<br>
 							<img src="images/item/3/img07.jpg">';
-	$data['3']['ruleUrl'] = 'https://goo.gl/d17rmY';
-	$data['3']['award'] = '‧八穀饅頭一包(10粒/包，共計80名)';
-	$data['3']['ruleImageNum'] = 2;
-	$data['3']['ruleStep2'] = '公開分享此篇文章至個人Facebook ，並寫下指定內容「想吃的快+1~ 太麻里在地食材手做饅頭！」。';
-	$data['3']['ruleStep3'] = '留言寫下此頁上方影片中你最想吃的饅頭口味。<br>';
-	$data['3']['shareTitle'] = '抽！喚醒台東部落靈魂的Vaqu饅頭';
-	$data['3']['shareDescription'] = '【車庫精神‧返巢世代】三部曲！只要簡單3步驟，就有機會免費品嘗南迴正夯的老麵天然發酵無毒饅頭！';
-	$data['3']['gaMark'] = '八穀';
+	// $data['3']['ruleUrl'] = 'https://goo.gl/d17rmY';
+	// $data['3']['award'] = '‧八穀饅頭一包(10粒/包，共計80名)';
+	// $data['3']['ruleImageNum'] = 2;
+	// $data['3']['ruleStep2'] = '公開分享此篇文章至個人Facebook ，並寫下指定內容「想吃的快+1~ 太麻里在地食材手做饅頭！」。';
+	// $data['3']['ruleStep3'] = '留言寫下此頁上方影片中你最想吃的饅頭口味。<br>';
+	$data['3']['description'] = '2018 Bar BEER邀請你一起直擊寶島翻轉行動，為台灣車庫青年加油打氣!';
+	$data['3']['innerTitle'] = '甜玉軒｜KIRIN Bar BEER 車庫精神翻轉世代';
+	$data['3']['shareTitle'] = '【分享影片即有機會得到Bar BEER獨家限量好禮】';
+	$data['3']['shareDescription'] = '甜玉軒∣看果醬男孩如何翻轉非主流水果成為一罐罐寶石？';
+	$data['3']['gaMark'] = '甜玉軒';
 
 ?>
