@@ -1,7 +1,7 @@
 <?
 	 include('../../../../config.php');
 	 include('../../../../barbeer/CSV/2018/js/data.php');
-	$id = 1;
+	$id = 3;
 
 	if (!$data[$id]['title']) {
 		header("Location:./");

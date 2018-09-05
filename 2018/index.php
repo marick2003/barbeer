@@ -5,6 +5,17 @@ include('../../../include/head.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15575589-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-15575589-7');
+</script>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -202,14 +213,22 @@ include('../../../include/head.php');
 							
 							<div class="fixed_bg">	
 								<div class="bg_beer toleft">
+									<div>
+										<img src="images/index/bg_beer.png" alt="">
+									</div>
+								
 									<div class='fly-bubble'>
 										
 									</div>
-									<img src="images/index/bg_beer.png" alt="">
+									
 								</div>
 								<div class="bg_beer toright">
+									<div>
+										<img src="images/index/bg_beer2.png" alt="">
+									</div>
+									
 									<div class='fly-bubble'></div>
-								    <img src="images/index/bg_beer2.png" alt="">
+								    
 								</div>
 							</div>
 						</div>

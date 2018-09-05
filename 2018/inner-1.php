@@ -174,17 +174,15 @@
 				<div class="bg">	
 							<div class="fixed_bg">	
 								<div class="bg_beer toleft">
-									<div class='fly-bubble'>
-										
-									</div>
+									<div class='fly-bubble'></div>
 									<img src="images/index/bg_beer.png" alt="">
 								</div>
 								<div class="bg_beer toright">
-									<div class='fly-bubble'></div>
-								    <img src="images/index/bg_beer2.png" alt="">
+										<div class='fly-bubble'></div>
+								    	<img src="images/index/bg_beer2.png" alt="">
+									</div>
 								</div>
-				</div>
-			</div>
+							</div>
 			</div>
 			<div id="mask"></div>
 			

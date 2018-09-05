@@ -1,7 +1,7 @@
 <?
 
-require_once '../../../config.php';
-include('../../../include/head.php');
+// require_once '../../../config.php';
+// include('../../../include/head.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,12 +28,12 @@ include('../../../include/head.php');
 </head>
 <body id="news">
 	<?php
-		include('../../../include/track.php');
+		// include('../../../include/track.php');
 	?>
     <div id="wrap">
 	  <div id="wrap2">
 			<?php
-				include('../../../include/header.php');
+				// include('../../../include/header.php');
 			?>
          <div id="main">
              <div id="list" class="box">
@@ -202,21 +202,29 @@ include('../../../include/head.php');
 							
 							<div class="fixed_bg">	
 								<div class="bg_beer toleft">
+									<div>
+										<img src="images/index/bg_beer.png" alt="">
+									</div>
+								
 									<div class='fly-bubble'>
 										
 									</div>
-									<img src="images/index/bg_beer.png" alt="">
+									
 								</div>
 								<div class="bg_beer toright">
+									<div>
+										<img src="images/index/bg_beer2.png" alt="">
+									</div>
+									
 									<div class='fly-bubble'></div>
-								    <img src="images/index/bg_beer2.png" alt="">
+								    
 								</div>
 							</div>
 						</div>
 					</div>
 			</div>
 			<?php
-			include('../../../include/footer.php');
+			// include('../../../include/footer.php');
 		?>
     </div>
 </body>

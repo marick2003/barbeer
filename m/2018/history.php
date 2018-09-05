@@ -1,12 +1,26 @@
+<?
+	 include('../../../../config.php');
+	//  include('../../../../barbeer/CSV/2018/js/data.php');
+	// $id = 3;
+
+	// if (!$data[$id]['title']) {
+	// 	header("Location:./");
+	// 	exit;
+	// }
+	
+	include('../../../include/head.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=375 ,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="keywords" content="KIRIN Bar BEER,Bar, 車庫精神, 翻轉世代, 青年">
+    <title>台灣麒麟 KIRIN | Bar Beer 歷年車庫精神</title>
+    
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/history.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script>
@@ -14,7 +28,14 @@
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
+    <?php
+		include('../../../include/track.php');
+	?>
     <div id="wrap">
+        <?php
+			include('../../../include/header.php');
+		?>
+        <div id="wrap2">
         <div id="main" class='detail'>
             <div class="inner">
 				<div id="history-detail">
@@ -99,10 +120,14 @@
                 </div>
             </div>
         </div>
+            <?php
+				include('../../../include/footer.php');
+			?>
+        </div>
     </div>
     <?php
-		//include('../../../include/menu.php');
-		//include('../../../include/rotate.php');
+		include('../../../include/menu.php');
+		include('../../../include/rotate.php');
 	?>  
 </body>
 </html>

@@ -41,9 +41,9 @@ $(document).ready(function() {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		  },
-		// autoplay: {
-		// 	delay: 5000,
-		//   },
+		autoplay: {
+			delay: 5000,
+		  },
 		speed:300,
 		// 如果需要滾動條
 		//   scrollbar: '.swiper-scrollbar',
@@ -166,7 +166,6 @@ function startList() {
 
 	//$('.bg1').addClass('animate');
 	BGflyBubble('toleft', 1);
-	// BGflyBubble('toright', 1);
 	listAnimateTimeout[0] = setTimeout(function() { $('.bg2').addClass('animate'); }, 800);
 	listAnimateTimeout[1] = setTimeout(function() {
 		$('.natural').animate({'opacity': 1}, 450);
@@ -244,7 +243,7 @@ function listActive() {
 			var gaName = '甜玉軒';
 			break;
 		}	
-		sendEvent('首頁_' + gaName, '點選首頁_' + gaName, 'CSV');	
+		sendEvent('首頁_' + gaName, '點選首頁_' + gaName, '首頁');	
 	});
 
 	$(window).scroll(scroll);
@@ -260,16 +259,16 @@ function scroll() {
 			gaFlag[i] = true;
 			switch (i) {
 				case 0:
-					var gaName = '甘樂';
+					var gaName = '芭特芙萊';
 					break;
 				case 1:
-					var gaName = '苑里';
+					var gaName = '老屋顏';
 					break;
 				case 2:
-					var gaName = '八穀';
+					var gaName = '甜玉軒';
 					break;
 			}
-			sendPage('/Index_CSV_' + gaName);
+			//sendPage('/Index_CSV_' + gaName);
 		}
 	}	
 	
@@ -315,27 +314,24 @@ function history_initDetail(){
 		$(window).scroll(function() {
 			
         console.log( $(window).scrollTop());
-        if( $(window).scrollTop() >=$("#history-detail .item").eq(0).offset().top){
-			$("#history-detail .item:eq(0) .history_img img").each(function(index) {  
+    	$("#history-detail .item:eq(0) .history_img img").each(function(index) {  
 				
-				$(this).delay(500 * index).animate({
-					'opacity': '1',
-					'margin-top': '0px'
-				}, 500, function() {
-					
-				});
+			$(this).delay(200 * index).animate({
+				'opacity': '1',
+				'margin-top': '0px'
+			}, 300, function() {
 				
-			   });  
+			});
 			
-		}
+		   });  
 		 if( $(window).scrollTop() >=$("#history-detail .item").eq(1).offset().top){
 			
 			$("#history-detail .item:eq(1) .history_img img").each(function(index) {  
 				
-				$(this).delay(500 * index).animate({
+				$(this).delay(200 * index).animate({
 					'opacity': '1',
 					'margin-top': '0px'
-				}, 500, function() {
+				}, 300, function() {
 					
 				});
 				
@@ -345,10 +341,10 @@ function history_initDetail(){
 
 			$("#history-detail .item:eq(2) .history_img img").each(function(index) {  
 				
-				$(this).delay(500 * index).animate({
+				$(this).delay(200 * index).animate({
 					'opacity': '1',
 					'margin-top': '0px'
-				}, 500, function() {
+				}, 300, function() {
 					
 				});
 				
@@ -587,18 +583,18 @@ function initDetail() {
 
 	});
 	$(".fb_btn").click(function(){
-		sendEvent('分頁_' + gaMark +'_分享', '點選分頁_' + gaMark +'_分享', 'CSV');
+
 		FB.ui({
 			method: 'feed',
-			link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0830_csv&utm_campaign=csv18&v=20180830',
+			link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0830_csv&utm_campaign=csv17&v=20180830',
 			picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
 			name: shareTitle,
 			description: shareDescription
 		}, function(response) {
 			if (response && !response.error_message) {
-			   // alert('分享成功，請進行Step3留言，就有機會中大獎！');
+			  
 				openPopup();
-				sendEvent('分頁_' + gaMark +'_分享done', '點選分頁_' + gaMark +'_分享done', 'CSV');
+				sendEvent('KOL_' + gaMark +'_分享done', '點選KOL_' + gaMark +'_分享', 'KOL');
 			}
 		});
 	
@@ -613,10 +609,14 @@ function initDetail() {
 		$( this ).toggleClass( "check" );
 	
 	});
+	$(".more_btn").click(function(){
+
+		sendEvent('填寫資料', '點選_填寫資料＿看其他', 'KOL');
+	});
 	$(".send_btn").click(function(){
 
 		if(check_form()){
-                     
+            sendEvent('填寫資料＿完成', '點選＿填寫資料_完成', 'KOL');          
 			var _str="name="+$(".form .name").val()+"&phone="+$(".form .tel").val()+"&email="+$('.form .email').val()+"&address="+$(".form .county").val()+$(".form .district").val()+$('.form .address').val()+"&type="+type;
 			$.ajax({
 						type: "POST",
@@ -636,7 +636,7 @@ function initDetail() {
 							$(".startform").fadeOut();
 							$(".form").delay(1000 ).addClass("over");
 							$(".overform").delay( 1500 ).fadeIn();
-
+							sendPage("/finish");	
 						 }  
 						 
 					}
@@ -712,7 +712,7 @@ function openPopup(){
 				  
 	});
 
-
+	sendPage("/personal");
 } 
 function closePopup(){
 

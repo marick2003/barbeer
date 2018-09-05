@@ -55,15 +55,17 @@ $(document).ready(function() {
 			
         scrolltop=$(window).scrollTop();
         console.log(scrolltop+"::::"+$(".box-content").offset().top);
-        if(scrolltop>=$(".box-content").offset().top-126 && scrolltop<$(".box-content").height()){
 
-            $(".fixed_bg .bg_beer").css({"position":"fixed","top":"340px"})
-        }else if(scrolltop>$(".box-content").height()-70){
-            $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "20px","top":"auto"})
-        }else if(scrolltop<=740){
-            $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "auto","top":"340px"})
+        if ($('#list').length == 1) {
+            if(scrolltop>=$(".box-content").offset().top-126 && scrolltop<$(".box-content").height()){
+
+                $(".fixed_bg .bg_beer").css({"position":"fixed","top":"340px"})
+            }else if(scrolltop>$(".box-content").height()-70){
+                $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "20px","top":"auto"})
+            }else if(scrolltop<=740){
+                $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "auto","top":"340px"})
+            }
         }
-
     });
 
 });    
@@ -199,7 +201,7 @@ $(document).ready(function() {
 
     function BGflyBubble(direction, num) {
         setTimeout(function(){
-            var item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 1) +'" style="left: ' + Math.floor((Math.random() * 80) + 0) + '%;"></div>';
+            var item = '<div data-num="' + num + '" class="type' + Math.floor((Math.random() * 3) + 1) +'" style="left: ' + Math.floor((Math.random() * 100) + 0) + '%;"></div>';
             $('.fixed_bg .' + direction + ' .fly-bubble').append(item);
             BGflyBubbleEnd(direction, num);
         }, Math.floor((Math.random() * 1000) + 200));
@@ -210,7 +212,7 @@ $(document).ready(function() {
     function BGflyBubbleEnd(direction, num) {
         setTimeout(function(){
             $('.fixed_bg .' + direction + ' .fly-bubble div[data-num=' + num +']').remove();
-        }, 1700);
+        }, 3000);
     }
     function history_initDetail(){
         $("#history-detail .item:eq(0) .history_img img").each(function(index) {  
@@ -569,7 +571,7 @@ $(document).ready(function() {
                     var gaName = '甜玉軒';
                     break;
             }		
-            sendEvent('首頁_' + gaName, '點選首頁_' + gaName, 'CSV');
+            sendEvent('首頁_' + gaName, '點選首頁_' + gaName, '首頁');
     
         });
     }
@@ -613,9 +615,11 @@ $(document).ready(function() {
 
     });
  function change_beer(){
-   if($(window).width()>=1620){
-        $(".fixed_bg .bg_beer").css({"transform":"scale("+$(window).width()/2000+")"});
-    }else{
-        $(".fixed_bg .bg_beer").css({"transform":"scale("+$(window).width()/2600+")"});
-    }
+
+//    if($(window).width()>=1620){
+//         $(".fixed_bg .bg_beer").css({"transform":"scale("+$(window).width()/2000+")"});
+//     }else{
+//         $(".fixed_bg .bg_beer").css({"transform":"scale("+$(window).width()/2600+")"});
+//     }
+
  }

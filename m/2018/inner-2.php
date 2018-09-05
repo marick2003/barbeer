@@ -1,7 +1,7 @@
 <?
 	 include('../../../../config.php');
 	 include('../../../../barbeer/CSV/2018/js/data.php');
-	$id = 1;
+	$id = 2;
 
 	if (!$data[$id]['title']) {
 		header("Location:./");
@@ -13,15 +13,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15575589-7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-15575589-7');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" id="viewport-meta" content="width=375 ,user-scalable=no">
 <meta name="description" content="<?=$data[$id]['shareDescription']?>">

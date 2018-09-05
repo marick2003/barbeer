@@ -4,12 +4,21 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15575589-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-15575589-7');
+</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" id="viewport-meta" content="width=375 ,user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="description" content="從賈伯斯到披頭四，「車庫」成為孕育世界偉大創意的起點。台灣也有一群用新思維闖出新局的「返巢世代」。KIRIN Bar BEER 將以「創造共享價值」，全心投入支持行動，為擁有車庫精神的大家加油！">
-	<meta name="keywords" content="KIRIN,台灣麒麟,歡笑,Bar,bar,beer,公益,甘樂文創,苑裡掀海風,八穀農糧手工作坊,甘樂,苑里,八穀,耀就來Bar,車庫精神,閃耀啟程,返巢世代,三峽,藍染,無毒,饅頭,孝念米,免費,抽獎,林峻丞,熱血,返鄉,返鄉青年">
+	<meta name="keywords" content="KIRIN Bar BEER,Bar, 車庫精神, 翻轉世代, 青年">
 
 	<meta property="og:site_name" content="台灣麒麟 KIRIN | Bar Beer 車庫精神‧翻轉世代" /> 
 	<meta property="og:title" content="台灣麒麟 KIRIN | Bar Beer 車庫精神‧翻轉世代" /> 
@@ -153,7 +162,7 @@
                                         <p>不僅是你<span class="red">力挺這群台灣青年的熱血行動力</span></p>
                                         <p>還有機會獲得</p>
                                         <p><span class="red">今年Bar BEER X 翻轉世代的限量好禮！</span></p>
-                                        <p>詳情請見<a href="#">活動辦法</a></p>
+                                        <p>詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=123" target="_blank">活動辦法</a></p>
 									</div>
 									<div class="group">
 										<div class="group-content">

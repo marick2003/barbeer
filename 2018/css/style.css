@@ -883,7 +883,8 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 	background-image: url(../images/index/news-bg01.png);
 	background-repeat:  repeat-x;
 	background-size: contain;
-    background-position: 0px 0px;
+	background-position: 0px 0px;
+	overflow: hidden;
 	z-index: 1;
 	-webkit-animation: content-bg linear 3s infinite;
 	-moz-animation: content-bg linear 3s infinite;
@@ -913,12 +914,12 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 
 .fixed_bg{
-	position: absolute;
-    width: 100%;
-	height: 100%;
-	top: 0px;
-  
-
+    position: absolute;
+    width: 1920px;
+    left: 50%;
+    margin-left: -960px;
+    height: 100%;
+    top: 0px;
 }
 .fixed_bg.fix_bg{
 	position: fixed;
@@ -930,12 +931,12 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 }
 .toleft{
 
-	left: 0%;
+	left: -3%;
 	transform-origin:top left;
 }
 .toright{
 
-	right: 0%;
+	right: -3%;
 	transform-origin:top right;
 }
 .bg_item{
@@ -1356,7 +1357,17 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 			mix-blend-mode: multiply;
 		}
 	}
+	/* #main.detail:after {
 
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: -58px;
+		background: url(../images/index/news-bg03.png) center 237px no-repeat;
+		position: fixed;
+		z-index: 2;
+		opacity: .1;
+	} */
 	@supports(mix-blend-mode: soft-light) {
 		#main.detail:after {
 			opacity: 1;
@@ -1431,17 +1442,19 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 	}
 
 
-	.fixed_bg .bg_beer .fly-bubble {
-		/* width: 45%;
-		height: 50%;
-		position: absolute;
-		z-index: 2; */
+	.fixed_bg .bg_beer div:nth-child(0) {
+		z-index:2;
 	}
+
 	.fixed_bg .bg_beer.toleft .fly-bubble {
 		left: 43%;
 	}
 	.fixed_bg .bg_beer.toright .fly-bubble {
 		left: -43%;
+	}
+	.fixed_bg .bg_beer .fly-bubble{
+
+		z-index:1;
 	}
 	.fixed_bg .bg_beer .fly-bubble div {
 		position: absolute;
@@ -1449,33 +1462,33 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 		height: 84px;
 		background: url(../images/index/bubble.png)  center no-repeat;
 		background-size: contain;
-		z-index: 1;
-		-webkit-animation: bgfly-bubble ease-out 1.5s forwards;
-		-moz-animation: bgfly-bubble ease-out 1.5s forwards;
-		-ms-animation: bgfly-bubble ease-out 1.5s forwards;
-		-o-animation: bgfly-bubble ease-out 1.5s forwards;
-		animation: bgfly-bubble ease-out 1.5s forwards;
+		z-index: -1;
+		-webkit-animation: bgfly-bubble ease-out 2.5s forwards;
+		-moz-animation: bgfly-bubble ease-out 2.5s forwards;
+		-ms-animation: bgfly-bubble ease-out 2.5s forwards;
+		-o-animation: bgfly-bubble ease-out 2.5s forwards;
+		animation: bgfly-bubble ease-out 2.5s forwards;
 	}
 	@-webkit-keyframes bgfly-bubble {
-		0%   { top: 0px; opacity: 0; -webkit-transform: scale(0) translate3d(0%, 0, 0);  }
+		0%   { top: 100%; opacity: 0; -webkit-transform: scale(0) translate3d(0%, 0, 0);  }
 		20%  { opacity: 1; -webkit-transform: scale(1) translate3d(20%, 0, 0);}
 		80%  { opacity: 1; -webkit-transform: scale(1) translate3d(-20%, 0, 0);}
 		100% { top: -50%; opacity: 0; -webkit-transform: scale(0) translate3d(0%, 0, 0); }
 	}
 	@-moz-keyframes bgfly-bubble {
-		0%   { top: 0px; opacity: 0; -moz-transform: scale(0) translate3d(0%, 0, 0); }
+		0%   { top: 100%; opacity: 0; -moz-transform: scale(0) translate3d(0%, 0, 0); }
 		20%  { opacity: 1; -moz-transform: scale(1)  translate3d(20%, 0, 0); }
 		80%  { opacity: 1; -moz-transform: scale(1) translate3d(-20%, 0, 0);}
 		100% { top: -50%; opacity: 0; -moz-transform: scale(0) translate3d(0%, 0, 0);}
 	}
 	@-o-keyframes bgfly-bubble {
-		0%   { top: 0px; opacity: 0; -o-transform: scale(0) translate3d(0%, 0, 0);}
+		0%   { top: 100%; opacity: 0; -o-transform: scale(0) translate3d(0%, 0, 0);}
 		20%  { opacity: 1; -o-transform: scale(1) translate3d(20%, 0, 0); }
 		80%  { opacity: 1; -o-transform: scale(1) translate3d(-20%, 0, 0); }
 		100% { top: -50%; opacity: 0; -o-transform: scale(0) translate3d(0%, 0, 0);}
 	}
 	@keyframes bgfly-bubble {
-		0%   { top: 0px; opacity: 0; transform: scale(0) translate3d(0%, 0, 0);}
+		0%   { top: 100%; opacity: 0; transform: scale(0) translate3d(0%, 0, 0);}
 		20%  { opacity: 1; transform: scale(1) translate3d(20%, 0, 0); }
 		80%  { opacity: 1; transform: scale(1) translate3d(-20%, 0, 0); }
 		100% { top: -50%; opacity: 0; transform: scale(0) translate3d(0%, 0, 0); }
