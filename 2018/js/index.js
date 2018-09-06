@@ -59,7 +59,7 @@ $(document).ready(function() {
         if ($('#list').length == 1) {
             if(scrolltop>=$(".box-content").offset().top-126 && scrolltop<$(".box-content").height()){
 
-                $(".fixed_bg .bg_beer").css({"position":"fixed","top":"340px"})
+                $(".fixed_bg .bg_beer").css({"position":"absolute","top":scrolltop-$(".box-content").offset().top+340})
             }else if(scrolltop>$(".box-content").height()-70){
                 $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "20px","top":"auto"})
             }else if(scrolltop<=740){

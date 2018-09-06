@@ -96,7 +96,7 @@ fbq('track', 'PageView');
 						</div>
 						<div class="more_btn">
 							<a href="./" target="_blank">
-								<img src="images/index/more_btn.png" alt="">	
+								<img src="images/index/more_btn.jpg" alt="">	
 							</a>
 						</div>
 					</div>
@@ -195,13 +195,13 @@ fbq('track', 'PageView');
 	?>
 
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
+	<!-- <script>(function(d, s, id) {
 	var js, fjs = d.getElementsByTagName(s)[0];
 	if (d.getElementById(id)) return;
 	js = d.createElement(s); js.id = id;
 	js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.9&appId=1830556680498946";
 	fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+	}(document, 'script', 'facebook-jssdk'));</script> -->
 
 	<script>
 
