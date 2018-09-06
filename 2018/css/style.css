@@ -411,6 +411,7 @@
 #list .box-top-inner .desc,#list .box-top-inner .desc2 {
 	width: 100%;
 	top: 428px;
+	font-size: 20px;
 	position: absolute;
 	z-index: 1;
 }

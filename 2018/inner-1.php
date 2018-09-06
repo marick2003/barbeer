@@ -91,7 +91,7 @@
 							<span>中獎名單將於2018/00/00於活動網站公布</span>
 						</div>
 						<div class="more_btn">
-							<a href="">
+							<a href="./" target="_blank">
 								<img src="images/index/more_btn.png" alt="">	
 							</a>
 							

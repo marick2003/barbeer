@@ -73,7 +73,8 @@ include('../../../include/head.php');
 									<div class="line">跟 KIRIN Bar BEER 一起支持車庫青年化信念為行動！</div>
 								</div>
 								<div class="desc2 step2">
-									<div class="line">面對現實難題，他們正面迎擊！用新思維解決問題，用創意與熱血翻轉困境。</span></div>
+									<div class="line">面對現實難題，他們正面迎擊！用新思維解決問題，</div>
+									<div class="line">用創意與熱血翻轉困境。</div>
 									<div class="line">2018 邀請你一起直擊寶島翻轉行動！</div>
 								</div>
 								<div class="godown">

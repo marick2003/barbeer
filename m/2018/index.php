@@ -17,16 +17,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" id="viewport-meta" content="width=375 ,user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="description" content="從賈伯斯到披頭四，「車庫」成為孕育世界偉大創意的起點。台灣也有一群用新思維闖出新局的「返巢世代」。KIRIN Bar BEER 將以「創造共享價值」，全心投入支持行動，為擁有車庫精神的大家加油！">
+	<meta name="description" content="2018 Bar BEER邀請你一起直擊寶島翻轉行動，為台灣車庫青年加油打氣!">
 	<meta name="keywords" content="KIRIN Bar BEER,Bar, 車庫精神, 翻轉世代, 青年">
 
-	<meta property="og:site_name" content="台灣麒麟 KIRIN | Bar Beer 車庫精神‧翻轉世代" /> 
-	<meta property="og:title" content="台灣麒麟 KIRIN | Bar Beer 車庫精神‧翻轉世代" /> 
-	<meta property="og:description" content="從賈伯斯到披頭四，「車庫」成為孕育世界偉大創意的起點。台灣也有一群用新思維闖出新局的「返巢世代」。KIRIN Bar BEER 將以「創造共享價值」，全心投入支持行動，為擁有車庫精神的大家加油！" />
-	<meta property="og:image" content="http://www.kirin.com.tw/barbeer/CSV/2017/images/common/meta.jpg" />
-	<meta property="og:url" content="https://www.kirin.com.tw/barbeer/CSV/2017/" />
+	<meta property="og:site_name" content="首頁｜KIRIN Bar BEER 車庫精神翻轉世代" /> 
+	<meta property="og:title" content="首頁｜KIRIN Bar BEER 車庫精神翻轉世代" /> 
+	<meta property="og:description" content="2018 Bar BEER邀請你一起直擊寶島翻轉行動，為台灣車庫青年加油打氣!" />
+	<meta property="og:image" content="http://www.kirin.com.tw/barbeer/CSV/2018/images/common/meta.jpg" />
+	<meta property="og:url" content="https://www.kirin.com.tw/barbeer/CSV/2018/" />
 	<meta property="fb:app_id" content="1830556680498946">
-	<title>台灣麒麟 KIRIN | Bar Beer 車庫精神‧翻轉世代</title>
+	<title>首頁｜KIRIN Bar BEER 車庫精神翻轉世代</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
@@ -86,7 +86,8 @@
                                         <div class="line">化信念為行動！</div>
                                     </div>
                                     <div class="desc2 step2">
-                                        <div class="line">面對現實難題，他們正面迎擊！用新思維解決問題，用創意與熱血翻轉困境。</span></div>
+                                        <div class="line">面對現實難題，他們正面迎擊！</div>
+										<div class="line">用新思維解決問題，用創意與熱血翻轉困境。</div>
                                         <div class="line">2018 邀請你一起直擊寶島翻轉行動！</div>
                                     </div> 
 									<div class="godown">

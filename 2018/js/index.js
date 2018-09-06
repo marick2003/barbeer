@@ -173,6 +173,7 @@ $(document).ready(function() {
             $("#list .step2 ").fadeIn();
             $('.desc2 .line').eq(0).delay(1500).animate({'opacity': 1}, 450);
             $('.desc2 .line').eq(1).delay(1800).animate({'opacity': 1}, 450);
+            $('.desc2 .line').eq(2).delay(2200).animate({'opacity': 1}, 450);
             $("#list .box-top-inner .godown").css({'background-position': '0px -35px'}); 
             $('.bg2').addClass('animate2'); }, 7000);
             
@@ -408,7 +409,7 @@ $(document).ready(function() {
                
                 FB.ui({
                     method: 'feed',
-                    link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0721_csv&utm_campaign=csv17&v=20170712',
+                    link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0830_csv&utm_campaign=csv17&v=20180830',
                     picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
                     name: shareTitle,
                     description: shareDescription

@@ -95,7 +95,9 @@ fbq('track', 'PageView');
 							<span>中獎名單將於2018/00/00於活動網站公布</span>
 						</div>
 						<div class="more_btn">
-							<img src="images/index/more_btn.jpg" alt="">
+							<a href="./" target="_blank">
+								<img src="images/index/more_btn.png" alt="">	
+							</a>
 						</div>
 					</div>
 					<div class="close_btn change_btn">

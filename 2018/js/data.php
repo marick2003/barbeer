@@ -11,7 +11,7 @@
                             <br>
                             STEP 3.  填寫個人資料，即有機會獲得限量 Bar 好禮
                             <br>
-                            詳情請見<a href="#">活動辦法</a>
+                            詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=123" target="_blank">活動辦法</a>
                             <br>
                             <br>
                             <span class="subTitle">活動贈品：</span><br>
@@ -72,7 +72,7 @@
 	<br>
 	STEP 3.  填寫個人資料，即有機會獲得限量 Bar 好禮
 	<br>
-	詳情請見<a href="#">活動辦法</a>
+	詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=123" target="_blank">活動辦法</a>
 	<br>
 	<br>
 	<span class="subTitle">活動贈品：</span><br>
@@ -82,6 +82,7 @@
 	盛夏交響 Bar 鳳梨果醬
 	<br>
 	漫步懷舊 Bar 窗花杯墊
+	<br>
 	<br>
 	<span class="subTitle">在最快的時代放慢腳步，蒐集家家戶戶的記憶</span><br>
 							<br>
@@ -133,7 +134,7 @@
 	<br>
 	STEP 3.  填寫個人資料，即有機會獲得限量 Bar 好禮
 	<br>
-	詳情請見<a href="#">活動辦法</a>
+	詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=123" target="_blank">活動辦法</a>
 	<br>
 	<br>
 	<span class="subTitle">活動贈品：</span><br>
@@ -143,7 +144,9 @@
 	盛夏交響 Bar 鳳梨果醬
 	<br>
 	漫步懷舊 Bar 窗花杯墊
-	<br><span class="subTitle">問題生了根，就回起點解決它</span><br>
+	<br>
+	<br>
+	<span class="subTitle">問題生了根，就回起點解決它</span><br>
 							<br>
 							剛抵達甜玉軒店門外，就看到果醬男孩林韡勳帶著靦腆的笑容和大夥兒打招呼。這裡是台南新營，空氣裡自有一股悠閒自在，不出風頭也不急著趕上誰的步調，而韡勳便是在這樣的農村氛圍中長大。大學時開始環島打工換宿，這一路讓他認識不少志同道合的朋友，也看見不少台灣農村的困境。「台灣農村有許多原生種水果，因為口感比較酸澀，或外表不好看，有滯銷的問題。」又大又甜的水果才是消費者心中的主流，那些外型口味相對獨特的原生水果，逐漸在這樣的取捨標準下被農夫捨棄。儘管畢業後仍留在都市工作，但走訪農地時觀察到的種種問題，一直在他心裡發酵，家鄉長輩的呼喚，終於讓他下定決心，離開端正的辦公桌，捲起袖子回家鄉解決問題。
 							<br>
