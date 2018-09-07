@@ -69,6 +69,12 @@ $(document).ready(function() {
 		  
 	if ($('#list').length == 1) {
 		sendPage('/index'); 
+		if(func.getParameterByName("t")=="back"){
+
+			$('html, body').animate({scrollTop: $('.box-content').offset().top - 61}, 1000);
+			var newURL = location.href.split("?")[0];
+			window.history.pushState('object', document.title, newURL);
+		}
 		if ( $(window).height() > $(window).width() ) {
 			windowDirection = 'vertical';
 		} else {
@@ -87,6 +93,10 @@ $(document).ready(function() {
 				scroll();
 				// sendPage('/Index_CSV');
 			//}
+			
+	
+
+
 		}, 300);
 	} else if ($('#detail').length == 1) {
 		if(func.getParameterByName("utm_source")=="facebook"){
@@ -221,7 +231,7 @@ function startList() {
 		$('.desc2 .line').eq(1).delay(1800).animate({'opacity': 1}, 450);
 		$('.desc2 .line').eq(2).delay(2200).animate({'opacity': 1}, 450);
 		$("#list .box-top-inner .godown").css({'background-position': '0px -17px'}); 
-		$('.bg2').addClass('animate2'); }, 7000);
+		$('.bg2').addClass('animate2'); }, 5500);
 	listAnimateTimeout[13] = setTimeout(function() { listAnimateIsFin = true; }, 7000);
 }
 

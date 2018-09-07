@@ -14,7 +14,8 @@
 }
 .inner_desc a {
     text-decoration: none;
-    position: relative;
+	position: relative;
+	color: #4b4b4b;
 }
 .inner_desc a:after {
     content: '';
@@ -412,6 +413,7 @@
 	width: 100%;
 	top: 428px;
 	font-size: 20px;
+	color: #000000;
 	position: absolute;
 	z-index: 1;
 }
@@ -535,7 +537,13 @@
 .ytplayer-container{
 
 	position: absolute;
-    top: -53%;
+    top: -50%;
+}
+.ytp-pause-overlay{
+
+ opacity: 0;
+ display: none;
+ 
 }
 @-webkit-keyframes bg1-animate {
 	0%   { top: -688px; }

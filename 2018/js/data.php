@@ -2,7 +2,7 @@
 
 	$data['1']['title'] = 'Bar BEER 車庫精神 翻轉世代│ 勇往直前的使命‧芭特芙萊';
 	$data['1']['date'] = '2018/8/30';
-	$data['1']['video'] = 'Zc9EbikW0LU';
+	$data['1']['video'] = 'jX4_Tw93jiQ';
 	$data['1']['article'] = '<span class="subTitle">活動步驟說明：</span><br>
 							<br>
                             STEP 1.  點擊觀看翻轉世代任一支影片
@@ -63,7 +63,7 @@
 
 	$data['2']['title'] = 'Bar BEER 車庫精神 翻轉世代│ 閃耀不滅的信念‧老屋顏 ';
 	$data['2']['date'] = '2018/8/30';
-	$data['2']['video'] = 'c__n__WlMYc';
+	$data['2']['video'] = 'OnsKTsJ_2GE';
 	$data['2']['article'] = '<span class="subTitle">活動步驟說明：</span><br>
 	<br>
 	STEP 1.  點擊觀看翻轉世代任一支影片
@@ -125,7 +125,7 @@
 
 	$data['3']['title'] = 'Bar BEER 車庫精神 翻轉世代│ 一路堅持的熱血‧甜玉軒';
 	$data['3']['date'] = '2018/8/30';
-	$data['3']['video'] = 'vLJChYOmd1Q';
+	$data['3']['video'] = 'LEv8rAEVzOo';
 	$data['3']['article'] = '<span class="subTitle">活動步驟說明：</span><br>
 	<br>
 	STEP 1.  點擊觀看翻轉世代任一支影片

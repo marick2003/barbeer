@@ -73,8 +73,8 @@ include('../../../include/head.php');
 									<div class="line">跟 KIRIN Bar BEER 一起支持車庫青年化信念為行動！</div>
 								</div>
 								<div class="desc2 step2">
-									<div class="line">面對現實難題，他們正面迎擊！用新思維解決問題，</div>
-									<div class="line">用創意與熱血翻轉困境。</div>
+									<div class="line">面對現實難題，他們正面迎擊！</div>
+									<div class="line">用新思維解決問題，用創意與熱血翻轉困境。</div>
 									<div class="line">2018 邀請你一起直擊寶島翻轉行動！</div>
 								</div>
 								<div class="godown">
@@ -118,7 +118,7 @@ include('../../../include/head.php');
 									<div class="inner_desc">
 										<p>如果你也曾勇於翻轉現況，如果你也是不安於室的翻轉世代</p>
 										<p>如果你也認同，請用力<span class="red">分享以下任一支影片</span>，不僅是你<span class="red">力挺這群台灣青年的熱血行動力</span></p>
-										<p>還有機會獲得<span class="red">今年 Bar BEER X 翻轉世代的限量好禮</span>！詳情請見<span><a>活動辦法</a></span></p>
+										<p>還有機會獲得<span class="red">今年 Bar BEER X 翻轉世代的限量好禮</span>！詳情請見<span><a  href="https://www.kirin.com.tw/news-detail.php?id=123" target="_blank">活動辦法</a></span></p>
 									</div>
 
 								</div>

@@ -2,7 +2,7 @@
 	 include('../../../../config.php');
 	 include('../../../../barbeer/CSV/2018/js/data.php');
 	$id = 3;
-
+	$page = 'index_test.php';
 	if (!$data[$id]['title']) {
 		header("Location:./");
 		exit;
@@ -27,7 +27,7 @@
 <meta name="description" content="<?=$data[$id]['shareDescription']?>">
 <meta name="keywords" content="KIRIN Bar BEER,Bar, 車庫精神, 翻轉世代, 青年">
 <meta property="og:site_name" content="<?=$data[$id]['innerTitle']?>" /> 
-<meta property="og:title" content="<?=$data[$id]['innerTitle']?>" /> 
+<meta property="og:title" content="<?=$data[$id]['shareTitle']?>" /> 
 <meta property="og:description" content="<?=$data[$id]['shareDescription']?>" />
 <meta property="og:image" content="https://www.kirin.com.tw/barbeer/CSV/2018/images/item/<?=$id?>/metaimg.jpg?v=20170712" />
 <meta property="og:url" content="https://www.kirin.com.tw/barbeer/CSV/2018/inner-<?=$id?>.php" />
@@ -104,7 +104,7 @@ fbq('track', 'PageView');
 							<span>中獎名單將於2018/00/00於活動網站公布</span>
 						</div>
 						<div class="more_btn">
-							<a href="./" target="_blank">
+							<a href="./<?=$page?>" target="_blank">
 								<img src="images/index/more_btn.jpg" alt="">	
 							</a>
 						</div>
@@ -173,7 +173,7 @@ fbq('track', 'PageView');
 								<a class="next" href="https://www.kirin.com.tw/barbeer/CSV/2018/inner-<?=$nextId?>.php">下一篇</a>
 							</div>
 							
-							<a class="back" href="https://www.kirin.com.tw/barbeer/CSV/2018/">返回翻轉世代 列表頁</a>
+							<a class="back" href="./<?=$page?>?t=back">返回翻轉世代 列表頁</a>
 						</div>
 					</div>
 				</div>

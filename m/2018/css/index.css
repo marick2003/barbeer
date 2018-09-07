@@ -1,11 +1,24 @@
+body {
+    -webkit-text-size-adjust: 100%;
+}
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 a {
     text-decoration: none;
     cursor: pointer;
     color: black;
 }
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	line-height: 1;
+	
+}
 #wrap{
-    font-family: 'Noto Sans TC';
+	font-family: 'Noto Sans TC';
+	overflow-x: hidden;
 }
 /*****************************************
 *                  news                  *
@@ -476,7 +489,7 @@ a {
 	100% { top: 8px; opacity: 0; }
 }
 #list .box-title .bg {
-	width: 100%;
+	width: 375px;
 	height: 100%;
 	top: 0px;
 	position: absolute;
@@ -487,14 +500,14 @@ a {
 	
 }
 #list .box-title .bg .bg1,
-#list .box-title .bg .bg2,
-#list .box-title .bg .bg3 {
-	width: 100%;
+#list .box-title .bg .bg2 {
+	width: 375px;
 	height: 100%;
 	position: absolute;
 	background-repeat: no-repeat;
 	background-position: center top; 
 	background-size: cover;
+	overflow: hidden;
 }
 #list .box-title .bg .bg1 {
 	top: 0%;
@@ -555,7 +568,10 @@ a {
 }
 
 #list .box-title .bg .bg3 {
-	/* background-image: url(../images/index/bg3.jpg); */
+	width: 375px;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
 	z-index: 1;
 	opacity: 0;
 }
@@ -915,7 +931,7 @@ a {
 .box-content .bg:before {
 	content: "";
 	width: 193px;
-	height: 144px;
+	height: 129px;
 	bottom: 0px;
 	left: 50%;
 	margin-left: -96px;
@@ -1313,7 +1329,11 @@ a {
 	0%   { background-position: 0 0; }
 	100% { background-position: -80px 0; }
 }
+#main{
 
+	width: 375px;
+	height: 100%;
+}
 #main > .inner {
 	 z-index: 3;
 }
@@ -1568,15 +1588,15 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
    .form .my-selector-c{
     position: absolute;
     top: 237px;
-    left: 87px;
-    width: 194px;
+    left: 77px;
+    width: 241px;
    }
    .form .my-selector-c select{
     height: 27px;
     background-color: transparent;
     border-radius: 0;
     border: none;
-    width: 86px;
+    width: 101px;
     margin-top: 0px;
     margin-right: 0px;
     text-indent: 3px;
@@ -1599,7 +1619,7 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
    .form_style {
 	   padding-left: 10px;
 	   padding-right: 10px;
-	   line-height: 35px;
+	   line-height: 1px;
 	   font-size: 18px;
 	   font-weight: 500;
 	   font-family: 'Noto Sans TC';

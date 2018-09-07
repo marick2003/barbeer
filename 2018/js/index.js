@@ -23,8 +23,19 @@ $(document).ready(function() {
 				
             }
             clearInterval(loadingInterval);
-				initList();
-		}, 300);
+                initList();
+                listActive(); 
+        }, 300);
+        
+        if(func.getParameterByName("t")=="back"){
+
+            $('html, body').animate({scrollTop: $('.box-content').offset().top - 58}, 1000);
+            var newURL = location.href.split("?")[0];
+            window.history.pushState('object', document.title, newURL);
+        }
+
+
+
 	} else if ($('#detail').length == 1) {
 
         if(func.getParameterByName("utm_source")=="facebook"){
@@ -58,7 +69,6 @@ $(document).ready(function() {
 
         if ($('#list').length == 1) {
             if(scrolltop>=$(".box-content").offset().top-126 && scrolltop<$(".box-content").height()){
-
                 $(".fixed_bg .bg_beer").css({"position":"absolute","top":scrolltop-$(".box-content").offset().top+340})
             }else if(scrolltop>$(".box-content").height()-70){
                 $(".fixed_bg .bg_beer").css({"position":"absolute","bottom": "20px","top":"auto"})
@@ -74,7 +84,7 @@ $(document).ready(function() {
     function initList() {
         $('#video').YTPlayer({
             fitToBackground: true,
-            videoId: 'cARq74PCUqY'
+            videoId: 'VXw1Dbmhc_E'
         });
     // func.setCookie('productsHash', '', 1);
     
@@ -162,7 +172,7 @@ $(document).ready(function() {
         listAnimateTimeout[9] = setTimeout(function() { $('.desc .line').eq(2).animate({'opacity': 1}, 450); }, 4600);
         listAnimateTimeout[10] = setTimeout(function() { $('.desc .line').eq(3).animate({'opacity': 1}, 450); }, 4900);
         listAnimateTimeout[11] = setTimeout(function() { $('.godown').animate({'opacity': 1}, 450);
-          $(".ytplayer-container").css({"top": -$(".box-top-inner").height()/3});
+         $(".ytplayer-container").css({"top": -$(".box-top-inner").height()/3});
          }, 5000);
         listAnimateTimeout[12] = setTimeout(function() {
             
@@ -175,7 +185,7 @@ $(document).ready(function() {
             $('.desc2 .line').eq(1).delay(1800).animate({'opacity': 1}, 450);
             $('.desc2 .line').eq(2).delay(2200).animate({'opacity': 1}, 450);
             $("#list .box-top-inner .godown").css({'background-position': '0px -35px'}); 
-            $('.bg2').addClass('animate2'); }, 7000);
+            $('.bg2').addClass('animate2'); }, 5500);
             
         
 
@@ -411,7 +421,7 @@ $(document).ready(function() {
                     method: 'feed',
                     link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0830_csv&utm_campaign=csv17&v=20180830',
                     picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
-                    name: shareTitle,
+                    name: "【分享影片即有機會得到Bar BEER獨家限量好禮】",
                     description: shareDescription
                 }, function(response) {
                     if (response && !response.error_message) {
@@ -611,7 +621,7 @@ $(document).ready(function() {
        
         change_beer();
 
-        $(".ytplayer-container").css({"top": -$(".box-top-inner").height()/3});
+       $(".ytplayer-container").css({"top": -$(".box-top-inner").height()/3});
 
 
     });
