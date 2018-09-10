@@ -185,7 +185,7 @@ $(document).ready(function() {
             $('.desc2 .line').eq(1).delay(1800).animate({'opacity': 1}, 450);
             $('.desc2 .line').eq(2).delay(2200).animate({'opacity': 1}, 450);
             $("#list .box-top-inner .godown").css({'background-position': '0px -35px'}); 
-            $('.bg2').addClass('animate2'); }, 5500);
+            $('.bg2').addClass('animate2'); }, 6000);
             
         
 

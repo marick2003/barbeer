@@ -231,7 +231,7 @@ function startList() {
 		$('.desc2 .line').eq(1).delay(1800).animate({'opacity': 1}, 450);
 		$('.desc2 .line').eq(2).delay(2200).animate({'opacity': 1}, 450);
 		$("#list .box-top-inner .godown").css({'background-position': '0px -17px'}); 
-		$('.bg2').addClass('animate2'); }, 5500);
+		$('.bg2').addClass('animate2'); }, 6000);
 	listAnimateTimeout[13] = setTimeout(function() { listAnimateIsFin = true; }, 7000);
 }
 
@@ -322,19 +322,20 @@ function flyBubbleEnd(direction, num) {
 }
 function history_initDetail(){
 	BGflyBubble('toleft', 1);
+	    $("#history-detail .item:eq(0) .history_img img").each(function(index) {  
+				
+				$(this).delay(200 * index).animate({
+					'opacity': '1',
+					'margin-top': '0px'
+				}, 300, function() {
+					
+				});
+		
+	   });  
 		$(window).scroll(function() {
 			
         console.log( $(window).scrollTop());
-    	$("#history-detail .item:eq(0) .history_img img").each(function(index) {  
-				
-			$(this).delay(200 * index).animate({
-				'opacity': '1',
-				'margin-top': '0px'
-			}, 300, function() {
-				
-			});
-			
-		   });  
+    	
 		 if( $(window).scrollTop() >=$("#history-detail .item").eq(1).offset().top){
 			
 			$("#history-detail .item:eq(1) .history_img img").each(function(index) {  

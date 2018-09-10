@@ -32,9 +32,9 @@
 	<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/index.css?v=1">
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=2">
 
-	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/index.js?v=1"></script>
 </head>
 
 <body id="news">
@@ -80,10 +80,10 @@
 									<div class="desc">
 										<div class="line"><span class="black">從賈伯斯到披頭四，</span></div>
 										<div class="line"><span class="black">「車庫」成為孕育世界各種偉大創意的起點。</span></div>
-										<div class="line">而台灣也有一群車庫青年，</span>。</div>
-										<div class="line">為熱愛燃燒、為守護文化及土地閃耀。</span>，</div>
-                                        <div class="line">跟 KIRIN Bar BEER 一起支持車庫青年</div>
-                                        <div class="line">化信念為行動！</div>
+										<div class="line"><span class="black">而台灣也有一群車庫青年，</span>。</div>
+										<div class="line"><span class="black">為熱愛燃燒、為守護文化及土地閃耀。</span>，</div>
+                                        <div class="line"><span class="black">跟 KIRIN Bar BEER 一起支持車庫青年</span></div>
+                                        <div class="line"><span class="black">化信念為行動！</span></div>
                                     </div>
                                     <div class="desc2 step2">
                                         <div class="line">面對現實難題，他們正面迎擊！</div>

@@ -92,7 +92,7 @@ fbq('track', 'PageView');
 					<div class="overform">
 						<div class="content">
 							<div class="title">資料已成功送出!</div>
-							<span>中獎名單將於2018/00/00於活動網站公布</span>
+							<span>中獎名單將於2018/10/29於活動網站公布</span>
 						</div>
 						<div class="more_btn">
 							<a href="./<?=$page?>" target="_blank">
