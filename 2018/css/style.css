@@ -87,6 +87,37 @@
 		mix-blend-mode: soft-light;
 	}
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE10+ CSS */
+	#gift-desc .gift-item {
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		left: 50%;
+	}
+ }
+ @supports (-ms-accelerator:true) {
+	/* IE Edge 12+ CSS */ 
+	#gift-desc .gift-item {
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		left: 50%;
+	}
+ }
+@supports (-ms-ime-align:auto) {
+	/* IE Edge 16+ CSS */ 
+	#gift-desc .gift-item {
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		left: 50%;
+	}
+}
+
+
+
+
 #list .box-top-inner .beer {
 	width: 94px;
 	height: 97px;

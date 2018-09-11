@@ -10,6 +10,16 @@
 
 	include('../../../include/head.php');
 ?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15575589-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-15575589-7');
+</script>
+
 <meta name="description" content="<?=$data[$id]['shareDescription']?>">
 <meta name="keywords" content="KIRIN Bar BEER,Bar, 車庫精神, 翻轉世代, 青年">
 
@@ -244,7 +254,7 @@
 					break;
 				case 1:
 					if ( ( prevYoutubeData[0] == -1 && prevYoutubeData[1] == 3 ) || ( prevYoutubeData[1] == 0 ) || ( player.getCurrentTime() >= 0 && player.getCurrentTime() <= 0.5 ) ) {
-						sendEvent('KOL_' + gaMark +'_影片', '點選KOL_' + gaMark +'_影片', 'KOL');
+						sendEvent('KOL_' + gaMark +'_影片', '點選_KOL_' + gaMark +'_影片', 'KOL');
 					}
 					break;
 			}

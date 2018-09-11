@@ -65,7 +65,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
 			
         scrolltop=$(window).scrollTop();
-        console.log(scrolltop+"::::"+$(".box-content").offset().top);
+        //console.log(scrolltop+"::::"+$(".box-content").offset().top);
 
         if ($('#list').length == 1) {
             if(scrolltop>=$(".box-content").offset().top-126 && scrolltop<$(".box-content").height()){
@@ -376,7 +376,7 @@ $(document).ready(function() {
             $('#detail .btn-active').click(function() {
         
                 $('html, body').animate({scrollTop: $('#detail .box-content .rule-info .rule-image').offset().top - 58 + 80}, 2000);
-                sendEvent('分頁_' + gaMark +'_立即抽獎', '點選分頁_' + gaMark +'_立即抽獎', 'CSV');
+                sendEvent('分頁_' + gaMark +'_立即抽獎', '點選_分頁_' + gaMark +'_立即抽獎', 'CSV');
         
             });
         
@@ -416,7 +416,7 @@ $(document).ready(function() {
             });
             $(".fb_btn").click(function(){
 
-               
+                sendEvent('KOL_' + gaMark +'_分享', '點選KOL_' + gaMark +'_分享', 'KOL');
                 FB.ui({
                     method: 'feed',
                     link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0830_csv&utm_campaign=csv17&v=20180830',
@@ -427,7 +427,7 @@ $(document).ready(function() {
                     if (response && !response.error_message) {
                       
                         openPopup();
-                        sendEvent('KOL_' + gaMark +'_分享done', '點選KOL_' + gaMark +'_分享', 'KOL');
+                        sendEvent('KOL_' + gaMark +'_分享done', '點選_KOL_' + gaMark +'_分享', 'KOL');
                     }
                 });
             
@@ -468,11 +468,12 @@ $(document).ready(function() {
                             
                              console.log(response);
                              if(response.slice(4)=='yes'){
+                                sendPage("/finish");
                                 $(".startform").fadeOut();
                                 $(".form").delay(1000 ).addClass("over");
                                 $(".overform").delay( 1500 ).fadeIn();
                                 
-                                sendPage("/finish");
+                               
 
                              }  
                              
@@ -582,7 +583,7 @@ $(document).ready(function() {
                     var gaName = '甜玉軒';
                     break;
             }		
-            sendEvent('首頁_' + gaName, '點選首頁_' + gaName, '首頁');
+            sendEvent('首頁_' + gaName, '點選_首頁_' + gaName, '首頁');
     
         });
     }

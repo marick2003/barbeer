@@ -255,7 +255,7 @@ fbq('track', 'PageView');
 					break;
 				case 1:
 					if ( ( prevYoutubeData[0] == -1 && prevYoutubeData[1] == 3 ) || ( prevYoutubeData[1] == 0 ) || ( player.getCurrentTime() >= 0 && player.getCurrentTime() <= 0.5 ) ) {
-						sendEvent('KOL_' + gaMark +'_影片', '點選KOL_' + gaMark +'_影片', 'KOL');
+						sendEvent('KOL_' + gaMark +'_影片', '點選_KOL_' + gaMark +'_影片', 'KOL');
 					}
 					break;
 			}

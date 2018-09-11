@@ -254,7 +254,7 @@ function listActive() {
 			var gaName = '甜玉軒';
 			break;
 		}	
-		sendEvent('首頁_' + gaName, '點選首頁_' + gaName, '首頁');	
+		sendEvent('首頁_' + gaName, '點選_首頁_' + gaName, '首頁');	
 	});
 
 	$(window).scroll(scroll);
@@ -596,6 +596,7 @@ function initDetail() {
 	});
 	$(".fb_btn").click(function(){
 
+		sendEvent('KOL_' + gaMark +'_分享', '點選KOL_' + gaMark +'_分享', 'KOL');
 		FB.ui({
 			method: 'feed',
 			link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0830_csv&utm_campaign=csv18&v=20180830',
@@ -645,10 +646,11 @@ function initDetail() {
 						
 						 console.log(response);
 						 if(response.slice(4)=='yes'){
+							sendPage("/finish");
 							$(".startform").fadeOut();
 							$(".form").delay(1000 ).addClass("over");
 							$(".overform").delay( 1000 ).fadeIn();
-							sendPage("/finish");	
+								
 						 }  
 						 
 					}
