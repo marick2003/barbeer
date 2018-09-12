@@ -597,20 +597,33 @@ function initDetail() {
 	$(".fb_btn").click(function(){
 
 		sendEvent('KOL_' + gaMark +'_分享', '點選KOL_' + gaMark +'_分享', 'KOL');
+		var str="";
+		switch(detailID){
+
+			case "1":   
+				str="B_storyback";
+			break;
+			case "2":
+				str="L_storyback";
+			break;
+			case "3":
+				str="T_storyback"
+			break;
+
+		}
 		FB.ui({
 			method: 'feed',
-			link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=post_0' + detailID + '&utm_content=0830_csv&utm_campaign=csv18&v=20180830',
+			link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=' + str + '',
 			picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
-			name: shareTitle,
+			name: "【分享影片即有機會得到Bar BEER獨家限量好禮】",
 			description: shareDescription
 		}, function(response) {
 			if (response && !response.error_message) {
 			  
 				openPopup();
-				sendEvent('KOL_' + gaMark +'_分享done', '點選KOL_' + gaMark +'_分享', 'KOL');
+				sendEvent('KOL_' + gaMark +'_分享done', '點選_KOL_' + gaMark +'_分享', 'KOL');
 			}
 		});
-	
 	});
 	$(".close_btn").click(function(){
 
