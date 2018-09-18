@@ -10,6 +10,9 @@
 
 	include('../../../include/head.php');
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-15575589-7"></script>
 <script>
@@ -44,7 +47,7 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <!-- <script type="text/javascript" src="../../../js/libs/swipe.js"></script> -->
 <script src="js/tw-city-selector.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/index.js?v=2"></script>
 
 
 

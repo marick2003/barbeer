@@ -68,7 +68,7 @@ $(document).ready(function() {
 		  });
 		  
 	if ($('#list').length == 1) {
-		sendPage('/index'); 
+		sendPages("/index"); 
 		if(func.getParameterByName("t")=="back"){
 
 			$('html, body').animate({scrollTop: $('.box-content').offset().top - 61}, 1000);
@@ -107,13 +107,13 @@ $(document).ready(function() {
         switch(type){
 
             case "1":
-                sendPage('/B_story'); 
+                sendPages("/B_story"); 
             break;
             case "2":
-                sendPage('/L_story'); 
+                sendPages("/L_story"); 
             break;
             case "3":
-                sendPage('/T_story'); 
+                sendPages("/T_story"); 
             break;
         }
 		initDetail();
@@ -231,8 +231,8 @@ function startList() {
 		$('.desc2 .line').eq(1).delay(1800).animate({'opacity': 1}, 450);
 		$('.desc2 .line').eq(2).delay(2200).animate({'opacity': 1}, 450);
 		$("#list .box-top-inner .godown").css({'background-position': '0px -17px'}); 
-		$('.bg2').addClass('animate2'); }, 6000);
-	listAnimateTimeout[13] = setTimeout(function() { listAnimateIsFin = true; }, 7000);
+		$('.bg2').addClass('animate2'); }, 8000);
+	listAnimateTimeout[13] = setTimeout(function() { listAnimateIsFin = true; }, 8000);
 }
 
 function listActive() {
@@ -363,7 +363,15 @@ function history_initDetail(){
 			   });  
 		}
 
-    });
+	});
+	
+	$(".item:eq(0) .content a").click(function() {
+		sendEvent('前往2018車庫精神', '點選', '歷年車庫精神');
+	});
+
+	$(".item:eq(1) .content a").click(function() {
+		sendEvent('前往2017車庫精神', '點選', '歷年車庫精神');
+	});
 
 }
 function initDetail() {
@@ -600,13 +608,13 @@ function initDetail() {
 		var str="";
 		switch(detailID){
 
-			case "1":   
+			case 1:   
 				str="B_storyback";
 			break;
-			case "2":
+			case 2:
 				str="L_storyback";
 			break;
-			case "3":
+			case 3:
 				str="T_storyback"
 			break;
 
@@ -659,7 +667,7 @@ function initDetail() {
 						
 						 console.log(response);
 						 if(response.slice(4)=='yes'){
-							sendPage("/finish");
+							sendPages("/finish");
 							$(".startform").fadeOut();
 							$(".form").delay(1000 ).addClass("over");
 							$(".overform").delay( 1000 ).fadeIn();
@@ -739,7 +747,7 @@ function openPopup(){
 				  
 	});
 
-	sendPage("/personal");
+	sendPages("/personal");
 } 
 function closePopup(){
 
@@ -750,9 +758,16 @@ function closePopup(){
 
 
 }
-
-
-
+function sendPages(page, title) {
+	//if (ga && typeof(ga) != 'undefined') {
+		gtag('config', 'UA-15575589-7', {
+			
+			'page_path': page
+			// 'title': title
+		});
+		echo('pageview: ' + page/* + ', ' + title*/);
+	//}
+}
 
 $(window).resize(function(){
 	// if ($('#list').length == 1) {

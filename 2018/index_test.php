@@ -35,7 +35,7 @@ include('../../../include/head.php');
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="js/jquery.youtubebackground.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/index.js?v=1"></script>
 </head>
 <body id="news">
 	<?php

@@ -14,7 +14,7 @@ $(document).ready(function() {
     change_beer();
     first_srcoll=false;
     if ($('#list').length == 1) {
-        sendPage('/index'); 
+        sendPages('/index'); 
 		loadingInterval = setInterval(function(){
 			if ( $('html.jf-active').length == 1 ) {
 				clearInterval(loadingInterval);
@@ -46,13 +46,13 @@ $(document).ready(function() {
         switch(type){
 
             case "1":
-                sendPage('/B_story'); 
+                sendPages('/B_story'); 
             break;
             case "2":
-                sendPage('/L_story'); 
+                sendPages('/L_story'); 
             break;
             case "3":
-                sendPage('/T_story'); 
+                sendPages('/T_story'); 
             break;
         }
         
@@ -185,12 +185,12 @@ $(document).ready(function() {
             $('.desc2 .line').eq(1).delay(1800).animate({'opacity': 1}, 450);
             $('.desc2 .line').eq(2).delay(2200).animate({'opacity': 1}, 450);
             $("#list .box-top-inner .godown").css({'background-position': '0px -35px'}); 
-            $('.bg2').addClass('animate2'); }, 6000);
+            $('.bg2').addClass('animate2'); }, 8000);
             
         
 
 
-        listAnimateTimeout[13] = setTimeout(function() { listAnimateIsFin = true; }, 7000);
+        listAnimateTimeout[13] = setTimeout(function() { listAnimateIsFin = true; }, 8000);
     }
 
     function flyBubble(direction, num) {
@@ -269,9 +269,13 @@ $(document).ready(function() {
     
         });
 
+        $(".item:eq(0) .content a").click(function() {
+            sendEvent('前往2018車庫精神', '點選', '歷年車庫精神');
+        });
 
-
-
+        $(".item:eq(1) .content a").click(function() {
+            sendEvent('前往2017車庫精神', '點選', '歷年車庫精神');
+        });
     }
     function initDetail() {
       
@@ -420,13 +424,13 @@ $(document).ready(function() {
                 var str="";
                 switch(detailID){
 
-                    case "1":   
+                    case 1:   
                         str="B_storyback";
                     break;
-                    case "2":
+                    case 2:
                         str="L_storyback";
                     break;
-                    case "3":
+                    case 3:
                         str="T_storyback"
                     break;
 
@@ -482,7 +486,7 @@ $(document).ready(function() {
                             
                              console.log(response);
                              if(response.slice(4)=='yes'){
-                                sendPage("/finish");
+                                sendPages("/finish");
                                 $(".startform").fadeOut();
                                 $(".form").delay(1000 ).addClass("over");
                                 $(".overform").delay( 1500 ).fadeIn();
@@ -563,7 +567,7 @@ $(document).ready(function() {
                       
         });
 
-        sendPage("/personal");
+        sendPages("/personal");
 
 
     } 
@@ -649,3 +653,15 @@ $(document).ready(function() {
 //     }
 
  }
+
+ function sendPages(page, title) {
+	//if (ga && typeof(ga) != 'undefined') {
+		gtag('config', 'UA-15575589-7', {
+			
+			'page_path': page
+			// 'title': title
+		});
+		echo('pageview: ' + page/* + ', ' + title*/);
+	//}
+}
+

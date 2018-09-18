@@ -49,7 +49,7 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script>
 <script src="js/tw-city-selector.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/index.js?v=2"></script>
 
 <!-- Facebook Pixel Code -->
 <!-- <script>
