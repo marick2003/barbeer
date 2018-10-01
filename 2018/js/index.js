@@ -437,8 +437,8 @@ $(document).ready(function() {
                 }
                 FB.ui({
                     method: 'feed',
-                    link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=' + str + '',
-                    picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
+                    link: 'https://www.kirin.com.tw/' + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=' + str + '',
+                    picture: 'https://www.kirin.com.tw/'  + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
                     name: "【分享影片即有機會得到Bar BEER獨家限量好禮】",
                     description: shareDescription
                 }, function(response) {

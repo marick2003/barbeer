@@ -1,7 +1,7 @@
 <?php
 
 	$data['1']['title'] = 'Bar BEER 車庫精神 翻轉世代│ 勇往直前的使命‧芭特芙萊';
-	$data['1']['date'] = '2018/8/30';
+	$data['1']['date'] = '2018/9/21';
 	$data['1']['video'] = 'jX4_Tw93jiQ';
 	$data['1']['article'] = '<span class="subTitle">活動步驟說明：</span><br>
 							<br>
@@ -11,7 +11,7 @@
                             <br>
                             STEP 3.  填寫個人資料，即有機會獲得限量 Bar 好禮
                             <br>
-                            詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=123" target="_blank">活動辦法</a>
+                            詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=181" target="_blank">活動辦法</a>
                             <br>
                             <br>
                             <span class="subTitle">活動贈品：</span><br>
@@ -62,7 +62,7 @@
 	$data['1']['gaMark'] = '芭特芙萊';
 
 	$data['2']['title'] = 'Bar BEER 車庫精神 翻轉世代│ 閃耀不滅的信念‧老屋顏 ';
-	$data['2']['date'] = '2018/8/30';
+	$data['2']['date'] = '2018/9/21';
 	$data['2']['video'] = 'OnsKTsJ_2GE';
 	$data['2']['article'] = '<span class="subTitle">活動步驟說明：</span><br>
 	<br>
@@ -72,7 +72,7 @@
 	<br>
 	STEP 3.  填寫個人資料，即有機會獲得限量 Bar 好禮
 	<br>
-	詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=123" target="_blank">活動辦法</a>
+	詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=181" target="_blank">活動辦法</a>
 	<br>
 	<br>
 	<span class="subTitle">活動贈品：</span><br>
@@ -124,7 +124,7 @@
 	$data['2']['gaMark'] = '老屋顏';
 
 	$data['3']['title'] = 'Bar BEER 車庫精神 翻轉世代│ 一路堅持的熱血‧甜玉軒';
-	$data['3']['date'] = '2018/8/30';
+	$data['3']['date'] = '2018/9/21';
 	$data['3']['video'] = 'LEv8rAEVzOo';
 	$data['3']['article'] = '<span class="subTitle">活動步驟說明：</span><br>
 	<br>
@@ -134,7 +134,7 @@
 	<br>
 	STEP 3.  填寫個人資料，即有機會獲得限量 Bar 好禮
 	<br>
-	詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=123" target="_blank">活動辦法</a>
+	詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=181" target="_blank">活動辦法</a>
 	<br>
 	<br>
 	<span class="subTitle">活動贈品：</span><br>

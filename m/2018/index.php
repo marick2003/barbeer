@@ -2,18 +2,16 @@
 	include('../../../../config.php');
 	include('../../../include/head.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15575589-7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-15575589-7');
-</script>
-<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15575589-7"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-15575589-7');
+	</script>
     <meta charset="UTF-8">
     <meta name="viewport" id="viewport-meta" content="width=375 ,user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -32,9 +30,21 @@
 	<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-
-	<script type="text/javascript" src="js/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=2">
+	<script type="text/javascript" src="js/index.js?v=1"></script>
+	<!-- Facebook Pixel Code -->
+	<script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1857929141121316'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1857929141121316&ev=PageView&noscript=1"/></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
 </head>
 
 <body id="news">
@@ -80,10 +90,10 @@
 									<div class="desc">
 										<div class="line"><span class="black">從賈伯斯到披頭四，</span></div>
 										<div class="line"><span class="black">「車庫」成為孕育世界各種偉大創意的起點。</span></div>
-										<div class="line">而台灣也有一群車庫青年，</span>。</div>
-										<div class="line">為熱愛燃燒、為守護文化及土地閃耀。</span>，</div>
-                                        <div class="line">跟 KIRIN Bar BEER 一起支持車庫青年</div>
-                                        <div class="line">化信念為行動！</div>
+										<div class="line"><span class="black">而台灣也有一群車庫青年，</span></div>
+										<div class="line"><span class="black">為熱愛燃燒、為守護文化及土地閃耀。</span></div>
+                                        <div class="line"><span class="black">跟 KIRIN Bar BEER 一起支持車庫青年</span></div>
+                                        <div class="line"><span class="black">化信念為行動！</span></div>
                                     </div>
                                     <div class="desc2 step2">
                                         <div class="line">面對現實難題，他們正面迎擊！</div>
@@ -163,7 +173,7 @@
                                         <p>不僅是你<span class="red">力挺這群台灣青年的熱血行動力</span></p>
                                         <p>還有機會獲得</p>
                                         <p><span class="red">今年Bar BEER X 翻轉世代的限量好禮！</span></p>
-                                        <p>詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=123" target="_blank">活動辦法</a></p>
+                                        <p>詳情請見<a href="https://www.kirin.com.tw/news-detail.php?id=181" target="_blank">活動辦法</a></p>
 									</div>
 									<div class="group">
 										<div class="group-content">
@@ -185,7 +195,7 @@
                                                     <div class="swiper-slide box2" >
                                                             
                                                             <div class="inner">
-                                                                <a href="inner-1.php">
+                                                                <a href="inner-2.php">
                                                                     <div class="pic"><img src="images/item/2/cover.jpg"></div>
                                                                     <div class="info">
                                                                         <p class="text">在這個求新求快的速食時代下，看兩位男孩如何喚 回眾人記憶，翻轉老舊窗花被忽略淘汰的命運？ </p>
@@ -196,7 +206,7 @@
                                                     <div class="swiper-slide box3">
                                                             
                                                             <div class="inner">
-                                                                <a href="inner-1.php">
+                                                                <a href="inner-3.php">
                                                                     <div class="pic"><img src="images/item/3/cover.jpg"></div>
                                                                     <div class="info">
                                                                         <p class="text">除了被捨棄，酸澀的寶島水果還有另一種可能！？ 看果醬男孩如何翻轉非主流水果成為一罐罐寶石？ </p>

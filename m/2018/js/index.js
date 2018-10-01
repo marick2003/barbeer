@@ -219,7 +219,8 @@ function startList() {
 	listAnimateTimeout[9] = setTimeout(function() { $('.desc .line').eq(2).animate({'opacity': 1}, 450); }, 4600);
 	listAnimateTimeout[10] = setTimeout(function() { $('.desc .line').eq(3).animate({'opacity': 1}, 450); }, 4900);
 	listAnimateTimeout[10] = setTimeout(function() { $('.desc .line').eq(4).animate({'opacity': 1}, 450); }, 5200);
-	listAnimateTimeout[11] = setTimeout(function() { $('.godown').animate({'opacity': 1}, 450); }, 5300);
+	listAnimateTimeout[10] = setTimeout(function() { $('.desc .line').eq(5).animate({'opacity': 1}, 450); }, 5500);
+	listAnimateTimeout[11] = setTimeout(function() { $('.godown').animate({'opacity': 1}, 450); }, 5500);
 	listAnimateTimeout[12] = setTimeout(function() {
 		fadeInOut($('.bg3'));
 		$("#list .box-top-inner.shadow").fadeOut();
@@ -621,8 +622,8 @@ function initDetail() {
 		}
 		FB.ui({
 			method: 'feed',
-			link: 'https://' + proj.domain + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=' + str + '',
-			picture: 'https://' + proj.domain + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
+			link: 'https://www.kirin.com.tw/' + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=' + str + '',
+			picture: 'https://www.kirin.com.tw/' + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
 			name: "【分享影片即有機會得到Bar BEER獨家限量好禮】",
 			description: shareDescription
 		}, function(response) {

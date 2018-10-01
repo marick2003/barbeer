@@ -1,5 +1,5 @@
 <?
-	include('../../../config.php');
+	include('../../config.php');
 	include('js/data.php');
 	$id = 1;
 
@@ -8,11 +8,9 @@
 		exit;
 	}
 
-	include('../../../include/head.php');
+	include('../../include/head.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -28,12 +26,25 @@
     <link rel="stylesheet" type="text/css" href="css/history.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1857929141121316'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1857929141121316&ev=PageView&noscript=1"/></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
 </head>
 <body>
     <div id="wrap">
         <div id="wrap2">
 			<?php
-				include('../../../include/header.php');
+				include('../../include/header.php');
 			?>
          <div id="main" class='detail'>
             <div class="inner">
@@ -56,7 +67,7 @@
                                 <br>
                             </div>
                             
-                            <a href="https://www.kirin.com.tw/barbeer/CSV/2018/index_test.php" target="_blank"><div class="seemore">了解更多</div></a>
+                            <a href="https://www.kirin.com.tw/barbeer/CSV/2018/" target="_blank"><div class="seemore">了解更多</div></a>
                             <div class="history_img history_img1">
                                 <img src="images/history/history_img1-1.png" alt="">
                                 <img src="images/history/history_img1-2.png" alt="">
@@ -135,7 +146,7 @@
         </div>
         </div>
         <?php
-			include('../../../include/footer.php');
+			include('../../include/footer.php');
 		?>
     </div>
 </body>

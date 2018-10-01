@@ -436,6 +436,7 @@ input {
 #list .box-top-inner .desc .line + div.line + div.line { top: 42px; }
 #list .box-top-inner .desc .line + div.line + div.line + div.line { top: 63px; }
 #list .box-top-inner .desc .line + div.line + div.line + div.line + div.line { top: 84px; }
+#list .box-top-inner .desc .line + div.line + div.line + div.line + div.line + div.line { top: 105px; }
 .black {
 	color: #000;
 }
