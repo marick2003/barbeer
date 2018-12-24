@@ -1,7 +1,8 @@
 <?
 	include('../../../config.php');
+	start_session(7*24*60*60);
 	include('js/data.php');
-	$id = 2;
+	$id = 1;
 	$page = '';
 	if (!$data[$id]['title']) {
 		header("Location:./");
@@ -9,6 +10,17 @@
 	}
 
 	include('../../../include/head.php');
+	if($_SESSION['city']){
+		$formCity = '"'.$_SESSION['city'].'"';
+	}else{
+		$formCity = 'null';
+	}
+	if($_SESSION['area']){
+		$formArea = '"'.$_SESSION['area'].'"';
+	}else{
+		$formArea = 'null';
+	}
+	
 ?>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -27,7 +39,7 @@
 <meta property="og:site_name" content="<?=$data[$id]['innerTitle']?>" /> 
 <meta property="og:title" content="<?=$data[$id]['shareTitle']?>" /> 
 <meta property="og:description" content="<?=$data[$id]['shareDescription']?>" />
-<meta property="og:image" content="https://www.kirin.com.tw/barbeer/CSV/2018/images/item/<?=$id?>/metaimg.jpg?v=20170712" />
+<meta property="og:image" content="https://www.kirin.com.tw/barbeer/CSV/2018/images/item/<?=$id?>/metaimg.jpg" />
 <meta property="og:url" content="https://www.kirin.com.tw/barbeer/CSV/2018/inner-<?=$id?>.php" />
 <meta property="fb:app_id" content="1830556680498946">
 
@@ -77,35 +89,7 @@
 		'targetType':'usual'
 		});
 	</script>
-<div id="overlay">
-	<div id="popup">
-            <div class="cover">
-                        
-            </div>
-            <div class='container'>
-				
-				<div class="form">
-					
-					<div class="setform">
-						<div class="content">
-							<div class="title">填寫個人資料抽Bar BEER限量好禮!</div>
-						
-						</div>
-						<div class="go_btn">
-							<img src="images/index/ok.jpg" alt="">
-						</div>
-					</div>
-					<div class="close_btn change_btn">
-							<img src="images/index/close_btn.png" alt="">
-					</div>
-				</div>
 
-				
-                
-            </div>
-                
-    </div>
-</div>
 
 
 
@@ -128,42 +112,52 @@
 				include('../../../include/header.php');
 			?>
 			<div id="main" class='detail'>
-				
+
 				<div class="inner">
 					<div id="detail" class="box">
 						<div class="box-title">
-							<p class="title"><?=$data[$id]['title']?></p>
-							<p class="date"><?=$data[$id]['date']?></p>
+						<div class="form">
+                                <div class="startform">
+                                        <input class="name form_style" type="text" placeholder="" value="<?=$_SESSION['uname']?>">
+                                        <input class="tel form_style" type="tel" placeholder="" maxlength="10" value="<?=$_SESSION['tel']?>">
+                                        <input class="email form_style" type="email" placeholder="" value="<?=$_SESSION['email']?>">
+                                        <div class="my-selector-c" >
+                                            
+                                                <select class="county form_style"></select>
+                                            
+                                            
+                                                <select class="district form_style"></select>
+                                            						
+                                        </div>
+                                        <input class="address form_style" type="text" placeholder="" value="<?=$_SESSION['addr']?>">
+                                        <div class="check_btn"></div>
+                                        <div class="rule_btn">
+                                            <a href="https://www.kirin.com.tw/privacy.php" target="_blank"></a>
+                                        </div>
+                                        <div class="send_btn">
+                                            <img src="images/index/send_form.png" alt="">
+                                        </div>
+                                    
+
+                                    </div>
+                                    <div class="overform">
+                                        <div class="content">
+                                            <div class="title">資料已成功送出!</div>
+                                            <span>中獎名單將於2018/10/29於活動網站公布</span>
+                                        </div>
+                                        <div class="more_btn">
+                                            <a href="./<?=$page?>" target="_blank">
+                                                <img src="images/index/more_btn.jpg" alt="">	
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="close_btn change_btn">
+                                            <img src="images/index/close_btn.png" alt="">
+                                    </div> -->
+                                </div>
 						</div>
 						<div class="box-content">
-							<div class="video">
-								<div id="video"></div>
-							</div>
-                            <!-- <div class="btn-active">抽獎活動已結束</div> -->
-                            <div class="fb_btn">
-                                <img src="images/index/fb_btn.png" alt="">
-                            </div>
-							<div id="article">
-								<?=$data[$id]['article']?>
-							</div>
-							<div class="links">
-								<?
-									if ( $id != 1 ) {
-										$prevId = $id-1;
-									} else {
-										$prevId = count($data);
-									}
-									if ( $id != count($data) ) {
-										$nextId = $id+1;
-									} else {
-										$nextId = 1;
-									}
-									$data[$prevId]['title'] = substr($data[$prevId]['title'],  strpos($data[$prevId]['title'], '│ ')+3);
-									$data[$nextId]['title'] = substr($data[$nextId]['title'],  strpos($data[$nextId]['title'], '│ ')+3);
-								?>
-								<a class="prev" href="https://www.kirin.com.tw/barbeer/CSV/2018/inner-<?=$prevId?>.php">上一篇：<?=$data[$prevId]['title']?></a>
-								<a class="next" href="https://www.kirin.com.tw/barbeer/CSV/2018/inner-<?=$nextId?>.php">下一篇：<?=$data[$nextId]['title']?></a>
-							</div>
+							
 							
 							<a class="back" href="./<?=$page?>?t=back">返回 BarBEER 車庫精神 翻轉世代 列表頁</a>
 						</div>
@@ -172,17 +166,15 @@
 				<div class="bg">	
 							<div class="fixed_bg">	
 								<div class="bg_beer toleft">
-									<div class='fly-bubble'>
-										
-									</div>
+									<div class='fly-bubble'></div>
 									<img src="images/index/bg_beer.png" alt="">
 								</div>
 								<div class="bg_beer toright">
-									<div class='fly-bubble'></div>
-								    <img src="images/index/bg_beer2.png" alt="">
+										<div class='fly-bubble'></div>
+								    	<img src="images/index/bg_beer2.png" alt="">
+									</div>
 								</div>
-				</div>
-			</div>
+							</div>
 			</div>
 			<div id="mask"></div>
 			
@@ -204,12 +196,13 @@
 	<script>
 		var type = "<?php echo $id; ?>";
 		//console.log(type);
-		// new TwCitySelector({
-		// 	el: ".my-selector-c",
-		// 	elCounty: ".county", // 在 el 裡查找 dom
-		// 	elDistrict: ".district" // 在 el 裡查找 dom
-		
-		// });
+		new TwCitySelector({
+			el: ".my-selector-c",
+			elCounty: ".county", // 在 el 裡查找 dom
+			elDistrict: ".district", // 在 el 裡查找 dom ,
+			selectedCounty: <?=$formCity?>, // 預設選擇的縣市名稱
+			selectedDistrict: <?=$formArea?>, // 預設選擇的區域名稱
+		});
 
 		var tag = document.createElement('script');
 

@@ -443,7 +443,7 @@ input {
 #list .box-top-inner .godown {
 	width: 17px;
 	height: 17px;
-	bottom: 30px;
+	bottom: 15px;
 	left: 159px;
 	position: absolute;
 	background: url(../images/index/index-img09.png) no-repeat;
@@ -1552,10 +1552,11 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 .form{
     position: relative;
     width: 90%;
-    height: 460px;
+    height: auto;
     margin: 0 auto;
-    transition: all 0.5s ease-in;
-    background-color: #ffffff;
+	transition: all 0.5s ease-in;
+	background-color: #ffffff;
+ 
    
    }
    .form .name{
@@ -1615,7 +1616,8 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
     left: 50%;
     margin-left: -94px;
     cursor: pointer;
-    width: 74%;
+	width: 74%;
+	margin-bottom: 35px;
    }
    .form_style {
 	   padding-left: 10px;
@@ -1642,32 +1644,42 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
    .startform{
     position: relative;
     width: 280px;
-    height: 417px;
+    height: 450px;
     margin: 0 auto;
     background-size: contain;
     background-image: url(../images/index/form.png);
     background-repeat: no-repeat;
-    background-position: 0px 50px;
+	background-position: 0px 50px;
+	background-color: #ffffff;
+   }
+   .setform{
+    position: relative;
+    width: 335px;
+    height: 250px;
+	margin: 0 auto;
+	background-color: #ffffff;
    }
    .overform {
 
-	   display: none;
+	 display: none;
+	 background-color: #ffffff;
    }
-   .overform .content{
+   .overform .content ,.setform .content{ 
     position: relative;
-    width: 230px;
+    width: 290px;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 15px;
    
    }
-   .overform .content .title{
+   .overform .content .title,.setform .content .title{
    
 	   font-size: 22px;
 	   color: #000000;
 	   font-weight: 500;
 	   font-family: 'Noto Sans TC';
 	   margin-bottom: 25px;
+	   text-align: center;
    }
    .overform .content span{
 	   font-size: 18px;
@@ -1678,7 +1690,21 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
 	   line-height: 30px;
    
    }
+   .overform .content .title2{
+	font-size: 18px;
+	color: #000000;
+	font-weight: 500;
+	font-family: 'Noto Sans TC';
+	text-align: center;
+	line-height: 30px;
+
+}
    .overform .more_btn{
+	position: relative;
+    width: 65%;
+    margin-left: 65px;
+   }
+   .setform .go_btn{
 	position: relative;
     width: 65%;
     margin: 0 auto;
@@ -1691,12 +1717,19 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
     position: absolute;
     width: 14px;
     height: 14px;
-    bottom: 69px;
+    bottom: 101px;
 	left: 15px;
 	background-color: #fff;
 	cursor: pointer;
+	z-index: 4;
     
    }
+   /* #detail .check_btn{
+
+	bottom: 68px;
+
+   } */
+
    .check_btn.check{
 	background-color: #000;
    }
@@ -1756,3 +1789,9 @@ filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5)); */
     height: 100%;
     display: inline-block;
 }	
+.go_btn{
+
+}
+#footer{
+    z-index: 3;
+}

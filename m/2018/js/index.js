@@ -1,7 +1,9 @@
 var listAnimateIsFin = false,
     listAnimateTimeout = [],
     loadingInterval,
-    gaFlag = [];
+	gaFlag = [],
+	page_id='',
+	form_final=true;
 	// windowDirection;
 var fadeInOut;	
 $(document).ready(function() {
@@ -99,6 +101,18 @@ $(document).ready(function() {
 
 		}, 300);
 	} else if ($('#detail').length == 1) {
+
+		if(func.getParameterByName("id")){
+			page_id=func.getParameterByName("id");
+			// $('html, body').animate({scrollTop: $('.box-content').offset().top - 61}, 1000);
+			var newURL = location.href.split("?")[0];
+			window.history.pushState('object', document.title, newURL);
+		}else{
+
+            page_id=type;
+        }
+
+
 		if(func.getParameterByName("utm_source")=="facebook"){
             
             sendEvent( gaMark +'_FB_回訪', '點選_' + gaMark +'_FB_回訪', 'KOL');
@@ -114,7 +128,10 @@ $(document).ready(function() {
             break;
             case "3":
                 sendPages("/T_story"); 
-            break;
+			break;
+			case "form":
+				sendPages("/personal");
+			break;
         }
 		initDetail();
 		// sendPage('/' + gaMark + '_CSV');
@@ -279,6 +296,7 @@ function scroll() {
 				case 2:
 					var gaName = '甜玉軒';
 					break;
+				
 			}
 			//sendPage('/Index_CSV_' + gaName);
 		}
@@ -559,9 +577,11 @@ function initDetail() {
 		// sendEvent('訊息按鈕-' + func.getParameterByName('id'), '點選', '最新訊息-' + $('#detail .box-title .title').text());
 
 	});
+	
+		
+		$('#detail .box-title .title').html($('#detail .box-title .title').html().replace('│ ', '<br>'));
 
-	$('#detail .box-title .title').html($('#detail .box-title .title').html().replace('│ ', '<br>'));
-
+	
 	$('#detail .btn-active').click(function() {
 
 		$('html, body').animate({scrollTop: $('#detail .box-content .rule-info .rule-image').offset().top - 61}, 2000);
@@ -604,35 +624,35 @@ function initDetail() {
 
 	});
 	$(".fb_btn").click(function(){
+		alert("活動已截止!");
+		// sendEvent('KOL_' + gaMark +'_分享', '點選KOL_' + gaMark +'_分享', 'KOL');
+		// var str="";
+		// switch(detailID){
 
-		sendEvent('KOL_' + gaMark +'_分享', '點選KOL_' + gaMark +'_分享', 'KOL');
-		var str="";
-		switch(detailID){
+		// 	case 1:   
+		// 		str="B_storyback";
+		// 	break;
+		// 	case 2:
+		// 		str="L_storyback";
+		// 	break;
+		// 	case 3:
+		// 		str="T_storyback"
+		// 	break;
 
-			case 1:   
-				str="B_storyback";
-			break;
-			case 2:
-				str="L_storyback";
-			break;
-			case 3:
-				str="T_storyback"
-			break;
-
-		}
-		FB.ui({
-			method: 'feed',
-			link: 'https://www.kirin.com.tw/' + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=' + str + '',
-			picture: 'https://www.kirin.com.tw/' + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
-			name: "【分享影片即有機會得到Bar BEER獨家限量好禮】",
-			description: shareDescription
-		}, function(response) {
-			if (response && !response.error_message) {
+		// }
+		// FB.ui({
+		// 	method: 'feed',
+		// 	link: 'https://www.kirin.com.tw/' + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=' + str + '',
+		// 	picture: 'https://www.kirin.com.tw/' + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
+		// 	name: "【分享影片即有機會得到Bar BEER獨家限量好禮】",
+		// 	description: shareDescription
+		// }, function(response) {
+		// 	if (response && !response.error_message) {
 			  
-				openPopup();
-				sendEvent('KOL_' + gaMark +'_分享done', '點選_KOL_' + gaMark +'_分享', 'KOL');
-			}
-		});
+		// 		openPopup();
+		// 		sendEvent('KOL_' + gaMark +'_分享done', '點選_KOL_' + gaMark +'_分享', 'KOL');
+		// 	}
+		// });
 	});
 	$(".close_btn").click(function(){
 
@@ -648,11 +668,17 @@ function initDetail() {
 
 		sendEvent('填寫資料', '點選_填寫資料＿看其他', 'KOL');
 	});
-	$(".send_btn").click(function(){
+	$(".go_btn").click(function(){
 
-		if(check_form()){
+		window.location.href = "./form.php?id="+detailID;
+
+	});
+	$(".send_btn").click(function(){
+		console.log("test");
+		if(check_form() && form_final){
+			form_final=false;
             sendEvent('填寫資料＿完成', '點選＿填寫資料_完成', 'KOL');          
-			var _str="name="+$(".form .name").val()+"&phone="+$(".form .tel").val()+"&email="+$('.form .email').val()+"&address="+$(".form .county").val()+$(".form .district").val()+$('.form .address').val()+"&type="+type;
+			var _str="name="+$(".form .name").val()+"&phone="+$(".form .tel").val()+"&email="+$('.form .email').val()+"&address="+$(".form .county").val()+" "+$(".form .district").val()+" "+$('.form .address').val()+"&type="+page_id;
 			$.ajax({
 						type: "POST",
 						url: "../../../../barbeer/CSV/2018/api/sendForm.php",
@@ -665,7 +691,7 @@ function initDetail() {
 				   
 					  },
 						success: function(response) {
-						
+							form_final=true;
 						 console.log(response);
 						 if(response.slice(4)=='yes'){
 							sendPages("/finish");
@@ -748,7 +774,7 @@ function openPopup(){
 				  
 	});
 
-	sendPages("/personal");
+	
 } 
 function closePopup(){
 

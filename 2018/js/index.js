@@ -4,7 +4,9 @@ var listAnimateIsFin = false,
     scrolltop,
     windowH,
     first_srcoll,
-    windowW;
+    windowW,
+    page_id='',
+    form_final=true;
     
 
 $(document).ready(function() {
@@ -38,6 +40,16 @@ $(document).ready(function() {
 
 	} else if ($('#detail').length == 1) {
 
+		if(func.getParameterByName("id")){
+			page_id=func.getParameterByName("id");
+			//$('html, body').animate({scrollTop: $('.box-content').offset().top - 61}, 1000);
+			var newURL = location.href.split("?")[0];
+			window.history.pushState('object', document.title, newURL);
+        }else{
+
+            page_id=type;
+        }
+        
         if(func.getParameterByName("utm_source")=="facebook"){
             
             sendEvent( gaMark +'_FB_回訪', '點選_' + gaMark +'_FB_回訪', 'KOL');
@@ -54,6 +66,9 @@ $(document).ready(function() {
             case "3":
                 sendPages('/T_story'); 
             break;
+            case "form":
+				sendPages("/personal");
+			break;
         }
         
 		initDetail();
@@ -419,35 +434,35 @@ $(document).ready(function() {
         
             });
             $(".fb_btn").click(function(){
-               
-                sendEvent('KOL_' + gaMark +'_分享', '點選KOL_' + gaMark +'_分享', 'KOL');
-                var str="";
-                switch(detailID){
+               alert("活動已截止!");
+                // sendEvent('KOL_' + gaMark +'_分享', '點選KOL_' + gaMark +'_分享', 'KOL');
+                // var str="";
+                // switch(detailID){
 
-                    case 1:   
-                        str="B_storyback";
-                    break;
-                    case 2:
-                        str="L_storyback";
-                    break;
-                    case 3:
-                        str="T_storyback"
-                    break;
+                //     case 1:   
+                //         str="B_storyback";
+                //     break;
+                //     case 2:
+                //         str="L_storyback";
+                //     break;
+                //     case 3:
+                //         str="T_storyback"
+                //     break;
 
-                }
-                FB.ui({
-                    method: 'feed',
-                    link: 'https://www.kirin.com.tw/' + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=' + str + '',
-                    picture: 'https://www.kirin.com.tw/'  + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
-                    name: "【分享影片即有機會得到Bar BEER獨家限量好禮】",
-                    description: shareDescription
-                }, function(response) {
-                    if (response && !response.error_message) {
+                // }
+                // FB.ui({
+                //     method: 'feed',
+                //     link: 'https://www.kirin.com.tw/' + 'barbeer/CSV/2018/inner-' + detailID + '.php?utm_source=facebook&utm_medium=' + str + '',
+                //     picture: 'https://www.kirin.com.tw/'  + 'barbeer/CSV/2018/images/item/' + detailID + '/metaimg.jpg',
+                //     name: "【分享影片即有機會得到Bar BEER獨家限量好禮】",
+                //     description: shareDescription
+                // }, function(response) {
+                //     if (response && !response.error_message) {
                       
-                        openPopup();
-                        sendEvent('KOL_' + gaMark +'_分享done', '點選_KOL_' + gaMark +'_分享', 'KOL');
-                    }
-                });
+                //         openPopup();
+                //         sendEvent('KOL_' + gaMark +'_分享done', '點選_KOL_' + gaMark +'_分享', 'KOL');
+                //     }
+                // });
             
             });
             $(".close_btn").click(function(){
@@ -465,12 +480,17 @@ $(document).ready(function() {
 
                 sendEvent('填寫資料', '點選_填寫資料＿看其他', 'KOL');
             });
+            $(".go_btn").click(function(){
+
+                window.location.href = "./form.php?id="+detailID;
+
+            });
             $(".send_btn").click(function(){
 
-                if(check_form()){
-
+                if(check_form() && form_final){
+                form_final=false;
                 sendEvent('填寫資料＿完成', '點選＿填寫資料_完成', 'KOL');
-                var _str="name="+$(".form .name").val()+"&phone="+$(".form .tel").val()+"&email="+$('.form .email').val()+"&address="+$(".form .county").val()+$(".form .district").val()+$('.form .address').val()+"&type="+type;
+                var _str="name="+$(".form .name").val()+"&phone="+$(".form .tel").val()+"&email="+$('.form .email').val()+"&address="+$(".form .county").val()+" "+$(".form .district").val()+" "+$('.form .address').val()+"&type="+page_id;
                 $.ajax({
                             type: "POST",
                             url: "./api/sendForm.php",
@@ -483,9 +503,10 @@ $(document).ready(function() {
                        
                           },
                             success: function(response) {
-                            
+                                form_final=true;
                              console.log(response);
                              if(response.slice(4)=='yes'){
+                                 
                                 sendPages("/finish");
                                 $(".startform").fadeOut();
                                 $(".form").delay(1000 ).addClass("over");
@@ -558,8 +579,8 @@ $(document).ready(function() {
     function openPopup(){
 
         $(".check_btn").removeClass("check");
-        $(".startform").css({'display' : 'block'});
-        $(".overform").css({'display' : 'none'});
+        $(".setform").css({'display' : 'block'});
+       // $(".overform").css({'display' : 'none'});
         $(".form").removeClass("over");
         $("html,body").css({'overflow' : 'hidden'});
             
@@ -567,7 +588,7 @@ $(document).ready(function() {
                       
         });
 
-        sendPages("/personal");
+        //sendPages("/personal");
 
 
     } 

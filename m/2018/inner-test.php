@@ -1,8 +1,9 @@
 <?
 	 include('../../../../config.php');
 	 include('../../../../barbeer/CSV/2018/js/data.php');
-	$id = 3;
+	$id = 1;
 	$page = '';
+
 	if (!$data[$id]['title']) {
 		header("Location:./");
 		exit;
@@ -46,7 +47,7 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script>
 <script src="js/tw-city-selector.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/index.js?v=2"></script>
 
 	<!-- Facebook Pixel Code -->
 	<script>
@@ -66,34 +67,34 @@
 
 <body id="news">
 <div id="overlay">
-	<div id="popup">
-				<div class="cover">
-							
-				</div>
-				<div class='container'>
+    <div id="popup">
+            <div class="cover">
+                        
+            </div>
+            <div class='container'>
+				
+				<div class="form">
 					
-					<div class="form">
-						
-						<div class="setform">
-							<div class="content">
-								<div class="title">填寫個人資料</div>
-								<div class="title">抽Bar BEER限量好禮!</div>
-								
-							</div>
-							<div class="go_btn">
-								<img src="images/index/ok.jpg" alt="">
-							</div>
+					<div class="setform">
+						<div class="content">
+                            <div class="title">填寫個人資料</div>
+                            <div class="title">抽Bar BEER限量好禮!</div>
+							
 						</div>
-						<div class="close_btn change_btn">
-								<img src="images/index/close_btn.png" alt="">
+						<div class="go_btn">
+							<img src="images/index/ok.jpg" alt="">
 						</div>
 					</div>
-
-					
-					
+					<div class="close_btn change_btn">
+							<img src="images/index/close_btn.png" alt="">
+					</div>
 				</div>
-					
-		</div>
+
+				
+                
+            </div>
+                
+    </div>
 </div>
 	<?php
 		include('../../../include/track.php');
@@ -111,7 +112,8 @@
 			// 'trackSubfolderDepth':3,
 			// 'targetType':'usual'
 			// });
-		</script>
+        </script>
+        
 		<div id="wrap2">
 			<div id="main" class="detail">
 				<div class="inner">
